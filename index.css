@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#contenido-principal{
+    margin: 1rem;
+}
+
+footer {
+    margin: 1rem;
+    text-align: right;
+}
+
+#nav {
+    background-color: rgb(35, 90, 255);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: right;
+}
+
+#nav a {
+    padding: 0.5rem;
+    border-radius: 5%;
+    text-decoration: none;
+    color: white;
+}
+
+#nav a:hover {
+    background-color: rgb(61, 110, 255);
+}
+
+#inicio {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#cta {
+    margin: 1rem;
+}
+#cta-btn {
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: rgb(255, 206, 12);
+    color: black;
+    border-radius: 5px;
+}
+
+#img-perfil{
+    border-radius: 50%;
+    max-height: 180px;
+    height: auto;
+}
+
+#coleccion-proyectos {
+    display: flex;
+}
+
+.proyecto {
+    margin: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 5%;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.btn-ver-mas{
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: rgb(255, 206, 12);
+    color: black;
+    border-radius: 5px;
+}
+
+.proyecto-logo{
+    max-width: 100%;
+    border-radius: 5%;
+    height: auto;
+    display: block;
+    margin-top: 5%;
+}
