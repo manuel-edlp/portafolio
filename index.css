@@ -7,10 +7,27 @@ body {
     margin: 1rem;
 }
 
-footer {
-    margin: 1rem;
-    text-align: right;
+#contacto {
+    background-color: rgb(26, 26, 26);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+
+#contacto h2, #contacto p {
+    color: white;
+}
+
+
+footer {
+    padding: 1rem;
+    text-align: right;
+    color: white;
+    background-color: rgb(26, 26, 26);
+}
+
+
 
 #nav {
     background-color: rgb(35, 90, 255);
@@ -61,12 +78,19 @@ footer {
 .proyecto {
     margin: 0.5rem;
     padding: 0.8rem;
-    border-radius: 5%;
-    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    background-color: rgb(238, 238, 238);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly
+}
+
+.proyecto:hover {
+    background-color: rgb(198, 198, 198);
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
+              0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .btn-ver-mas{
@@ -79,8 +103,30 @@ footer {
 
 .proyecto-logo{
     max-width: 100%;
-    border-radius: 5%;
+    border-radius: 10px;
     height: auto;
     display: block;
     margin-top: 5%;
+}
+
+#org {
+    display:flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: rgb(35, 90, 255);
+}
+
+.rol {
+    font-weight: bold;
+}
+
+.experiencia-item {
+    background-color: rgb(231 231 231);
+    border-radius: 7px;
+    padding: 0 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.experiencia-item:hover {
+    background-color: rgb(198, 198, 198);
 }
