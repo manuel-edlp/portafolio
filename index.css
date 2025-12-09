@@ -130,3 +130,80 @@ footer {
 .experiencia-item:hover {
     background-color: rgb(198, 198, 198);
 }
+
+
+/*
+=============================
+   ESTILOS BASE DEL CONTENEDOR
+=============================
+*/
+
+#stack {
+  background-color: #f8f9fa; 
+  padding: 30px 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#stack h2 {
+  color: #343a40;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+
+#stack ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+#stack li {
+  color: #495057;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  
+  transition: all 0.3s ease; 
+  
+  /* Para centrar el contenido si se añade un icono */
+  display: flex; 
+  align-items: center; 
+  /* Puedes añadir una pequeña imagen de icono aquí */
+}
+
+#stack li:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05) translateY(-2px); 
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+  cursor: pointer;
+}
+
+#stack li:nth-child(1) { background-color: #3776ab; color: white; } /* Python */
+#stack li:nth-child(2) { background-color: #512bd4; color: white; } /* C# */
+#stack li:nth-child(3) { background-color: #777bb4; color: white; } /* PHP */
+#stack li:nth-child(4) { background-color: #f7df1e; color: #323330; } /* Javascript */
+#stack li:nth-child(5) { background-color: #a8b9c7; color: black; } /* C */
+#stack li:nth-child(6) { background-color: #ea2d2e; color: white; } /* Java */
+#stack li:nth-child(7) { background-color: #61dafb; color: #20232a; } /* React */
+#stack li:nth-child(8) { background-color: #e34c26; color: white; } /* HTML */
+#stack li:nth-child(9) { background-color: #264de4; color: white; } /* CSS */
+
+#stack li:hover {
+  background-color: #007bff;
+  color: white;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+}
