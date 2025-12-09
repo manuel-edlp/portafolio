@@ -73,20 +73,81 @@ footer {
     margin-bottom: 40px; 
 }
 
-#img-perfil {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px; 
-    object-fit: cover;
-    margin-bottom: 40px;
-    
-
-    border: 5px solid #ffffff; 
-    box-shadow: 0 0 0 4px #007bff;
-
+/* animación de rotación */
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-#img-perfil:hover {
+/* marco de la foto */
+.contenedor-img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 40px auto;
+    border-radius: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Pseudo-elemento ::before para el Borde Giratorio */
+.contenedor-img::before {
+    content: "";
+    position: absolute;
+    inset: -5px; 
+    border-radius: 50%;
+    z-index: -1;
+    
+    background: conic-gradient(
+        from 0deg,
+        #6366f1,
+        #8b5cf6,
+        #ec4899,
+        #8b5cf6,
+        #6366f1
+    );
+    animation: girar 4s linear infinite;
+}
+
+.contenedor-img::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    z-index: -2;
+    background: conic-gradient(
+        from 0deg,
+        #6366f1,
+        #8b5cf6,
+        #ec4899,
+        #8b5cf6,
+        #6366f1
+    );
+    animation: girar 4s linear infinite;
+    filter: blur(15px);
+    opacity: 0.8;
+}
+
+/* Estilos de la imagen */
+#img-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.contenedor-img:hover {
     transform: scale(1.05);
 }
 
@@ -190,6 +251,10 @@ footer {
     font-weight: bold;
 }
 
+.rol-descripcion {
+    text-align: justify;
+}
+
 .experiencia-item {
     background-color: rgb(231 231 231);
     border-radius: 7px;
@@ -218,6 +283,10 @@ footer {
 #filtros {
     text-align: center;
     margin-bottom: 30px;
+}
+
+.proyecto-descripcion {
+    text-align: justify;
 }
 
 #busqueda {
