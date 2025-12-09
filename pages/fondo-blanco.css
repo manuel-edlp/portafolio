@@ -1,0 +1,136 @@
+#banner {
+    background: linear-gradient(to right,  #1814ff, #00008B );
+    display: flex;
+    justify-content: center;
+}
+
+#banner img{
+    max-width: 200px;
+    padding: 1rem;
+}
+
+
+/*   CONTENIDO PRINCIPAL   */
+#contenido-principal {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    color: #222;
+    font-family: "Inter", sans-serif;
+}
+
+
+/*       CABECERA          */
+#cabecera-proyecto h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111; 
+    margin-bottom: 0.5rem;
+}
+
+#cabecera-proyecto .subtitulo {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+}
+
+
+/*  TARJETAS DE INFORMACIÓN */
+#detalles-clave h2 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0076d6;
+}
+
+.tarjetas-info {
+    background: rgba(0,0,0,0.04);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.08);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.tarjetas-info p strong {
+    color: #111;
+}
+
+
+
+/*     NARRATIVA / TEXTO   */
+
+#narrativa-proyecto h2 {
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #0076d6;
+}
+
+#narrativa-proyecto p {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.75;
+}
+
+
+/*       GALERÍA           */
+#galeria-muestras {
+    margin-top: 3rem;
+}
+
+#galeria-muestras h2 {
+    font-size: 1.6rem;
+    color: #0076d6;
+    margin-bottom: 1rem;
+}
+
+#galeria-muestras img {
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 1.5rem;
+    transition: 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+}
+
+.muestra-grande:hover,
+.muestra-pequena:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/*     BOTÓN PROYECTO      */
+
+.boton-proyecto {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.9rem 1.8rem;
+    background-color: #0076d6;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: 0.25s ease;
+    font-size: 1.05rem;
+}
+
+.boton-proyecto:hover {
+    background-color: #1c8dec;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 650px) {
+    #cabecera-proyecto h1 {
+        font-size: 2rem;
+    }
+
+    #cabecera-proyecto .subtitulo {
+        font-size: 1.05rem;
+    }
+
+    .tarjetas-info {
+        font-size: 1rem;
+    }
+}
