@@ -1,11 +1,11 @@
 #banner {
-    background: linear-gradient(to right, #1814ff, #00008B );
+    background: linear-gradient(to right, #e0e8ff, #0042be );
     display: flex;
     justify-content: center;
 }
 
 #banner img{
-    max-width: 200px;
+    max-width: 100px;
     padding: 1rem;
 }
 
@@ -13,7 +13,7 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 3rem 1.5rem;
-    color: #222;
+    color: #222222;
     font-family: "Inter", sans-serif;
 }
 
