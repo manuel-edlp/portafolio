@@ -38,3 +38,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuLinks = document.getElementById('menu-links');
+
+        menuToggle.addEventListener('click', () => {
+            // Alternar la clase 'is-open' en el contenedor de enlaces
+            menuLinks.classList.toggle('is-open');
+            
+            // Actualizar el atributo aria-expanded para accesibilidad
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Opcional: Cerrar el menú después de hacer clic en un enlace (navegación)
+        const links = menuLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Solo cerrar si el menú está abierto
+                if (menuLinks.classList.contains('is-open')) {
+                    menuLinks.classList.remove('is-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    });

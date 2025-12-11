@@ -23,6 +23,26 @@ footer {
     padding: 1rem;
     display: flex;
     justify-content: right;
+    align-items: center;
+    position: relative;
+}
+
+/* Contenedor de enlaces (para desktop, se mantiene normal) */
+#menu-links {
+    display: flex; 
+    gap: 10px;
+}
+
+/* Estilos para el botón de hamburguesa (Oculto por defecto en Desktop) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 100;
 }
 
 #nav a {
@@ -36,6 +56,8 @@ footer {
 #nav a:hover {
     background-color: #005582;
 }
+
+
 
 /* --- Sección Inicio --- */
 #inicio {
@@ -213,6 +235,45 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    
+    /* 1. Mostrar el botón de hamburguesa */
+    .menu-toggle {
+        display: block; 
+    }
+
+    /* 2. Ocultar los enlaces por defecto */
+    #menu-links {
+        display: none;
+        flex-direction: column;
+        
+        /* Posiciona el menú desplegable debajo del nav (si tienes más contenido) */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0077B6;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 99;
+    }
+    
+    /* 3. Estilo de los enlaces en el menú desplegado */
+    #menu-links a {
+        padding: 1rem;
+        text-align: center;
+        width: auto;
+        border-bottom: 1px solid #005582;
+    }
+    
+    #menu-links a:last-child {
+        border-bottom: none;
+    }
+    
+    /* 4. Clase activa de JavaScript: mostrar el menú */
+    #menu-links.is-open {
+        display: flex;
+    }
+    
+
     #sobremi {
         padding: 30px 25px;
         margin: 40px 15px;
@@ -224,6 +285,15 @@ footer {
 
     #sobremi p {
         font-size: 1rem;
+    }
+
+    .experiencia-item {
+        /* Establece el margen derecho a 0 para que ocupe todo el ancho */
+        margin-right: 0 !important; 
+    }
+
+    #coleccion-proyectos {
+        padding: 0 !important;
     }
 }
 
