@@ -654,6 +654,83 @@ footer {
     fill: #ffffff;
 }
 
+
+.cv-actions {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0 35px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cv-btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, border-color 0.3s;
+    text-align: center;
+    min-width: 180px;
+}
+
+.cv-btn.primary-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid #007bff;
+}
+
+.cv-btn.primary-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.cv-btn.secondary-btn {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.cv-btn.secondary-btn:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+#cta-secundario {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#cta-contacto-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #6c757d;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#cta-contacto-btn:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+    border-color: #495057;
+}
+
+@media (max-width: 600px) {
+    .cv-actions {
+        flex-direction: column;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .cv-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 /* Responsive para ocultar o mover en pantallas pequeñas si es necesario */
 @media (max-width: 992px) {
     /* Ocultamos los iconos flotantes para no interferir con el contenido en móviles */
