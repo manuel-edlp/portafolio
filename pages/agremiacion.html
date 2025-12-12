@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Portafolio - </title>
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="jornadas.css">
+    <link rel="stylesheet" href="agremiacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="../index.js"></script>
 
@@ -25,37 +25,42 @@
         </div>
     </nav>
     <div id="banner">
-        <img src="../img/proyectos/jornadas/logo.png" alt="banner">
+        <img src="../img/proyectos/agremiacion/logo.png" alt="banner">
     </div>
    <div id="contenido-principal">
         
         <div id="cabecera-proyecto">
-            <h1>Jornadas de Formación Profesional 2025</h1> 
-            <p class="subtitulo">Plataforma de inscripción y promoción de charlas para la formación de estudiantes de ingeniería</p>
+            <h1>Agremiación Odontológica - Entrega de Bonos</h1> 
+            <p class="subtitulo">WebApp de registro y entrega de bonos para consultorios odontológicos</p>
         </div>
 
         <section id="detalles-clave">
             <h2>Información Rápida</h2>
             <div class="tarjetas-info">
-                <p><strong>Nombre del proyecto: </strong>Jornadas de Formación Profesional 2025 (JFP 2025)</p>
-                <p><strong>Descripción: </strong>Plataforma de inscripción y promoción de charlas para la formación de estudiantes de ingeniería, de parte de organizaciones de todo el país, y profesores de la comunidad.</p>
-                <p><strong>Tipo: </strong>Proyecto Institucional y de Extensión Universitaria (Secretaría de Asuntos Universitarios UTN FRLP)</p>
+                <p><strong>Nombre del proyecto: </strong>Agremiación Odontológica - Entrega de Bonos</p>
+                <p><strong>Descripción: </strong>Este proyecto es una web que facilita la alta y entrega de bonos odontológicos. Fue desarrollado como trabajo de campo para la cátedra de Diseño de Sistemas en la UTN FRLP</p>
+                <p><strong>Tipo: </strong>Proyecto académico - Cátedra Diseño de Sistemas UTN FRLP</p>
                 <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
-                <p><strong>Fecha: </strong>Abril - Junio 2025</p>
-                <p><strong>Tecnologías Usadas: </strong>Python, PHP, HTML, CSS</p>
-                <a href="https://sceu.frlp.utn.edu.ar/jornadas2025/home/jornada3raedicion.html" target="_blank" class="boton-proyecto">Visitar la página</a>
+                <p><strong>Fecha: </strong>Febrero 2024 - Marzo 2024</p>
+                <p><strong>Tecnologías Usadas: </strong>C# (.NET), PostgreSQL, Js (React), HTML, CSS</p>
+                <a href="https://github.com/manuel-edlp/AgremiacionOdontologica" target="_blank" class="boton-proyecto">Ver código</a>
             </div>
         </section>
 
         <section id="narrativa-proyecto">
             <h2>Desafío</h2>
-            <p>El proyecto consistió en crear la infraestructura digital de apoyo para las <strong>Jornadas de Formación Profesional (3ra edición)</strong>, un evento masivo institucional. Aunque la inscripción se realizaba externamente (Google Forms), el desafío principal fue <strong>automatizar la logística de post-inscripción</strong>: procesar, validar, normalizar y transformar las listas de participantes (obtenidas de los formularios), para luego generar de forma masiva los códigos de acceso (QR) y los certificados de asistencia.</p>
+            <p>El proyecto consistió en desarrollar un <strong>Sistema de Carga y Entrega de Bonos</strong> para la Agremiación Odontológica, destinado a ser utilizado en consultorios. El desafío principal fue digitalizar y automatizar el proceso de gestión de bonos, el cual es fundamental para la facturación y el servicio a los profesionales. La solución debía facilitar tanto el <strong>alta de bonos</strong> en el sistema como su posterior <strong>asignación controlada</strong> a los odontólogos.</p>
 
             <h2>Enfoque y Proceso</h2>
-            <p>Enfoque se centró en la <strong>eficiencia del procesamiento de datos</strong> utilizando <strong>scripts potentes de Python</strong>. El proceso incluyó crear un <em>workflow</em> para importar y tratar las listas de inscripción, aplicando reglas de <strong>normalización y validación</strong> para garantizar la calidad de la base de datos de participantes. La interfaz <em>frontend</em> se construyó con <strong>HTML/CSS/JS</strong> para servir como portal promocional del evento y, posteriormente, facilitar la distribución simple y eficiente de los QR y certificados personalizados a los miles de asistentes.</p>
+            <p>Enfoque se centró en crear un flujo de trabajo sencillo y seguro para la manipulación de información sensible (datos de odontólogos y obras sociales). Prioricé tres áreas clave: 1) <strong>Registro de Entidades</strong>: Implementación de módulos para cargar la información personal de los odontólogos. 2) <strong>Gestión Numérica de Bonos</strong>: Creación de una interfaz que permita dar de alta lotes de bonos y asignarlos por rangos numéricos. 3) <strong>Detalle de Asignación</strong>: Asegurando que cada entrega de bonos quede registrada con precisión, detallando la obra social y el intervalo exacto (desde/hasta) del talonario asignado. Se utilizó un enfoque de desarrollo centrado en la <strong>confiabilidad de los datos</strong>.</p>
             
             <h2>Solución Implementada</h2>
-            <p>Implementé un sistema basado en <strong>Scripts de Python</strong> para el <em>backend</em> de procesamiento. La solución automatizó la <strong>generación de Códigos QR de entrada únicos</strong> y la creación masiva de <strong>certificados de asistencia</strong> post-evento. Al separar el procesamiento de datos de la interfaz de inscripción, logramos <strong>reducir drásticamente el tiempo de gestión manual de listas</strong>, garantizando la precisión en la entrega de accesos y certificados, y liberando recursos del equipo logístico.</p>
+            <p>Construí una <strong>Web App de Gestión</strong> que sirve como columna vertebral para el manejo de bonos. La solución centraliza dos procesos críticos:</p>
+            <ul>
+                <li>Carga de Odontólogos: Permite dar de alta y gestionar a los profesionales con todos sus datos personales.</li>
+                <li>Entrega de Bonos: La funcionalidad principal que permite dar de alta nuevos bonos y entregarlos, <strong>asignándolos a odontólogos específicos</strong>. Esta asignación requiere detallar la <strong>Obra Social</strong> correspondiente y el <strong>rango de números de bono</strong> exacto que se está entregando (por ejemplo, del 5001 al 6000).</li>
+            </ul>
+            <p>Esta plataforma ha permitido a la Agremiación y a los consultorios optimizar la administración, reducir los errores en la asignación y llevar un <strong>control preciso</strong> sobre la distribución y uso de los bonos.</p>
         </section>
 
 
@@ -65,63 +70,31 @@
         <div class="capturas-contenedor">
 
             <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/jornadas-home.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
+                <img src="../img/proyectos/agremiacion/home.png" alt="Captura de pantalla de la interfaz del inicio." class="captura-grande">
                 <figcaption>
-                    <strong>Home parte 1:</strong> Esta captura muestra la interfaz del home
+                    <strong>Inicio parte 1:</strong> Esta captura muestra la interfaz del inicio, con un panel para elegir entre 2 opciones: Bonos y Entrega de Bonos
                 </figcaption>
             </figure>   
 
             <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/home-2.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
+                <img src="../img/proyectos/agremiacion/entrega-1.png" alt="Captura de pantalla de la interfaz de entrega de bonos." class="captura-grande">
                 <figcaption>
-                    <strong>Home parte 2:</strong> Esta captura muestra la sección de información del evento
+                    <strong>Entrega de Bonos parte 1:</strong> Esta captura muestra listado de bonos entregados, detallando a que odontólogo y que rango de número de bonos se le entrego. Ofreciendo la posiblidad de entrega nuevos bonos.
                 </figcaption>
             </figure>   
 
             <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/home-3.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
+                <img src="../img/proyectos/agremiacion/entrega-2.png" alt="Captura de pantalla de la interfaz de entrega de bonos." class="captura-grande">
                 <figcaption>
-                    <strong>Home parte 3:</strong> Esta captura muestra la sección de información de ferias
+                    <strong>Entrega de Bonos parte 2:</strong> Esta captura muestra el menú de entrega donde se puede seleccionar el odontólogo al cual entregarle el bono, la obra social, y el rango de bonos a entregarle.
                 </figcaption>
-            </figure>   
+            </figure>          
             <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/home-4.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
+                <img src="../img/proyectos/agremiacion/entrega-3.png" alt="Captura de pantalla de la interfaz de entrega de bonos." class="captura-grande">
                 <figcaption>
-                    <strong>Home parte 4:</strong> Esta captura muestra la información de inscripción con el paso a paso
+                    <strong>Alta de ontólogo:</strong> Esta captura muestra el menú donde se puede dar de alta un odontólogo, registrando toda su información personal. Para posteriormente poder seleccionarlo como odontólogo a quien entregarle bonos.
                 </figcaption>
-            </figure>   
-            <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/home-5.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
-                <figcaption>
-                    <strong>Home parte 5:</strong> Esta captura muestra la sección de charlas magistrales con la información de la charla y el disertante
-                </figcaption>
-            </figure>   
-            <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/home-6.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
-                <figcaption>
-                    <strong>Home parte 6:</strong> Esta captura muestra la sección de información del evento del cierre de las jornadas
-                </figcaption>
-            </figure>   
-            <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/actividades.png" alt="Captura de pantalla de la interfaz home ." class="captura-grande">
-                <figcaption>
-                    <strong>Selección de actividades:</strong> Esta captura muestra la sección para seleccionar las actividades del departamento al que pertenezca el asistente.
-                </figcaption>
-            </figure>   
-            <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/sistemas.png" alt="Captura de pantalla de la interfaz de actividades ." class="captura-grande">
-                <figcaption>
-                    <strong>Actividades de Sistemas parte 1:</strong> Esta captura muestra las actividades a las cuales de podes inscribir del departamento de sistemas.
-                </figcaption>
-            </figure>   
-            <figure class="captura-item">
-                <img src="../img/proyectos/jornadas/sistemas-2.png" alt="Captura de pantalla de la interfaz de actividades ." class="captura-grande">
-                <figcaption>
-                    <strong>Actividades de Sistemas parte 2:</strong> Esta captura muestra las actividades a las cuales de podes inscribir del departamento de sistemas.
-                </figcaption>
-            </figure> 
-            
-        
+            </figure>  
         </div>
         
     </section>
@@ -169,7 +142,6 @@
     </footer>
     <script src="index.js"></script>
 
-    
 
     <div id="miModal" class="modal">
         <div class="modal-content">
