@@ -661,7 +661,7 @@ footer {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s, bottom 0.3s;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -890,4 +890,21 @@ footer {
 .link-colaborador:hover {
     color: #005582;
     text-decoration: underline;
+}
+
+/* --- Botón Volver a Proyectos --- */
+.btn-volver-inicio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #0077B6;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-volver-inicio:hover {
+    color: #005582;
+    transform: translateX(-5px);
 }
