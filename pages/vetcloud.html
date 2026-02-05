@@ -7,26 +7,30 @@
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="vetcloud.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="../index.js"></script>
 
 </head>
 
 <body>
     <nav id="nav">
-        <button class="menu-toggle" aria-controls="menu-links" aria-expanded="false">
-            &#9776; </button>
-        
-        <div id="menu-links">
-            <a href="../#inicio">Inicio</a>
-            <a href="../#sobremi">Sobre mí</a>
-            <a href="../#experiencia">Experiencia</a>
-            <a href="../#proyectos">Proyectos</a>
-            <a href="../#contacto">Contacto</a>
+        <div class="nav-logo">
+            <img src="../img/proyectos/vetcloud/logo.png" alt="VetCloud">
+        </div>
+        <div class="nav-right">
+            <button class="menu-toggle" aria-controls="menu-links" aria-expanded="false">
+                &#9776;</button>
+            
+            <div id="menu-links">
+                <a href="../#inicio">Inicio</a>
+                <a href="../#sobremi">Sobre mí</a>
+                <a href="../#experiencia">Experiencia</a>
+                <a href="../#proyectos">Proyectos</a>
+                <a href="../#contacto">Contacto</a>
+            </div>
         </div>
     </nav>
-    <div id="banner">
-        <img src="../img/proyectos/vetcloud/logo.png" alt="banner">
-    </div>
+   
+   <div id="banner"></div>
+   
    <div id="contenido-principal">
         
         <div id="cabecera-proyecto">
@@ -195,8 +199,6 @@
     <footer>
         <p><span id="current-year"></span> - Manuel Morullo.</p>
     </footer>
-    <script src="index.js"></script>
-
 
     <div id="miModal" class="modal">
         <div class="modal-content">
@@ -291,9 +293,8 @@
 });
     </script>
 
+<script src="../index.js"></script>
 </body>
 
 
 </html>
-
-

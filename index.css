@@ -18,12 +18,33 @@ footer {
 
 /* --- Navegación --- */
 #nav {
-    background-color: #0077B6;
+    --nav-bg: #0077B6;
+    background: var(--nav-bg);
     color: white;
-    padding: 1rem;
+    padding: 1rem 1rem;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-right: 2rem;
+}
+
+.nav-logo img {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     position: relative;
 }
 
@@ -31,6 +52,8 @@ footer {
 #menu-links {
     display: flex; 
     gap: 10px;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 /* Estilos para el botón de hamburguesa (Oculto por defecto en Desktop) */
@@ -43,6 +66,7 @@ footer {
     cursor: pointer;
     line-height: 1;
     z-index: 100;
+    margin-left: auto;
 }
 
 #nav a {
@@ -54,7 +78,7 @@ footer {
 }
 
 #nav a:hover {
-    background-color: #005582;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -236,6 +260,25 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     
+    #nav {
+        padding: 0.5rem 0.5rem;
+        overflow: visible;
+    }
+    
+    .nav-logo {
+        margin-right: 0.5rem;
+        height: 45px;
+    }
+    
+    .nav-logo img {
+        max-height: 45px;
+        max-width: 100px;
+    }
+
+    .nav-right {
+        position: static;
+    }
+    
     /* 1. Mostrar el botón de hamburguesa */
     .menu-toggle {
         display: block; 
@@ -243,17 +286,19 @@ footer {
 
     /* 2. Ocultar los enlaces por defecto */
     #menu-links {
-        display: none;
+        display: none !important;
         flex-direction: column;
         
-        /* Posiciona el menú desplegable debajo del nav (si tienes más contenido) */
+        /* Posiciona el menú desplegable debajo del botón */
         position: absolute;
         top: 100%;
         left: 0;
+        right: 0;
         width: 100%;
-        background-color: #0077B6;
+        background: var(--nav-bg);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 99;
+        z-index: 1000;
+        margin-top: 0;
     }
     
     /* 3. Estilo de los enlaces en el menú desplegado */
@@ -261,7 +306,7 @@ footer {
         padding: 1rem;
         text-align: center;
         width: auto;
-        border-bottom: 1px solid #005582;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     #menu-links a:last-child {
@@ -270,7 +315,7 @@ footer {
     
     /* 4. Clase activa de JavaScript: mostrar el menú */
     #menu-links.is-open {
-        display: flex;
+        display: flex !important;
     }
     
 

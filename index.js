@@ -1,22 +1,10 @@
-// Función para obtener el año actual e inyectarlo en el footer
-function updateFooterYear() {
-    const yearSpan = document.getElementById('current-year');
-
-    if (yearSpan) {
-        const currentYear = new Date().getFullYear();
-        yearSpan.textContent = currentYear;
-    }
-}
-document.addEventListener('DOMContentLoaded', updateFooterYear);
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Script para el año actual en el footer
     const currentYearElement = document.getElementById('current-year');
     if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear();
     }
+    
     
     // 2. Lógica para el botón "Volver Arriba"
     const backToTopButton = document.getElementById('btn-back-to-top');
@@ -64,31 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-});
 
+    // 3. Menú hamburguesa
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuLinks = document.getElementById('menu-links');
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menuLinks = document.getElementById('menu-links');
-
-        menuToggle.addEventListener('click', () => {
-            // Alternar la clase 'is-open' en el contenedor de enlaces
+    if (menuToggle && menuLinks) {
+        menuToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             menuLinks.classList.toggle('is-open');
-            
-            // Actualizar el atributo aria-expanded para accesibilidad
-            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
             menuToggle.setAttribute('aria-expanded', !isExpanded);
         });
 
-        // Cerrar el menú después de hacer clic en un enlace (navegación)
+        // Cerrar menú al hacer click en un enlace
         const links = menuLinks.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                // Solo cerrar si el menú está abierto
-                if (menuLinks.classList.contains('is-open')) {
-                    menuLinks.classList.remove('is-open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
+                menuLinks.classList.remove('is-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
-    });
+    }
+});

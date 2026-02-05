@@ -1,12 +1,30 @@
 #banner {
     background: linear-gradient(to right, #e0e8ff, #0042be );
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
 #banner img{
     max-width: 100px;
     padding: 1rem;
+}
+
+#nav {
+    background: linear-gradient(to right, #e0e8ff, #0042be);
+    --nav-bg: linear-gradient(to right, #e0e8ff, #0042be);
+    color: white;
+}
+
+#nav a {
+    color: white;
+}
+
+#nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+    color: white;
 }
 
 #contenido-principal {
