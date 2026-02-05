@@ -878,3 +878,16 @@ footer {
 #contacto-icons {
     animation: fadeInUp 0.6s ease-out 0.2s both;
 }
+
+/* --- Estilos para enlaces de colaboradores --- */
+.link-colaborador {
+    color: #0077B6;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link-colaborador:hover {
+    color: #005582;
+    text-decoration: underline;
+}
