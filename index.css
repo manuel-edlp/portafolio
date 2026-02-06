@@ -738,7 +738,6 @@ footer {
     flex-direction: column;
     gap: 10px;
     z-index: 999;
-    padding: 10px;
 }
 
 .social-icon-flotante {
