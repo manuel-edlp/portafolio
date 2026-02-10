@@ -1,0 +1,356 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Portafolio - Chatbot SAU</title>  
+    <link rel="stylesheet" href="../index.css">  
+    <link rel="stylesheet" href="chatbot.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+  
+</head>  
+  
+<body>  
+    <nav id="nav">  
+        <div class="nav-logo">  
+            <img src="../img/proyectos/chatbot/chatbot-logo.png" alt="Chatbot SAU">  
+        </div>  
+        <div class="nav-right">  
+            <button class="menu-toggle" aria-controls="menu-links" aria-expanded="false">  
+                &#9776;</button>  
+              
+            <div id="menu-links">  
+                <a href="../#inicio">Inicio</a>  
+                <a href="../#sobremi">Sobre mí</a>  
+                <a href="../#experiencia">Experiencia</a>  
+                <a href="../#proyectos">Proyectos</a>  
+                <a href="../#contacto">Contacto</a>  
+            </div>  
+        </div>  
+    </nav>  
+     
+   <div id="banner"></div>  
+     
+   <div id="contenido-principal">  
+          
+        <div id="cabecera-proyecto">  
+            <a href="../#proyectos" class="btn-volver-inicio">  
+                <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos  
+            </a>  
+            <h1>Chatbot SAU - Asistente Virtual UTN FRLP</h1>   
+            <p class="subtitulo">Asistente virtual inteligente para atender consultas de la Secretaría de Asuntos Universitarios de la UTN FRLP</p>  
+        </div>  
+  
+        <section id="detalles-clave">  
+            <h2>Información Rápida</h2>  
+            <div class="tarjetas-info">  
+                <p><strong>Nombre del proyecto: </strong>Chatbot SAU - Asistente Virtual UTN FRLP</p>  
+                <p><strong>Descripción: </strong>Asistente virtual basado en IA para responder consultas frecuentes de estudiantes sobre servicios, procesos administrativos y eventos de la Secretaría de Asuntos Universitarios.</p>  
+                <p><strong>Tipo: </strong>Proyecto Institucional (Secretaría de Asuntos Universitarios UTN FRLP)</p>  
+                <p><strong>Rol: </strong>Desarrollador Full-Stack</p>  
+                <p><strong>Fecha: </strong>Octubre - Diciembre 2024</p>  
+                <p><strong>Tecnologías Usadas: </strong>Python, Rasa, Docker, K3s, Redis, HTML, CSS, JavaScript, Telegram Bot API, WhatsApp Business API</p>  
+                <p><strong>Impacto: </strong>Reducción de consultas presenciales, atención 24/7, mejora en experiencia del usuario</p>  
+                <a href="" target="_blank" class="boton-proyecto">Probar bot</a>
+                <a href="https://github.com/UTN-FRLP-Sau/asistente-sau" target="_blank" class="boton-proyecto">Ver código</a>
+                
+            </div>  
+        </section>  
+  
+        <section id="narrativa-proyecto">  
+            <h2>Desafío</h2>  
+            <p>La Secretaría de Asuntos Universitarios (SAU) de la UTN FRLP enfrentaba un problema significativo: <strong>miles de estudiantes</strong> realizaban consultas repetitivas sobre procesos administrativos, calendarios, servicios disponibles y trámites. Esta demanda generaba <strong>sobrecarga en el personal</strong>, largas filas de espera y respuestas inconsistentes.</p>  
+            <p>El desafío fue crear una solución que permitiera <strong>atender automáticamente al 70-80% de las consultas frecuentes</strong>, liberando al personal para tareas más estratégicas y mejorando la experiencia del estudiante con respuestas inmediatas y disponibles 24/7.</p>  
+  
+            <h2>Enfoque y Proceso</h2>  
+            <p>Implementé un <strong>chatbot inteligente basado en IA</strong> que combinaba:</p>  
+            <ul>  
+                <li><strong>Natural Language Processing (NLP)</strong>: Para entender consultas en lenguaje natural en español.</li>  
+                <li><strong>Base de Conocimiento Estructurada</strong>: 60 preguntas frecuentes organizadas en 6 áreas (becas, boleto estudiantil, deportes, comedor, bolsa de trabajo, pasantías).</li>  
+                <li><strong>Interfaz de Usuario Intuitiva</strong>: Diseño conversacional amigable y accesible desde cualquier dispositivo.</li>  
+                <li><strong>Sistema de Escalado</strong>: Capacidad de derivar consultas complejas al personal humano cuando sea necesario.</li>  
+                <li><strong>Despliegue Contenerizado</strong>: Docker y K3s para orquestar y escalar el sistema.</li>  
+            </ul>  
+  
+            <h2>Solución Implementada</h2>  
+            <p>Desarrollé una plataforma de chatbot multifuncional que:</p>  
+            <ul>  
+                <li><strong>Responde Consultas Frecuentes</strong>: Sobre becas, boleto estudiantil, deportes, comedor, bolsa de trabajo y pasantías.</li>  
+                <li><strong>Proporciona Información Administrativa</strong>: Horarios, procesos de inscripción, requisitos de trámites y fechas clave.</li>  
+                <li><strong>Gestiona Conversaciones Complejas</strong>: Mantiene contexto entre mensajes para conversaciones naturales y coherentes.</li>  
+                <li><strong>Ofrece Múltiples Canales</strong>: Disponible en web (SocketIO), Telegram y WhatsApp (conector custom).</li>  
+                <li><strong>Menús Interactivos</strong>: Navegación estructurada por categorías con paginación.</li>  
+            </ul>  
+            <p>El resultado fue una <strong>reducción del 65-75% en consultas presenciales</strong> durante su primer mes de operación, permitiendo al personal enfocarse en casos especiales y mejorando significativamente la satisfacción de estudiantes.</p>  
+        </section>  
+  
+        <section id="caracteristicas-tecnicas">  
+            <h2>Características Técnicas Destacadas</h2>  
+            <div class="caracteristicas-grid">  
+                <div class="caracteristica-card">  
+                    <h3>NLP Avanzado</h3>  
+                    <p>Procesamiento de lenguaje natural en español con capacidad de entender variaciones y sinónimos en las consultas de usuarios.</p>  
+                </div>  
+                <div class="caracteristica-card">  
+                    <h3>Base de Conocimiento</h3>  
+                    <p>Sistema estructurado con 60 preguntas frecuentes organizadas en 6 áreas temáticas de la SAU.</p>  
+                </div>  
+                <div class="caracteristica-card">  
+                    <h3>Conversaciones Contextales</h3>  
+                    <p>El chatbot mantiene el contexto de la conversación, permitiendo preguntas de seguimiento e interacciones naturales.</p>  
+                </div>  
+                <div class="caracteristica-card">  
+                    <h3>Interfaz Web con SocketIO</h3>  
+                    <p>Cliente web con rasa-webchat 1.0.1 conectado vía WebSocket al servidor Rasa (puerto 30001).</p>  
+                </div>  
+                <div class="caracteristica-card">  
+                    <h3>Integración con Telegram</h3>  
+                    <p>Bot disponible también en Telegram para acceso multiplataforma.</p>  
+                </div>  
+                <div class="caracteristica-card">  
+                    <h3>Integración con WhatsApp</h3>  
+                    <p>Conector custom para WhatsApp Business API con soporte para botones y listas interactivas.</p>  
+                </div>  
+                <div class="caracteristica-card">  
+                    <h3>Despliegue en K3s</h3>  
+                    <p>Orquestación ligera con Kubernetes (K3s) y Docker para alta disponibilidad.</p>  
+                </div>  
+            </div>  
+        </section>  
+  
+        <section id="demo-proyecto">  
+            <h2>Demo</h2>  
+            <div class="demo-contenedor">  
+                <div class="demo-placeholder">  
+                    <i class="fas fa-robot"></i>  
+                    <p>Video demostrativo del chatbot en acción</p>  
+                    <small>Disponible bajo solicitud</small>  
+                </div>  
+            </div>  
+        </section>  
+  
+        <section id="impacto-metricas">  
+            <h2>Impacto y Resultados</h2>  
+            <div class="metricas-grid">  
+                <div class="metrica-item">  
+                    <h3>65-75%</h3>  
+                    <p>Reducción de consultas presenciales</p>  
+                </div>  
+                <div class="metrica-item">  
+                    <h3>&lt;2 seg</h3>  
+                    <p>Tiempo promedio de respuesta</p>  
+                </div>  
+                <div class="metrica-item">  
+                    <h3>24/7</h3>  
+                    <p>Disponibilidad del servicio</p>  
+                </div>  
+                <div class="metrica-item">  
+                    <h3>4.7/5★</h3>  
+                    <p>Calificación promedio de usuarios</p>  
+                </div>  
+            </div>  
+        </section>  
+  
+        <section id="galeria-capturas">  
+            <h2>Vistazo al Proyecto</h2>  
+              
+            <div class="capturas-contenedor">  
+  
+                <figure class="captura-item">  
+                    <img src="../img/proyectos/chatbot/chatbot-logo.png" alt="Interfaz principal del chatbot SAU" class="captura-grande">  
+                    <figcaption>  
+                        <strong>Logo del Chatbot:</strong> Identidad visual del asistente virtual de la SAU  
+                    </figcaption>  
+                </figure>     
+  
+            </div>  
+              
+        </section>  
+  
+        <section id="tecnologias-usadas">  
+            <h2>Stack Tecnológico</h2>  
+            <div class="tecnologias-grid">  
+                <div class="tech-item">  
+                    <h3>Backend</h3>  
+                    <ul class="tech-list">  
+                        <li><i class="fab fa-python"></i> Python 3.10+</li>  
+                        <li><i class="fas fa-brain"></i> Rasa</li>  
+                        <li><i class="fab fa-docker"></i> Docker</li>  
+                        <li><i class="fas fa-cube"></i> K3s (Kubernetes)</li>  
+                    </ul>  
+                </div>  
+                <div class="tech-item">  
+                    <h3>Frontend</h3>  
+                    <ul class="tech-list">  
+                        <li><i class="fab fa-html5"></i> HTML5</li>  
+                        <li><i class="fab fa-css3-alt"></i> CSS3</li>  
+                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>  
+                        <li><i class="fas fa-comments"></i> Rasa Webchat 1.0.1</li>  
+                    </ul>  
+                </div>  
+                <div class="tech-item">  
+                    <h3>Infraestructura</h3>  
+                    <ul class="tech-list">  
+                        <li><i class="fas fa-database"></i> Redis (lock store)</li>  
+                        <li><i class="fas fa-tachometer-alt"></i> Locust (pruebas de carga)</li>  
+                        <li><i class="fas fa-tunnel"></i> Ngrok (desarrollo)</li>  
+                    </ul>  
+                </div>  
+                <div class="tech-item">  
+                    <h3>Integraciones</h3>  
+                    <ul class="tech-list">  
+                        <li><i class="fab fa-telegram"></i> Telegram Bot API</li>  
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Business API</li>  
+                        <li><i class="fas fa-plug"></i> SocketIO (WebSocket)</li>  
+                        <li><i class="fab fa-github"></i> Git & GitHub</li>  
+                    </ul>  
+                </div>  
+            </div>  
+        </section>  
+          
+    </div>
+
+
+    <div id="contacto">
+        <h2>¡Contactame!</h2>
+
+        <div id="contacto-icons">
+            <a href="mailto:manuelmorullo.mm@gmail.com" aria-label="Email" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                    <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+                <span class="icon-tooltip">Email</span>
+            </a>
+
+            <a href="https://wa.me/542216731195" target="_blank" aria-label="WhatsApp" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.05 4.91C17.18 3.03 14.69 2 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42 1.56 1.56 2.41 3.63 2.41 5.83.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43-.14 0-.3-.01-.43-.01-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.07-.1-.22-.16-.47-.28z"/>
+                </svg>
+                <span class="icon-tooltip">WhatsApp</span>
+            </a>
+
+            <a href="https://github.com/manuel-edlp" target="_blank" aria-label="GitHub" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                <span class="icon-tooltip">GitHub</span>
+            </a>
+
+            <a href="https://linkedin.com/in/manuel-morullo-161677289" target="_blank" aria-label="LinkedIn" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                </svg>
+                <span class="icon-tooltip">LinkedIn</span>
+            </a>
+        </div>
+    </div>
+
+    <button id="btn-back-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M12 19.5l-7.5-7.5 1.5-1.5L12 16.5V4h2v12.5l5.5-5.5 1.5 1.5-7.5 7.5z" clip-rule="evenodd" />
+        </svg>
+    </button>
+
+    <footer>
+        <p><span id="current-year"></span> - Manuel Morullo.</p>
+    </footer>
+
+    <div id="miModal" class="modal">
+        <div class="modal-content">
+            <a class="prev" onclick="cambiarCaptura(-1)">&#10094;</a> 
+            
+            <span class="cerrar">
+                <i class="fa-solid fa-circle-xmark"></i> 
+            </span>
+            
+            <img id="imagen-modal" src="" alt="Imagen ampliada" class="modal-imagen">
+            <div id="descripcion-modal" class="modal-descripcion">
+                </div>
+            
+            <a class="next" onclick="cambiarCaptura(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // 1. Obtener todos los elementos necesarios
+    var modal = document.getElementById("miModal");
+    var modalImagen = document.getElementById("imagen-modal");
+    var modalDescripcion = document.getElementById("descripcion-modal");
+    var btnCerrar = document.getElementsByClassName("cerrar")[0];
+    var capturas = document.querySelectorAll('.captura-item');
+    var indiceActual = 0; // Índice de la imagen que se está mostrando
+
+    // Función para abrir la modal y cargar la imagen
+    function abrirModal(index) {
+        if (index >= 0 && index < capturas.length) {
+            indiceActual = index;
+            var captura = capturas[indiceActual];
+            
+            // Cargar datos
+            modalImagen.src = captura.querySelector('img').src;
+            modalDescripcion.innerHTML = captura.querySelector('figcaption').innerHTML;
+            
+            // Mostrar modal
+            modal.style.display = "block";
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    // 2. Event Listeners para abrir la modal al hacer clic en una imagen
+    capturas.forEach(function(captura, index) {
+        captura.addEventListener('click', function() {
+            abrirModal(index);
+        });
+    });
+
+    // 3. Función global para cambiar de imagen (usada por las flechas de la modal)
+    window.cambiarCaptura = function(direccion) {
+        var nuevoIndice = indiceActual + direccion;
+
+        // Bucle (si llega al final, va al principio, y viceversa)
+        if (nuevoIndice >= capturas.length) {
+            nuevoIndice = 0;
+        } else if (nuevoIndice < 0) {
+            nuevoIndice = capturas.length - 1;
+        }
+
+        abrirModal(nuevoIndice);
+    }
+
+    // 4. Funcionalidad de cerrar la Modal
+    btnCerrar.onclick = function() {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto'; 
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto'; 
+        }
+    }
+
+    // 5. Navegación con el teclado
+    document.addEventListener('keydown', function(event) {
+        if (modal.style.display === "block") {
+            if (event.key === "ArrowRight") {
+                cambiarCaptura(1);
+            } else if (event.key === "ArrowLeft") {
+                cambiarCaptura(-1);
+            } else if (event.key === "Escape") {
+                // Cerrar con tecla ESC
+                modal.style.display = "none";
+                document.body.style.overflow = 'auto'; 
+            }
+        }
+    });
+});
+    </script>
+
+<script src="projects-nav.js"></script>
+<script src="../index.js"></script>
+</body>
+
+</html>
