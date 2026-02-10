@@ -816,7 +816,7 @@ footer {
     align-items: center;
     gap: 0.75rem;
     padding: 0.9rem 1.8rem;
-    background-color: #0076d6;
+    background: linear-gradient(to right, #1814ff, #00008B);
     color: white;
     text-decoration: none;
     font-weight: 600;
