@@ -32,190 +32,246 @@
         </div>
     </nav>
 
-    <div id="banner"></div>
+    <div class="project-container">
+        <nav id="side-nav">
+            <a href="fondo-blanco.html" class="side-link">Fondo Blanco</a>
+            <a href="hogares-del-sol.html" class="side-link">Hogares del Sol</a>
+            <a href="ticket.html" class="side-link">Ticket</a>
+            <a href="leyendas-del-sur.html" class="side-link">Leyendas del Sur</a>
+            <a href="jornadas.html" class="side-link">Jornadas</a>
+            <a href="cneisi.html" class="side-link active">CNEISI</a>
+            <a href="vetcloud.html" class="side-link">VetCloud</a>
+            <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
+            <a href="chatbot.html" class="side-link">Chatbot SAU</a>
+        </nav>
 
-    <div id="contenido-principal">
+        <div id="contenido-principal">
+            <div id="nav-proyectos-top"></div>
+            <div id="cabecera-proyecto">
+                <a href="../#proyectos" class="btn-volver-inicio">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
+                </a>
+                <h1>Congreso Nacional de Estudiantes de Ingenieria en Sistemas de Información</h1>
+                <p class="subtitulo">Plataforma de inscripción y promoción del congreso de estudiantes de ingeniería en
+                    sistemas de información de todas las UTN Regionales de la Argentina</p>
+            </div>
 
-        <div id="cabecera-proyecto">
-            <a href="../#proyectos" class="btn-volver-inicio">
-                <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
-            </a>
-            <h1>Congreso Nacional de Estudiantes de Ingenieria en Sistemas de Información</h1>
-            <p class="subtitulo">Plataforma de inscripción y promoción del congreso de estudiantes de ingeniería en
-                sistemas de información de todas las UTN Regionales de la Argentina</p>
+            <section id="detalles-clave">
+                <h2>Información Rápida</h2>
+                <div class="tarjetas-info">
+                    <p><strong>Nombre del proyecto: </strong>Congreso Nacional de Estudiantes de Ingenieria en Sistemas
+                        de
+                        Información (CNEISI 2024)</p>
+                    <p><strong>Descripción: </strong>Plataforma de inscripción y promoción del congreso de estudiantes
+                        de
+                        ingeniería en sistemas de información de todas las UTN Regionales de la Argentina.</p>
+                    <p><strong>Tipo: </strong>Proyecto Institucional y de Extensión Universitaria (Secretaría de Asuntos
+                        Universitarios UTN FRLP)</p>
+                    <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
+                    <p><strong>Fecha: </strong>Septiembre - Octubre 2024</p>
+                    <p><strong>Tecnologías Usadas: </strong>Python (Django), Mysql, HTML, CSS y Js</p>
+                    <p><strong>Colaboradores: </strong><a href="https://www.linkedin.com/in/juan-manuel-semper/"
+                            target="_blank" class="link-colaborador">Juan Manuel Semper</a></p>
+                    <a href="" target="_blank" class="boton-proyecto">Visitar la página</a>
+                </div>
+            </section>
+
+            <section id="narrativa-proyecto">
+                <h2>Desafío</h2>
+                <p>El proyecto consistió en modificar la infraestructura digital existente para el <strong>Congreso
+                        Nacional
+                        de Estudiantes de Ingeniería en Sistemas de Información (CNEISI)</strong>. El desafío principal
+                    fue
+                    optimizar y extender el <strong>backend de administración</strong> para que el personal
+                    <strong>Staff</strong> pudiera gestionar de manera eficiente la logística del evento, las
+                    inscripciones
+                    de los asistentes y el control de cupos en tiempo real para las actividades.
+                </p>
+
+                <h2>Enfoque y Proceso</h2>
+                <p>Enfoque se centró en la <strong>extensión y seguridad del backend</strong> del sistema, desarrollado
+                    en
+                    <strong>Django</strong>. El proceso incluyó la modificación de las funciones de
+                    <strong>administración
+                        de usuarios Staff</strong>, implementando la lógica para <strong>habilitar o deshabilitar
+                        inscripciones</strong> globales. Además, desarrollé el mecanismo de carga de <strong>actividades
+                        con
+                        control estricto de cupos</strong> por charla, y modifiqué las vistas para permitir la
+                    <strong>carga
+                        manual de datos de asistentes</strong> por parte de los coordinadores para la creación masiva de
+                    cuentas.
+                </p>
+
+                <h2>Solución Implementada</h2>
+                <p>Implementé y modifiqué el sistema de gestión del <strong>CNEISI</strong>, centrándome en las
+                    funcionalidades del <strong>backend</strong> y la interfaz administrativa. La solución automatizó:
+                <ul>
+                    <li>La <strong>administración de actividades</strong>, permitiendo a los usuarios Staff crear,
+                        editar y
+                        gestionar charlas.</li>
+                    <li>El <strong>control de cupos</strong>: se aplicó una lógica que restringe automáticamente las
+                        inscripciones una vez alcanzado el límite de cada actividad.</li>
+                    <li>La <strong>interfaz de usuario (frontend)</strong> para coordinadores y el panel de
+                        administración
+                        fue adaptada para integrar estas nuevas funcionalidades de forma clara y accesible, mejorando la
+                        experiencia del usuario Staff y agilizando las tareas logísticas.</li>
+                </ul>
+                Esto resultó en una <strong>plataforma de gestión más robusta</strong> y capaz de manejar la complejidad
+                logística de un congreso masivo.
+                </p>
+            </section>
+
+            <section id="caracteristicas-tecnicas">
+                <h2>Características Principales</h2>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <h3>Gestión de Usuarios Staff</h3>
+                        <p>Administración completa de permisos y roles para el personal organizador.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Control de Cupos</h3>
+                        <p>Sistema automático para limitar inscripciones por actividad en tiempo real.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Gestión de Actividades</h3>
+                        <p>ABM (Alta, Baja, Modificación) de charlas y talleres con asignación de disertantes.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Carga Masiva</h3>
+                        <p>Herramientas para la importación y validación de listas de asistentes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="archivos-extras">
+                <h2>Documentación y Recursos</h2>
+                <div class="extras-grid">
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Informe de Requerimientos</h3>
+                            <p>Documento formal de especificación de requisitos (SRS).</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-draw-polygon"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Diagramas UML</h3>
+                            <p>Diagramas de Clases, Secuencia y Casos de Uso.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Maquetados UI/UX</h3>
+                            <p>Wireframes y prototipos de alta fidelidad.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="impacto-metricas">
+                <h2>Impacto</h2>
+                <div class="metricas-grid">
+                    <div class="metrica-item">
+                        <h3>Logística</h3>
+                        <p>Gestión eficiente de miles de asistentes</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>Seguridad</h3>
+                        <p>Control de acceso robusto</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>Automatización</h3>
+                        <p>Reducción de carga manual</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo-proyecto">
+                <h2>Demo</h2>
+                <div class="demo-contenedor">
+                    <video class="demo-video" controls preload="metadata" playsinline>
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </section>
+
+            <section id="galeria-capturas">
+                <h2>Vistazo al Proyecto</h2>
+
+                <div class="capturas-contenedor">
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/cneisi/home.png" alt="Captura de pantalla de la interfaz home ."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Home parte 1:</strong> Esta captura muestra la interfaz del home
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/cneisi/home-2.png" alt="Captura de pantalla de la interfaz home ."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Home parte 2:</strong> Esta captura muestra información sobre el evento en el home
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/cneisi/home-3.png" alt="Captura de pantalla de la interfaz home ."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Home parte 3:</strong> Esta captura muestra más información del evento
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/cneisi/home-4.png" alt="Captura de pantalla de la interfaz home ."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Home parte 4:</strong> Esta captura muestra el cronograma del evento
+                        </figcaption>
+                    </figure>
+
+
+                </div>
+
+            </section>
+
+            <section id="tecnologias-usadas">
+                <h2>Tecnologías Usadas</h2>
+                <div class="tecnologias-grid">
+                    <div class="tech-item">
+                        <h3>Backend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fa-brands fa-python"></i> Python (Django)</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Frontend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fa-brands fa-html5"></i> HTML5 / CSS3</li>
+                            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Base de Datos</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-database"></i> MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
-
-        <section id="detalles-clave">
-            <h2>Información Rápida</h2>
-            <div class="tarjetas-info">
-                <p><strong>Nombre del proyecto: </strong>Congreso Nacional de Estudiantes de Ingenieria en Sistemas de
-                    Información (CNEISI 2024)</p>
-                <p><strong>Descripción: </strong>Plataforma de inscripción y promoción del congreso de estudiantes de
-                    ingeniería en sistemas de información de todas las UTN Regionales de la Argentina.</p>
-                <p><strong>Tipo: </strong>Proyecto Institucional y de Extensión Universitaria (Secretaría de Asuntos
-                    Universitarios UTN FRLP)</p>
-                <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
-                <p><strong>Fecha: </strong>Septiembre - Octubre 2024</p>
-                <p><strong>Tecnologías Usadas: </strong>Python (Django), Mysql, HTML, CSS y Js</p>
-                <p><strong>Colaboradores: </strong><a href="https://www.linkedin.com/in/juan-manuel-semper/"
-                        target="_blank" class="link-colaborador">Juan Manuel Semper</a></p>
-                <a href="" target="_blank" class="boton-proyecto">Visitar la página</a>
-            </div>
-        </section>
-
-        <section id="narrativa-proyecto">
-            <h2>Desafío</h2>
-            <p>El proyecto consistió en modificar la infraestructura digital existente para el <strong>Congreso Nacional
-                    de Estudiantes de Ingeniería en Sistemas de Información (CNEISI)</strong>. El desafío principal fue
-                optimizar y extender el <strong>backend de administración</strong> para que el personal
-                <strong>Staff</strong> pudiera gestionar de manera eficiente la logística del evento, las inscripciones
-                de los asistentes y el control de cupos en tiempo real para las actividades.
-            </p>
-
-            <h2>Enfoque y Proceso</h2>
-            <p>Enfoque se centró en la <strong>extensión y seguridad del backend</strong> del sistema, desarrollado en
-                <strong>Django</strong>. El proceso incluyó la modificación de las funciones de <strong>administración
-                    de usuarios Staff</strong>, implementando la lógica para <strong>habilitar o deshabilitar
-                    inscripciones</strong> globales. Además, desarrollé el mecanismo de carga de <strong>actividades con
-                    control estricto de cupos</strong> por charla, y modifiqué las vistas para permitir la <strong>carga
-                    manual de datos de asistentes</strong> por parte de los coordinadores para la creación masiva de
-                cuentas.
-            </p>
-
-            <h2>Solución Implementada</h2>
-            <p>Implementé y modifiqué el sistema de gestión del <strong>CNEISI</strong>, centrándome en las
-                funcionalidades del <strong>backend</strong> y la interfaz administrativa. La solución automatizó:
-            <ul>
-                <li>La <strong>administración de actividades</strong>, permitiendo a los usuarios Staff crear, editar y
-                    gestionar charlas.</li>
-                <li>El <strong>control de cupos</strong>: se aplicó una lógica que restringe automáticamente las
-                    inscripciones una vez alcanzado el límite de cada actividad.</li>
-                <li>La <strong>interfaz de usuario (frontend)</strong> para coordinadores y el panel de administración
-                    fue adaptada para integrar estas nuevas funcionalidades de forma clara y accesible, mejorando la
-                    experiencia del usuario Staff y agilizando las tareas logísticas.</li>
-            </ul>
-            Esto resultó en una <strong>plataforma de gestión más robusta</strong> y capaz de manejar la complejidad
-            logística de un congreso masivo.
-            </p>
-        </section>
-
-        <section id="caracteristicas-tecnicas">
-            <h2>Características Principales</h2>
-            <div class="caracteristicas-grid">
-                <div class="caracteristica-card">
-                    <h3>Gestión de Usuarios Staff</h3>
-                    <p>Administración completa de permisos y roles para el personal organizador.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Control de Cupos</h3>
-                    <p>Sistema automático para limitar inscripciones por actividad en tiempo real.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Gestión de Actividades</h3>
-                    <p>ABM (Alta, Baja, Modificación) de charlas y talleres con asignación de disertantes.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Carga Masiva</h3>
-                    <p>Herramientas para la importación y validación de listas de asistentes.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="impacto-metricas">
-            <h2>Impacto</h2>
-            <div class="metricas-grid">
-                <div class="metrica-item">
-                    <h3>Logística</h3>
-                    <p>Gestión eficiente de miles de asistentes</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>Seguridad</h3>
-                    <p>Control de acceso robusto</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>Automatización</h3>
-                    <p>Reducción de carga manual</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo-proyecto">
-            <h2>Demo</h2>
-            <div class="demo-contenedor">
-                <video class="demo-video" controls preload="metadata" playsinline>
-                    <source src="" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-        </section>
-
-        <section id="galeria-capturas">
-            <h2>Vistazo al Proyecto</h2>
-
-            <div class="capturas-contenedor">
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/cneisi/home.png" alt="Captura de pantalla de la interfaz home ."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Home parte 1:</strong> Esta captura muestra la interfaz del home
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/cneisi/home-2.png" alt="Captura de pantalla de la interfaz home ."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Home parte 2:</strong> Esta captura muestra información sobre el evento en el home
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/cneisi/home-3.png" alt="Captura de pantalla de la interfaz home ."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Home parte 3:</strong> Esta captura muestra más información del evento
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/cneisi/home-4.png" alt="Captura de pantalla de la interfaz home ."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Home parte 4:</strong> Esta captura muestra el cronograma del evento
-                    </figcaption>
-                </figure>
-
-
-            </div>
-
-        </section>
-
-        <section id="tecnologias-usadas">
-            <h2>Tecnologías Usadas</h2>
-            <div class="tecnologias-grid">
-                <div class="tech-item">
-                    <h3>Backend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fa-brands fa-python"></i> Python (Django)</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Frontend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fa-brands fa-html5"></i> HTML5 / CSS3</li>
-                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Base de Datos</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-database"></i> MySQL</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
     </div>
 
 

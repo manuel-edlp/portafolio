@@ -28,186 +28,238 @@
         </div>
     </nav>
 
-    <div id="banner"></div>
+    <div class="project-container">
+        <nav id="side-nav">
+            <a href="fondo-blanco.html" class="side-link">Fondo Blanco</a>
+            <a href="hogares-del-sol.html" class="side-link">Hogares del Sol</a>
+            <a href="ticket.html" class="side-link">Ticket</a>
+            <a href="leyendas-del-sur.html" class="side-link">Leyendas del Sur</a>
+            <a href="jornadas.html" class="side-link">Jornadas</a>
+            <a href="cneisi.html" class="side-link">CNEISI</a>
+            <a href="vetcloud.html" class="side-link active">VetCloud</a>
+            <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
+            <a href="chatbot.html" class="side-link">Chatbot SAU</a>
+        </nav>
 
-    <div id="contenido-principal">
+        <div id="contenido-principal">
+            <div id="nav-proyectos-top"></div>
+            <div id="cabecera-proyecto">
+                <a href="../#proyectos" class="btn-volver-inicio">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
+                </a>
+                <h1>VetCloud</h1>
+                <p class="subtitulo">WebApp Cloud Inteligente para la Gestión Veterinaria</p>
+            </div>
 
-        <div id="cabecera-proyecto">
-            <a href="../#proyectos" class="btn-volver-inicio">
-                <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
-            </a>
-            <h1>VetCloud</h1>
-            <p class="subtitulo">WebApp Cloud Inteligente para la Gestión Veterinaria</p>
+            <section id="detalles-clave">
+                <h2>Información Rápida</h2>
+                <div class="tarjetas-info">
+                    <p><strong>Nombre del proyecto: </strong>VetCloud</p>
+                    <p><strong>Descripción: </strong>Web app cloud con IA para gestión integral de clínicas veterinarias
+                        (clientes, mascotas, inventario).</p>
+                    <p><strong>Tipo: </strong>Proyecto Académico (Software Cloud - UTN FRLP)</p>
+                    <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
+                    <p><strong>Fecha: </strong>Marzo - Julio 2024</p>
+                    <p><strong>Tecnologías Usadas: </strong>Python (Django), Azure, PostgreSQL, AI</p>
+                    <p><strong>Repositorio: </strong><a href="https://github.com/manuel-edlp/vetCloud" target="_blank"
+                            class="link-colaborador">GitHub</a></p>
+                    <a href="https://github.com/manuel-edlp/vetCloud" target="_blank" class="boton-proyecto">Ver
+                        Código</a>
+                </div>
+            </section>
+
+            <section id="narrativa-proyecto">
+                <h2>Desafío</h2>
+                <p>El proyecto consistió en diseñar y construir <strong>VetCloud</strong>, una plataforma integral para
+                    modernizar la gestión de clínicas veterinarias. El desafío principal fue crear un sistema
+                    <strong>Cloud
+                        Native</strong> que no solo digitalizara el registro de clientes, mascotas e historias clínicas,
+                    sino que también optimizara la carga de datos utilizando <strong>Inteligencia Artificial</strong>.
+                </p>
+
+                <h2>Enfoque y Proceso</h2>
+                <p>Se adoptó una arquitectura basada en la nube (Azure) para garantizar escalabilidad y acceso remoto.
+                    El
+                    desarrollo se centró en tres pilares:</p>
+                <ul>
+                    <li><strong>Eficiencia Administrativa:</strong> Centralización de todos los recursos (veterinarios,
+                        proveedores, stock).</li>
+                    <li><strong>Automatización con IA:</strong> Integración de servicios cognitivos para reducir la
+                        carga
+                        manual de datos.</li>
+                    <li><strong>Experiencia de Usuario:</strong> Interfaz intuitiva para facilitar el uso diario en el
+                        consultorio.</li>
+                </ul>
+
+                <h2>Solución Implementada</h2>
+                <p>VetCloud centraliza todas las operaciones de la clínica en la nube. Su característica distintiva es
+                    el
+                    uso de <strong>IA</strong>: reconocimiento de objetos para catalogar productos automáticamente y
+                    <strong>OCR</strong> para digitalizar etiquetas de medicamentos, agilizando drásticamente la gestión
+                    del
+                    inventario.
+                </p>
+            </section>
+
+            <section id="caracteristicas-tecnicas">
+                <h2>Características Principales</h2>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <h3>Gestión Integral</h3>
+                        <p>Módulos interconectados para clientes, mascotas, veterinarios e historias clínicas.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Inventario con IA</h3>
+                        <p>Carga automática de productos y medicamentos mediante reconocimiento de imagen y OCR.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Arquitectura Cloud</h3>
+                        <p>Desplegado en Azure con almacenamiento de blobs y base de datos SQL gestionada.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Panel de Control</h3>
+                        <p>Dashboard centralizado para acceso rápido a todas las funcionalidades del sistema.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="archivos-extras">
+                <h2>Documentación y Recursos</h2>
+                <div class="extras-grid">
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Informe de Requerimientos</h3>
+                            <p>Documento formal de especificación de requisitos (SRS).</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-draw-polygon"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Diagramas UML</h3>
+                            <p>Diagramas de Clases, Secuencia y Casos de Uso.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Maquetados UI/UX</h3>
+                            <p>Wireframes y prototipos de alta fidelidad.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="demo-proyecto">
+                <h2>Demo</h2>
+                <div class="demo-contenedor">
+                    <video class="demo-video" controls preload="metadata" playsinline>
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </section>
+
+            <section id="impacto-metricas">
+                <h2>Impacto</h2>
+                <div class="metricas-grid">
+                    <div class="metrica-item">
+                        <h3>Digitalización</h3>
+                        <p>Eliminación del uso de papel</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>Eficiencia</h3>
+                        <p>Carga de datos 50% más rápida</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>Accesibilidad</h3>
+                        <p>Acceso seguro desde cualquier lugar</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="galeria-capturas">
+                <h2>Galería</h2>
+                <div class="capturas-contenedor">
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/vetcloud/home.png"
+                            alt="Captura de pantalla de la interfaz del inicio." class="captura-grande">
+                        <figcaption>
+                            <strong>Inicio:</strong> Dashboard principal con accesos rápidos.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/vetcloud/clientes.png"
+                            alt="Captura de pantalla de la interfaz de clientes." class="captura-grande">
+                        <figcaption>
+                            <strong>Clientes:</strong> Listado y gestión de propietarios.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/vetcloud/mascotas.png"
+                            alt="Captura de pantalla de la interfaz de mascotas." class="captura-grande">
+                        <figcaption>
+                            <strong>Mascotas:</strong> Registro detallado de pacientes.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/vetcloud/productos.png"
+                            alt="Captura de pantalla de la interfaz de productos." class="captura-grande">
+                        <figcaption>
+                            <strong>Inventario:</strong> Gestión de productos y stock.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/vetcloud/veterinarios.png" alt="Captura de pantalla de veterinarios."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Personal:</strong> Administración de veterinarios.
+                        </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="tecnologias-usadas">
+                <h2>Tecnologías Usadas</h2>
+                <div class="tecnologias-grid">
+                    <div class="tech-item">
+                        <h3>Backend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fa-brands fa-python"></i> Python (Django)</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Frontend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fa-brands fa-html5"></i> HTML5 / CSS3</li>
+                            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Base de Datos</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Cloud & IA</h3>
+                        <ul class="tech-list">
+                            <li><i class="fa-brands fa-microsoft"></i> Azure Cloud</li>
+                            <li><i class="fas fa-brain"></i> Azure AI Vision</li>
+                        </ul>
+                    </div>
+                </div>
         </div>
-
-        <section id="detalles-clave">
-            <h2>Información Rápida</h2>
-            <div class="tarjetas-info">
-                <p><strong>Nombre del proyecto: </strong>VetCloud</p>
-                <p><strong>Descripción: </strong>Web app cloud con IA para gestión integral de clínicas veterinarias
-                    (clientes, mascotas, inventario).</p>
-                <p><strong>Tipo: </strong>Proyecto Académico (Software Cloud - UTN FRLP)</p>
-                <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
-                <p><strong>Fecha: </strong>Marzo - Julio 2024</p>
-                <p><strong>Tecnologías Usadas: </strong>Python (Django), Azure, PostgreSQL, AI</p>
-                <p><strong>Repositorio: </strong><a href="https://github.com/manuel-edlp/vetCloud" target="_blank"
-                        class="link-colaborador">GitHub</a></p>
-                <a href="https://github.com/manuel-edlp/vetCloud" target="_blank" class="boton-proyecto">Ver Código</a>
-            </div>
-        </section>
-
-        <section id="narrativa-proyecto">
-            <h2>Desafío</h2>
-            <p>El proyecto consistió en diseñar y construir <strong>VetCloud</strong>, una plataforma integral para
-                modernizar la gestión de clínicas veterinarias. El desafío principal fue crear un sistema <strong>Cloud
-                    Native</strong> que no solo digitalizara el registro de clientes, mascotas e historias clínicas,
-                sino que también optimizara la carga de datos utilizando <strong>Inteligencia Artificial</strong>.</p>
-
-            <h2>Enfoque y Proceso</h2>
-            <p>Se adoptó una arquitectura basada en la nube (Azure) para garantizar escalabilidad y acceso remoto. El
-                desarrollo se centró en tres pilares:</p>
-            <ul>
-                <li><strong>Eficiencia Administrativa:</strong> Centralización de todos los recursos (veterinarios,
-                    proveedores, stock).</li>
-                <li><strong>Automatización con IA:</strong> Integración de servicios cognitivos para reducir la carga
-                    manual de datos.</li>
-                <li><strong>Experiencia de Usuario:</strong> Interfaz intuitiva para facilitar el uso diario en el
-                    consultorio.</li>
-            </ul>
-
-            <h2>Solución Implementada</h2>
-            <p>VetCloud centraliza todas las operaciones de la clínica en la nube. Su característica distintiva es el
-                uso de <strong>IA</strong>: reconocimiento de objetos para catalogar productos automáticamente y
-                <strong>OCR</strong> para digitalizar etiquetas de medicamentos, agilizando drásticamente la gestión del
-                inventario.
-            </p>
-        </section>
-
-        <section id="caracteristicas-tecnicas">
-            <h2>Características Principales</h2>
-            <div class="caracteristicas-grid">
-                <div class="caracteristica-card">
-                    <h3>Gestión Integral</h3>
-                    <p>Módulos interconectados para clientes, mascotas, veterinarios e historias clínicas.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Inventario con IA</h3>
-                    <p>Carga automática de productos y medicamentos mediante reconocimiento de imagen y OCR.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Arquitectura Cloud</h3>
-                    <p>Desplegado en Azure con almacenamiento de blobs y base de datos SQL gestionada.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Panel de Control</h3>
-                    <p>Dashboard centralizado para acceso rápido a todas las funcionalidades del sistema.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo-proyecto">
-            <h2>Demo</h2>
-            <div class="demo-contenedor">
-                <video class="demo-video" controls preload="metadata" playsinline>
-                    <source src="" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-        </section>
-
-        <section id="impacto-metricas">
-            <h2>Impacto</h2>
-            <div class="metricas-grid">
-                <div class="metrica-item">
-                    <h3>Digitalización</h3>
-                    <p>Eliminación del uso de papel</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>Eficiencia</h3>
-                    <p>Carga de datos 50% más rápida</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>Accesibilidad</h3>
-                    <p>Acceso seguro desde cualquier lugar</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria-capturas">
-            <h2>Galería</h2>
-            <div class="capturas-contenedor">
-                <figure class="captura-item">
-                    <img src="../img/proyectos/vetcloud/home.png" alt="Captura de pantalla de la interfaz del inicio."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Inicio:</strong> Dashboard principal con accesos rápidos.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/vetcloud/clientes.png"
-                        alt="Captura de pantalla de la interfaz de clientes." class="captura-grande">
-                    <figcaption>
-                        <strong>Clientes:</strong> Listado y gestión de propietarios.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/vetcloud/mascotas.png"
-                        alt="Captura de pantalla de la interfaz de mascotas." class="captura-grande">
-                    <figcaption>
-                        <strong>Mascotas:</strong> Registro detallado de pacientes.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/vetcloud/productos.png"
-                        alt="Captura de pantalla de la interfaz de productos." class="captura-grande">
-                    <figcaption>
-                        <strong>Inventario:</strong> Gestión de productos y stock.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/vetcloud/veterinarios.png" alt="Captura de pantalla de veterinarios."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Personal:</strong> Administración de veterinarios.
-                    </figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section id="tecnologias-usadas">
-            <h2>Tecnologías Usadas</h2>
-            <div class="tecnologias-grid">
-                <div class="tech-item">
-                    <h3>Backend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fa-brands fa-python"></i> Python (Django)</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Frontend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fa-brands fa-html5"></i> HTML5 / CSS3</li>
-                        <li><i class="fa-brands fa-js"></i> JavaScript</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Base de Datos</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-database"></i> PostgreSQL</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Cloud & IA</h3>
-                    <ul class="tech-list">
-                        <li><i class="fa-brands fa-microsoft"></i> Azure Cloud</li>
-                        <li><i class="fas fa-brain"></i> Azure AI Vision</li>
-                    </ul>
-                </div>
-            </div>
     </div>
 
     <div id="contacto">

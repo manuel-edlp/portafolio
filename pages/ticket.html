@@ -30,264 +30,323 @@
         </div>
     </nav>
 
-    <div id="banner"></div>
+    <div class="project-container">
+        <nav id="side-nav">
+            <a href="fondo-blanco.html" class="side-link">Fondo Blanco</a>
+            <a href="hogares-del-sol.html" class="side-link">Hogares del Sol</a>
+            <a href="ticket.html" class="side-link active">Ticket</a>
+            <a href="leyendas-del-sur.html" class="side-link">Leyendas del Sur</a>
+            <a href="jornadas.html" class="side-link">Jornadas</a>
+            <a href="cneisi.html" class="side-link">CNEISI</a>
+            <a href="vetcloud.html" class="side-link">VetCloud</a>
+            <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
+            <a href="chatbot.html" class="side-link">Chatbot SAU</a>
+        </nav>
 
-    <div id="contenido-principal">
+        <div id="contenido-principal">
+            <div id="nav-proyectos-top"></div>
+            <div id="cabecera-proyecto">
+                <a href="../#proyectos" class="btn-volver-inicio">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
+                </a>
+                <h1>Ticket</h1>
+                <p class="subtitulo">Web de venta de viandas y gestión del comedor universitario de la UTN FRLP</p>
+            </div>
 
-        <div id="cabecera-proyecto">
-            <a href="../#proyectos" class="btn-volver-inicio">
-                <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
-            </a>
-            <h1>Ticket</h1>
-            <p class="subtitulo">Web de venta de viandas y gestión del comedor universitario de la UTN FRLP</p>
+            <section id="detalles-clave">
+                <h2>Información Rápida</h2>
+                <div class="tarjetas-info">
+                    <p><strong>Nombre del proyecto: </strong>Ticket</p>
+                    <p><strong>Descripción: </strong>Web para venta de viandas y gestión del comedor universitario de la
+                        UTN
+                        FRLP.</p>
+                    <p><strong>Tipo: </strong>Proyecto Institucional y de Extensión Universitaria (Secretaría de Asuntos
+                        Universitarios UTN FRLP)</p>
+                    <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
+                    <p><strong>Fecha: </strong>Junio - Diciembre 2025</p>
+                    <p><strong>Tecnologías Usadas: </strong>PHP (CodeIgniter 3), HTML, JS, CSS, MySQL, Mercado Pago API
+                    </p>
+                    <p><strong>Colaboradores: </strong><a href="https://www.linkedin.com/in/jorge-ronconi/"
+                            target="_blank" class="link-colaborador">Jorge Ronconi</a></p>
+                    <a href="https://ticket.frlp.utn.edu.ar/" target="_blank" class="boton-proyecto">Visitar la
+                        página</a>
+                </div>
+            </section>
+
+            <section id="narrativa-proyecto">
+                <h2>Desafío</h2>
+                <p>El proyecto se centró en la modernización y automatización del sistema de gestión de viandas y
+                    compras
+                    del comedor universitario de la UTN-FRLP. El desafío principal radicó en transformar un proceso de
+                    verificación de pagos que era completamente manual y propenso a errores, a un sistema totalmente
+                    automatizado mediante la integración de Mercado Pago. Esto era crucial para agilizar la recarga de
+                    saldo
+                    de los usuarios y garantizar la disponibilidad de las viandas.</p>
+
+                <h2>Enfoque y Proceso</h2>
+                <p>El enfoque inicial consistió en analizar y reestructurar el backend existente para soportar la
+                    integración con la API de Mercado Pago, garantizando que cada pago se registrara instantáneamente
+                    como
+                    saldo en la cuenta del usuario. Paralelamente, se llevó a cabo una renovación completa del Frontend
+                    (UI/UX) para mejorar la navegabilidad y la experiencia de compra de viandas. El proceso de
+                    desarrollo se
+                    centró en la modularidad y la seguridad de las transacciones.</p>
+
+                <h2>Solución Implementada</h2>
+                <p>Implementamos una plataforma robusta que ofrece dos funciones principales: la compra ágil de viandas
+                    para
+                    los estudiantes y la automatización de pagos con Mercado Pago. Además, desarrollé y optimicé el
+                    Panel de
+                    Administración, una herramienta esencial para el personal del comedor. Este panel permite realizar
+                    tareas críticas como los cierres de caja diarios/semanales, el armado del listado de viandas
+                    disponibles, y el registro detallado de todos los movimientos de caja y transacciones. El resultado
+                    es
+                    un sistema moderno, eficiente y con trazabilidad completa de cada movimiento financiero y de
+                    inventario.
+                </p>
+            </section>
+
+            <section id="caracteristicas-tecnicas">
+                <h2>Características Técnicas Destacadas</h2>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <h3>Integración Mercado Pago</h3>
+                        <p>Sistema de pagos automatizado que acredita el saldo instantáneamente, eliminando la
+                            verificación
+                            manual.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Gestión de Viandas</h3>
+                        <p>Sistema completo para la selección y compra de menús diarios o semanales por parte de los
+                            estudiantes.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Panel de Administración</h3>
+                        <p>Herramientas para el personal del comedor: cierre de cajas, gestión de stock y reportes
+                            financieros.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Historial de Movimientos</h3>
+                        <p>Trazabilidad completa de transacciones y compras para usuarios y administradores.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Gestión de Devoluciones</h3>
+                        <p>Sistema automatizado para solicitar y procesar devoluciones de viandas no consumidas con
+                            reintegro de saldo.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Notificaciones y Alertas</h3>
+                        <p>Comunicación clara del estado de las compras y saldo disponible.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="archivos-extras">
+                <h2>Documentación y Recursos</h2>
+                <div class="extras-grid">
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Informe de Requerimientos</h3>
+                            <p>Documento formal de especificación de requisitos (SRS).</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-draw-polygon"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Diagramas UML</h3>
+                            <p>Diagramas de Clases, Secuencia y Casos de Uso.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Maquetados UI/UX</h3>
+                            <p>Wireframes y prototipos de alta fidelidad.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="impacto-metricas">
+                <h2>Impacto y Resultados</h2>
+                <div class="metricas-grid">
+                    <div class="metrica-item">
+                        <h3>100%</h3>
+                        <p>Automatización de pagos</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>+500</h3>
+                        <p>Usuarios activos diarios</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>0</h3>
+                        <p>Errores en conciliación</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>24/7</h3>
+                        <p>Disponibilidad de carga</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo-proyecto">
+                <h2>Demo</h2>
+                <div class="demo-contenedor">
+                    <video class="demo-video" controls preload="metadata" playsinline>
+                        <source src="../videos/ticket.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </section>
+
+            <section id="galeria-capturas">
+                <h2>Vistazo al Proyecto</h2>
+
+                <div class="capturas-contenedor">
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/ticket-logo.png" alt="Captura de pantalla del login."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Login:</strong> Esta captura muestra el login de la página
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/menu.png" alt="Captura de pantalla del menú de viandas."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Menú de Comidas:</strong> Esta captura muestra el menú de viandas disponibles.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/faq.png"
+                            alt="Captura de pantalla del menú preguntas frecuentes." class="captura-grande">
+                        <figcaption>
+                            <strong>Preguntas Frecuentes:</strong> Esta captura muestra la sección de ayuda para
+                            usuarios.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/home.png" alt="Captura de pantalla del home del usuario."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Home - Selección:</strong> El usuario puede seleccionar las viandas a comprar en el
+                            mes.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/home-2.png" alt="Captura de pantalla del home del usuario."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Home - Semanal:</strong> Vista expandida para seleccionar viandas por día de la
+                            semana.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/home-3.png" alt="Captura de pantalla del home del usuario."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Resumen de Compra:</strong> Detalle del monto total de items seleccionados y saldo a
+                            descontar.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/home-4.png" alt="Captura de pantalla del home del usuario."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Confirmación:</strong> Modal para confirmar la compra antes del pago.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/pasarela.png"
+                            alt="Captura de pantalla de la pasarela de mercado pago." class="captura-grande">
+                        <figcaption>
+                            <strong>Pasarela de Pago:</strong> Integración con Mercado Pago para saldo insuficiente.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/pago-exitoso.png" alt="Captura de pantalla del pago exitoso."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Pago Exitoso:</strong> Confirmación visual de la transacción completada.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/vianda-comprada.png"
+                            alt="Captura de pantalla de las viandas compradas." class="captura-grande">
+                        <figcaption>
+                            <strong>Viandas Adquiridas:</strong> Visualización de viandas compradas marcadas en el
+                            calendario.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/devoluciones.png"
+                            alt="Captura de pantalla de la gestion de devoluciones." class="captura-grande">
+                        <figcaption>
+                            <strong>Devoluciones:</strong> Gestión para cancelar viandas y reintegrar saldo a la cuenta.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/ticket/movimientos.png"
+                            alt="Captura de pantalla de los movimientos del usuario." class="captura-grande">
+                        <figcaption>
+                            <strong>Historial:</strong> Tabla detallada de movimientos, fechas y saldos.
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </section>
+
+            <section id="tecnologias-usadas">
+                <h2>Stack Tecnológico</h2>
+                <div class="tecnologias-grid">
+                    <div class="tech-item">
+                        <h3>Frontend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Backend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-php"></i> PHP (CodeIgniter 3)</li>
+                            <li><i class="fas fa-server"></i> Apache</li>
+                            <li><i class="fas fa-code"></i> MVC Pattern</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Base de Datos</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-database"></i> MySQL</li>
+                            <li><i class="fas fa-table"></i> Relational DB</li>
+                            <li><i class="fas fa-bolt"></i> Optimized Queries</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Integraciones y Herramientas</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-credit-card"></i> Mercado Pago API</li>
+                            <li><i class="fab fa-github"></i> Git & GitHub</li>
+                            <li><i class="fas fa-file-code"></i> Visual Studio Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
-
-        <section id="detalles-clave">
-            <h2>Información Rápida</h2>
-            <div class="tarjetas-info">
-                <p><strong>Nombre del proyecto: </strong>Ticket</p>
-                <p><strong>Descripción: </strong>Web para venta de viandas y gestión del comedor universitario de la UTN
-                    FRLP.</p>
-                <p><strong>Tipo: </strong>Proyecto Institucional y de Extensión Universitaria (Secretaría de Asuntos
-                    Universitarios UTN FRLP)</p>
-                <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
-                <p><strong>Fecha: </strong>Junio - Diciembre 2025</p>
-                <p><strong>Tecnologías Usadas: </strong>PHP (CodeIgniter 3), HTML, JS, CSS, MySQL, Mercado Pago API</p>
-                <p><strong>Colaboradores: </strong><a href="https://www.linkedin.com/in/jorge-ronconi/" target="_blank"
-                        class="link-colaborador">Jorge Ronconi</a></p>
-                <a href="https://ticket.frlp.utn.edu.ar/" target="_blank" class="boton-proyecto">Visitar la página</a>
-            </div>
-        </section>
-
-        <section id="narrativa-proyecto">
-            <h2>Desafío</h2>
-            <p>El proyecto se centró en la modernización y automatización del sistema de gestión de viandas y compras
-                del comedor universitario de la UTN-FRLP. El desafío principal radicó en transformar un proceso de
-                verificación de pagos que era completamente manual y propenso a errores, a un sistema totalmente
-                automatizado mediante la integración de Mercado Pago. Esto era crucial para agilizar la recarga de saldo
-                de los usuarios y garantizar la disponibilidad de las viandas.</p>
-
-            <h2>Enfoque y Proceso</h2>
-            <p>El enfoque inicial consistió en analizar y reestructurar el backend existente para soportar la
-                integración con la API de Mercado Pago, garantizando que cada pago se registrara instantáneamente como
-                saldo en la cuenta del usuario. Paralelamente, se llevó a cabo una renovación completa del Frontend
-                (UI/UX) para mejorar la navegabilidad y la experiencia de compra de viandas. El proceso de desarrollo se
-                centró en la modularidad y la seguridad de las transacciones.</p>
-
-            <h2>Solución Implementada</h2>
-            <p>Implementamos una plataforma robusta que ofrece dos funciones principales: la compra ágil de viandas para
-                los estudiantes y la automatización de pagos con Mercado Pago. Además, desarrollé y optimicé el Panel de
-                Administración, una herramienta esencial para el personal del comedor. Este panel permite realizar
-                tareas críticas como los cierres de caja diarios/semanales, el armado del listado de viandas
-                disponibles, y el registro detallado de todos los movimientos de caja y transacciones. El resultado es
-                un sistema moderno, eficiente y con trazabilidad completa de cada movimiento financiero y de inventario.
-            </p>
-        </section>
-
-        <section id="caracteristicas-tecnicas">
-            <h2>Características Técnicas Destacadas</h2>
-            <div class="caracteristicas-grid">
-                <div class="caracteristica-card">
-                    <h3>Integración Mercado Pago</h3>
-                    <p>Sistema de pagos automatizado que acredita el saldo instantáneamente, eliminando la verificación
-                        manual.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Gestión de Viandas</h3>
-                    <p>Sistema completo para la selección y compra de menús diarios o semanales por parte de los
-                        estudiantes.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Panel de Administración</h3>
-                    <p>Herramientas para el personal del comedor: cierre de cajas, gestión de stock y reportes
-                        financieros.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Historial de Movimientos</h3>
-                    <p>Trazabilidad completa de transacciones y compras para usuarios y administradores.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Gestión de Devoluciones</h3>
-                    <p>Sistema automatizado para solicitar y procesar devoluciones de viandas no consumidas con
-                        reintegro de saldo.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Notificaciones y Alertas</h3>
-                    <p>Comunicación clara del estado de las compras y saldo disponible.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="impacto-metricas">
-            <h2>Impacto y Resultados</h2>
-            <div class="metricas-grid">
-                <div class="metrica-item">
-                    <h3>100%</h3>
-                    <p>Automatización de pagos</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>+500</h3>
-                    <p>Usuarios activos diarios</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>0</h3>
-                    <p>Errores en conciliación</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>24/7</h3>
-                    <p>Disponibilidad de carga</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo-proyecto">
-            <h2>Demo</h2>
-            <div class="demo-contenedor">
-                <video class="demo-video" controls preload="metadata" playsinline>
-                    <source src="../videos/ticket.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-        </section>
-
-        <section id="galeria-capturas">
-            <h2>Vistazo al Proyecto</h2>
-
-            <div class="capturas-contenedor">
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/ticket-logo.png" alt="Captura de pantalla del login."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Login:</strong> Esta captura muestra el login de la página
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/menu.png" alt="Captura de pantalla del menú de viandas."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Menú de Comidas:</strong> Esta captura muestra el menú de viandas disponibles.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/faq.png" alt="Captura de pantalla del menú preguntas frecuentes."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Preguntas Frecuentes:</strong> Esta captura muestra la sección de ayuda para usuarios.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/home.png" alt="Captura de pantalla del home del usuario."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Home - Selección:</strong> El usuario puede seleccionar las viandas a comprar en el mes.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/home-2.png" alt="Captura de pantalla del home del usuario."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Home - Semanal:</strong> Vista expandida para seleccionar viandas por día de la semana.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/home-3.png" alt="Captura de pantalla del home del usuario."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Resumen de Compra:</strong> Detalle del monto total de items seleccionados y saldo a
-                        descontar.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/home-4.png" alt="Captura de pantalla del home del usuario."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Confirmación:</strong> Modal para confirmar la compra antes del pago.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/pasarela.png"
-                        alt="Captura de pantalla de la pasarela de mercado pago." class="captura-grande">
-                    <figcaption>
-                        <strong>Pasarela de Pago:</strong> Integración con Mercado Pago para saldo insuficiente.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/pago-exitoso.png" alt="Captura de pantalla del pago exitoso."
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Pago Exitoso:</strong> Confirmación visual de la transacción completada.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/vianda-comprada.png"
-                        alt="Captura de pantalla de las viandas compradas." class="captura-grande">
-                    <figcaption>
-                        <strong>Viandas Adquiridas:</strong> Visualización de viandas compradas marcadas en el
-                        calendario.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/devoluciones.png"
-                        alt="Captura de pantalla de la gestion de devoluciones." class="captura-grande">
-                    <figcaption>
-                        <strong>Devoluciones:</strong> Gestión para cancelar viandas y reintegrar saldo a la cuenta.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/ticket/movimientos.png"
-                        alt="Captura de pantalla de los movimientos del usuario." class="captura-grande">
-                    <figcaption>
-                        <strong>Historial:</strong> Tabla detallada de movimientos, fechas y saldos.
-                    </figcaption>
-                </figure>
-            </div>
-
-        </section>
-
-        <section id="tecnologias-usadas">
-            <h2>Stack Tecnológico</h2>
-            <div class="tecnologias-grid">
-                <div class="tech-item">
-                    <h3>Frontend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-html5"></i> HTML5</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Backend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-php"></i> PHP (CodeIgniter 3)</li>
-                        <li><i class="fas fa-server"></i> Apache</li>
-                        <li><i class="fas fa-code"></i> MVC Pattern</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Base de Datos</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-database"></i> MySQL</li>
-                        <li><i class="fas fa-table"></i> Relational DB</li>
-                        <li><i class="fas fa-bolt"></i> Optimized Queries</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Integraciones y Herramientas</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-credit-card"></i> Mercado Pago API</li>
-                        <li><i class="fab fa-github"></i> Git & GitHub</li>
-                        <li><i class="fas fa-file-code"></i> Visual Studio Code</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
     </div>
-
 
     <div id="contacto">
         <h2>¡Contactame!</h2>

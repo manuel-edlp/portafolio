@@ -30,331 +30,417 @@
         </div>
     </nav>
 
-    <div id="banner"></div>
+    <div class="project-container">
+        <nav id="side-nav">
+            <a href="fondo-blanco.html" class="side-link active">Fondo Blanco</a>
+            <a href="hogares-del-sol.html" class="side-link">Hogares del Sol</a>
+            <a href="ticket.html" class="side-link">Ticket</a>
+            <a href="leyendas-del-sur.html" class="side-link">Leyendas del Sur</a>
+            <a href="jornadas.html" class="side-link">Jornadas</a>
+            <a href="cneisi.html" class="side-link">CNEISI</a>
+            <a href="vetcloud.html" class="side-link">VetCloud</a>
+            <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
+            <a href="chatbot.html" class="side-link">Chatbot SAU</a>
+        </nav>
 
-    <div id="contenido-principal">
+        <div id="banner"></div>
 
-        <div id="cabecera-proyecto">
-            <a href="../#proyectos" class="btn-volver-inicio">
-                <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
-            </a>
-            <h1>Fondo Blanco</h1>
-            <p class="subtitulo">WebApp para descubrir tragos de bebidas. Trabajo presentado para la cátedra de Proyecto
-                Final de la UTN FRLP</p>
+        <div id="contenido-principal">
+            <div id="nav-proyectos-top"></div>
+            <div id="cabecera-proyecto">
+                <a href="../#proyectos" class="btn-volver-inicio">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
+                </a>
+                <h1>Fondo Blanco</h1>
+                <p class="subtitulo">WebApp para descubrir tragos de bebidas. Trabajo presentado para la cátedra de
+                    Proyecto
+                    Final de la UTN FRLP</p>
+            </div>
+
+            <section id="detalles-clave">
+                <h2>Información Rápida</h2>
+                <div class="tarjetas-info">
+                    <p><strong>Nombre del proyecto: </strong>Fondo Blanco (FoB)</p>
+                    <p><strong>Descripción: </strong>WebApp para descubrir, compartir, y valorar recetas de tragos de
+                        bebidas</p>
+                    <p><strong>Tipo: </strong>Proyecto académico - Cátedra Proyecto Final UTN FRLP</p>
+                    <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
+                    <p><strong>Fecha: </strong>Marzo - Diciembre 2025</p>
+                    <p><strong>Tecnologías Usadas: </strong>React, .NET, MySQL, HTML, CSS</p>
+                    <p><strong>Colaboradores: </strong><a href="https://www.linkedin.com/in/gabriel-scarafia/"
+                            target="_blank" class="link-colaborador">Gabriel Scarafia</a>, <a
+                            href="https://www.linkedin.com/in/matias-russo22/" target="_blank"
+                            class="link-colaborador">Matias Russo</a>, <a href="#" target="_blank"
+                            class="link-colaborador">Tomas Sbert</a></p>
+                    <!-- <a href="" target="_blank" class="boton-proyecto">Visitar la página</a> -->
+                </div>
+            </section>
+
+            <section id="narrativa-proyecto">
+                <h2>Desafío</h2>
+                <p>El proyecto consistió en diseñar una plataforma social dedicada a descubrir, compartir y valorar
+                    recetas
+                    de tragos. El desafío principal fue crear una experiencia atractiva e intuitiva donde los usuarios
+                    pudieran subir contenido propio —incluyendo fotos, ingredientes y pasos detallados— y, al mismo
+                    tiempo,
+                    fomentar la interacción mediante desafíos semanales temáticos.</p>
+
+                <h2>Enfoque y Proceso</h2>
+                <p>Junto a mi equipo, comenzamos analizando aplicaciones de referencia y definiendo las funcionalidades
+                    clave: carga de recetas con imágenes, sistema de valoración, perfiles de usuario y secciones
+                    dinámicas
+                    para desafíos. A partir de esto, diagramamos el flujo de usuario y diseñamos una interfaz que
+                    simplificara la creación de contenido. Durante el desarrollo, priorizamos la modularidad, la
+                    experiencia
+                    móvil y la integración fluida entre frontend y backend.</p>
+
+                <h2>Solución Implementada</h2>
+                <p>Construimos una web app que permite a los usuarios subir fotos, describir paso a paso cómo preparar
+                    un
+                    trago e indicar ingredientes y utensilios necesarios. Incluimos un sistema de valoración, feed
+                    dinámico,
+                    filtros de recetas y un módulo de desafíos semanales para incentivar la participación. El resultado
+                    fue
+                    una plataforma social colaborativa y visualmente atractiva, con foco en la comunidad y la facilidad
+                    para
+                    compartir nuevas creaciones.</p>
+            </section>
+
+            <section id="caracteristicas-tecnicas">
+                <h2>Características Técnicas Destacadas</h2>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <h3>Sistema de Recetas</h3>
+                        <p>Carga completa de recetas con ingredientes, pasos detallados, imágenes y metadatos como
+                            dificultad y tiempo de preparación.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Valoración y Feedback</h3>
+                        <p>Sistema integral de interacción con likes, dislikes, comentarios, favoritos y compartir en
+                            redes
+                            sociales.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Perfiles de Usuario</h3>
+                        <p>Perfiles personalizables con historial de publicaciones, seguidores/seguidos y estadísticas
+                            de
+                            actividad.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Desafíos Semanales</h3>
+                        <p>Dinámicas gamificadas con ingrediente semanal, ranking de puntos e incentivos para la
+                            participación comunitaria.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Sistema de Búsqueda</h3>
+                        <p>Búsqueda avanzada por título, descripción, ingredientes, etiquetas y perfiles de usuario.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Sistema de Notificaciones</h3>
+                        <p>Sistema de alertas para likes, comentarios, favoritos y respuestas de comentarios.</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="archivos-extras">
+                <h2>Documentación y Recursos</h2>
+                <div class="extras-grid">
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Informe de Requerimientos</h3>
+                            <p>Documento formal de especificación de requisitos (SRS).</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-draw-polygon"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Diagramas UML</h3>
+                            <p>Diagramas de Clases, Secuencia y Casos de Uso.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Maquetados UI/UX</h3>
+                            <p>Wireframes y prototipos de alta fidelidad.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="impacto-metricas">
+                <h2>Impacto y Resultados</h2>
+                <div class="metricas-grid">
+                    <div class="metrica-item">
+                        <h3>100%</h3>
+                        <p>Funcionalidades completadas</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>15+</h3>
+                        <p>Pantallas diseñadas</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>60+</h3>
+                        <p>Componentes React</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>4.8/5★</h3>
+                        <p>Calificación de funcionalidad</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo-proyecto">
+                <h2>Demo</h2>
+                <div class="demo-contenedor">
+                    <video class="demo-video" controls preload="metadata" playsinline>
+                        <source src="" type="video/mp4">
+                        Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            </section>
+
+            <section id="galeria-capturas">
+                <h2>Vistazo al Proyecto</h2>
+
+                <div class="capturas-contenedor">
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/registrarse.png"
+                            alt="Captura de pantalla de la interfaz de registrarse." class="captura-grande">
+                        <figcaption>
+                            <strong>Registrarse:</strong> Esta captura muestra la interfaz de registro
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/iniciar-sesion.png"
+                            alt="Captura de pantalla de la interfaz de inicio de sesión." class="captura-grande">
+                        <figcaption>
+                            <strong>Iniciar sesión:</strong> Esta captura muestra la interfaz de inicio de sesión
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/publicacion.png"
+                            alt="Captura de pantalla de la interfaz de publicación del proyecto."
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Feed:</strong> Esta captura muestra la interfaz del feed, donde se pueden ver las
+                            publicaciones de las personas a las que sigues.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/tendencias.png"
+                            alt="Captura de pantalla de la sección de tendencias o estadísticas del proyecto."
+                            class="captura-pequena">
+                        <figcaption>
+                            <strong>Tendencias:</strong> Vista de la sección de tendencias. El algoritmos de FoB
+                            desarrollado clasifica las publicaciones con más interacciones (likes, comentarios,
+                            favoritos) y
+                            las muestra en esta sección.
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/cargar-receta-1.png"
+                            alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
+                        <figcaption>
+                            <strong>Subir Receta parte 1:</strong> Vista de la sección para cargar una receta. Se puede
+                            cargar el nombre del trago, sus ingredientes con sus cantidades y unidades de medida, fotos
+                            del
+                            paso a paso con una descripción, etiquetas de la publicación, utensilios utilizados
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/cargar-receta-2.png"
+                            alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
+                        <figcaption>
+                            <strong>Subir Receta parte 2:</strong> Vista de la sección para cargar una receta. Se puede
+                            cargar el nombre del trago, sus ingredientes con sus cantidades y unidades de medida, fotos
+                            del
+                            paso a paso con una descripción, etiquetas de la publicación, utensilios utilizados
+                        </figcaption>
+                    </figure>
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/cargar-receta-3.png"
+                            alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
+                        <figcaption>
+                            <strong>Subir Receta parte 3:</strong> Vista de la sección para cargar una receta. Se puede
+                            cargar el nombre del trago, sus ingredientes con sus cantidades y unidades de medida, fotos
+                            del
+                            paso a paso con una descripción, etiquetas de la publicación, utensilios utilizados
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/receta-1.png"
+                            alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
+                        <figcaption>
+                            <strong>Publicación parte 1:</strong> Vista de una publicación con el paso a paso,
+                            ingrediente,
+                            descripción, utensilios utilizados, y etiquetas. También cuenta con nivel de dificultad,
+                            tiempo
+                            de preparación, botones para interactuar con like, dislike, comentar, guardar en favoritos y
+                            compartir.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/receta-2.png"
+                            alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
+                        <figcaption>
+                            <strong>Publicación parte 2:</strong> Vista de una publicación con el paso a paso,
+                            ingrediente,
+                            descripción, utensilios utilizados, y etiquetas. También cuenta con nivel de dificultad,
+                            tiempo
+                            de preparación, botones para interactuar con like, dislike, comentar, guardar en favoritos y
+                            compartir.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/desafio-1.png" alt="Captura de pantalla de la sección de desfío"
+                            class="captura-pequena">
+                        <figcaption>
+                            <strong>Desafío parte 1:</strong> Vista del desafío. El desafío es una dinámica que consiste
+                            en
+                            subir una receta que use el ingrediente de la semana (que se selecciona y cambia
+                            aleatoriamente
+                            cada semana). Cada interacción con la publicación (likes, comentarios, favoritos,
+                            compartidos)
+                            suman puntos en el ranking semanal. Los usuarios que acumulen más puntos tendrán visibilidad
+                            en
+                            el ranking.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/desafio-2.png" alt="Captura de pantalla de la sección de desfío"
+                            class="captura-pequena">
+                        <figcaption>
+                            <strong>Desafío parte 2:</strong> Vista del desafío. El desafío es una dinámica que consiste
+                            en
+                            subir una receta que use el ingrediente de la semana (que se selecciona y cambia
+                            aleatoriamente
+                            cada semana). Cada interacción con la publicación (likes, comentarios, favoritos,
+                            compartidos)
+                            suman puntos en el ranking semanal. Los usuarios que acumulen más puntos tendrán visibilidad
+                            en
+                            el ranking.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/desafio-3.png" alt="Captura de pantalla de la sección de desfío"
+                            class="captura-pequena">
+                        <figcaption>
+                            <strong>Desafío parte 3:</strong> Vista del desafío. El desafío es una dinámica que consiste
+                            en
+                            subir una receta que use el ingrediente de la semana (que se selecciona y cambia
+                            aleatoriamente
+                            cada semana). Cada interacción con la publicación (likes, comentarios, favoritos,
+                            compartidos)
+                            suman puntos en el ranking semanal. Los usuarios que acumulen más puntos tendrán visibilidad
+                            en
+                            el ranking.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/perfil.png" alt="Captura de pantalla de la sección del perfil"
+                            class="captura-pequena">
+                        <figcaption>
+                            <strong>Perfil:</strong> Vista del Perfil. Se muestra las publicaciones pudiendose filtrar
+                            por
+                            videos, y favoritas. Se muestra cantidad de publiciones, seguidores, seguidos. Y la opción
+                            de
+                            compartir y editar la información personal del perfil.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/busqueda.png" alt="Captura de pantalla de la sección de búsqueda"
+                            class="captura-pequena">
+                        <figcaption>
+                            <strong>Búsqueda:</strong> Vista de la barra de búsqueda. Se pueden buscar usuarios y
+                            recetas.
+                            Para las recetas el algoritmo realiza un búsqueda por titulo de receta, descripción,
+                            ingrediente
+                            y etiquetas.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/busqueda-2.png"
+                            alt="Captura de pantalla de la sección de búsqueda" class="captura-pequena">
+                        <figcaption>
+                            <strong>Búsqueda:</strong> Vista de la barra de búsqueda. Se pueden buscar usuarios y
+                            recetas.
+                            Para las recetas el algoritmo realiza un búsqueda por titulo de receta, descripción,
+                            ingrediente
+                            y etiquetas.
+                        </figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/fob/notificaciones.png"
+                            alt="Captura de pantalla de la sección de notificaciones" class="captura-pequena">
+                        <figcaption>
+                            <strong>Notificaciones:</strong> Vista de la sección de notificaciones. Se notifican al
+                            usuario
+                            las acciones como likes, comentarios, favoritos y respuestas de comentarios
+                        </figcaption>
+                    </figure>
+                </div>
+
+            </section>
+
+            <section id="tecnologias-usadas">
+                <h2>Stack Tecnológico</h2>
+                <div class="tecnologias-grid">
+                    <div class="tech-item">
+                        <h3>Frontend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-react"></i> React 18+</li>
+                            <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Backend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-microsoft"></i> .NET Framework</li>
+                            <li><i class="fas fa-code"></i> C#</li>
+                            <li><i class="fas fa-network-wired"></i> API REST</li>
+                            <li><i class="fas fa-database"></i> Entity Framework</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Base de Datos</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-database"></i> MySQL</li>
+                            <li><i class="fas fa-tachometer-alt"></i> Índices optimizados</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Herramientas</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-pencil-ruler"></i> Enterprise Architect</li>
+                            <li><i class="fas fa-palette"></i> Canva (Diseño)</li>
+                            <li><i class="fas fa-file-code"></i> Visual Studio Code</li>
+                            <li><i class="fab fa-github"></i> Git & GitHub</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
-
-        <section id="detalles-clave">
-            <h2>Información Rápida</h2>
-            <div class="tarjetas-info">
-                <p><strong>Nombre del proyecto: </strong>Fondo Blanco (FoB)</p>
-                <p><strong>Descripción: </strong>WebApp para descubrir, compartir, y valorar recetas de tragos de
-                    bebidas</p>
-                <p><strong>Tipo: </strong>Proyecto académico - Cátedra Proyecto Final UTN FRLP</p>
-                <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
-                <p><strong>Fecha: </strong>Marzo - Diciembre 2025</p>
-                <p><strong>Tecnologías Usadas: </strong>React, .NET, MySQL, HTML, CSS</p>
-                <p><strong>Colaboradores: </strong><a href="https://www.linkedin.com/in/gabriel-scarafia/"
-                        target="_blank" class="link-colaborador">Gabriel Scarafia</a>, <a
-                        href="https://www.linkedin.com/in/matias-russo22/" target="_blank"
-                        class="link-colaborador">Matias Russo</a>, <a href="#" target="_blank"
-                        class="link-colaborador">Tomas Sbert</a></p>
-                <!-- <a href="" target="_blank" class="boton-proyecto">Visitar la página</a> -->
-            </div>
-        </section>
-
-        <section id="narrativa-proyecto">
-            <h2>Desafío</h2>
-            <p>El proyecto consistió en diseñar una plataforma social dedicada a descubrir, compartir y valorar recetas
-                de tragos. El desafío principal fue crear una experiencia atractiva e intuitiva donde los usuarios
-                pudieran subir contenido propio —incluyendo fotos, ingredientes y pasos detallados— y, al mismo tiempo,
-                fomentar la interacción mediante desafíos semanales temáticos.</p>
-
-            <h2>Enfoque y Proceso</h2>
-            <p>Junto a mi equipo, comenzamos analizando aplicaciones de referencia y definiendo las funcionalidades
-                clave: carga de recetas con imágenes, sistema de valoración, perfiles de usuario y secciones dinámicas
-                para desafíos. A partir de esto, diagramamos el flujo de usuario y diseñamos una interfaz que
-                simplificara la creación de contenido. Durante el desarrollo, priorizamos la modularidad, la experiencia
-                móvil y la integración fluida entre frontend y backend.</p>
-
-            <h2>Solución Implementada</h2>
-            <p>Construimos una web app que permite a los usuarios subir fotos, describir paso a paso cómo preparar un
-                trago e indicar ingredientes y utensilios necesarios. Incluimos un sistema de valoración, feed dinámico,
-                filtros de recetas y un módulo de desafíos semanales para incentivar la participación. El resultado fue
-                una plataforma social colaborativa y visualmente atractiva, con foco en la comunidad y la facilidad para
-                compartir nuevas creaciones.</p>
-        </section>
-
-        <section id="caracteristicas-tecnicas">
-            <h2>Características Técnicas Destacadas</h2>
-            <div class="caracteristicas-grid">
-                <div class="caracteristica-card">
-                    <h3>Sistema de Recetas</h3>
-                    <p>Carga completa de recetas con ingredientes, pasos detallados, imágenes y metadatos como
-                        dificultad y tiempo de preparación.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Valoración y Feedback</h3>
-                    <p>Sistema integral de interacción con likes, dislikes, comentarios, favoritos y compartir en redes
-                        sociales.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Perfiles de Usuario</h3>
-                    <p>Perfiles personalizables con historial de publicaciones, seguidores/seguidos y estadísticas de
-                        actividad.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Desafíos Semanales</h3>
-                    <p>Dinámicas gamificadas con ingrediente semanal, ranking de puntos e incentivos para la
-                        participación comunitaria.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Sistema de Búsqueda</h3>
-                    <p>Búsqueda avanzada por título, descripción, ingredientes, etiquetas y perfiles de usuario.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Sistema de Notificaciones</h3>
-                    <p>Sistema de alertas para likes, comentarios, favoritos y respuestas de comentarios.</p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="impacto-metricas">
-            <h2>Impacto y Resultados</h2>
-            <div class="metricas-grid">
-                <div class="metrica-item">
-                    <h3>100%</h3>
-                    <p>Funcionalidades completadas</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>15+</h3>
-                    <p>Pantallas diseñadas</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>60+</h3>
-                    <p>Componentes React</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>4.8/5★</h3>
-                    <p>Calificación de funcionalidad</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo-proyecto">
-            <h2>Demo</h2>
-            <div class="demo-contenedor">
-                <video class="demo-video" controls preload="metadata" playsinline>
-                    <source src="" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
-            </div>
-        </section>
-
-        <section id="galeria-capturas">
-            <h2>Vistazo al Proyecto</h2>
-
-            <div class="capturas-contenedor">
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/registrarse.png"
-                        alt="Captura de pantalla de la interfaz de registrarse." class="captura-grande">
-                    <figcaption>
-                        <strong>Registrarse:</strong> Esta captura muestra la interfaz de registro
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/iniciar-sesion.png"
-                        alt="Captura de pantalla de la interfaz de inicio de sesión." class="captura-grande">
-                    <figcaption>
-                        <strong>Iniciar sesión:</strong> Esta captura muestra la interfaz de inicio de sesión
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/publicacion.png"
-                        alt="Captura de pantalla de la interfaz de publicación del proyecto." class="captura-grande">
-                    <figcaption>
-                        <strong>Feed:</strong> Esta captura muestra la interfaz del feed, donde se pueden ver las
-                        publicaciones de las personas a las que sigues.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/tendencias.png"
-                        alt="Captura de pantalla de la sección de tendencias o estadísticas del proyecto."
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Tendencias:</strong> Vista de la sección de tendencias. El algoritmos de FoB
-                        desarrollado clasifica las publicaciones con más interacciones (likes, comentarios, favoritos) y
-                        las muestra en esta sección.
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/cargar-receta-1.png"
-                        alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
-                    <figcaption>
-                        <strong>Subir Receta parte 1:</strong> Vista de la sección para cargar una receta. Se puede
-                        cargar el nombre del trago, sus ingredientes con sus cantidades y unidades de medida, fotos del
-                        paso a paso con una descripción, etiquetas de la publicación, utensilios utilizados
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/cargar-receta-2.png"
-                        alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
-                    <figcaption>
-                        <strong>Subir Receta parte 2:</strong> Vista de la sección para cargar una receta. Se puede
-                        cargar el nombre del trago, sus ingredientes con sus cantidades y unidades de medida, fotos del
-                        paso a paso con una descripción, etiquetas de la publicación, utensilios utilizados
-                    </figcaption>
-                </figure>
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/cargar-receta-3.png"
-                        alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
-                    <figcaption>
-                        <strong>Subir Receta parte 3:</strong> Vista de la sección para cargar una receta. Se puede
-                        cargar el nombre del trago, sus ingredientes con sus cantidades y unidades de medida, fotos del
-                        paso a paso con una descripción, etiquetas de la publicación, utensilios utilizados
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/receta-1.png"
-                        alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
-                    <figcaption>
-                        <strong>Publicación parte 1:</strong> Vista de una publicación con el paso a paso, ingrediente,
-                        descripción, utensilios utilizados, y etiquetas. También cuenta con nivel de dificultad, tiempo
-                        de preparación, botones para interactuar con like, dislike, comentar, guardar en favoritos y
-                        compartir.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/receta-2.png"
-                        alt="Captura de pantalla de la sección para cargar una receta" class="captura-pequena">
-                    <figcaption>
-                        <strong>Publicación parte 2:</strong> Vista de una publicación con el paso a paso, ingrediente,
-                        descripción, utensilios utilizados, y etiquetas. También cuenta con nivel de dificultad, tiempo
-                        de preparación, botones para interactuar con like, dislike, comentar, guardar en favoritos y
-                        compartir.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/desafio-1.png" alt="Captura de pantalla de la sección de desfío"
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Desafío parte 1:</strong> Vista del desafío. El desafío es una dinámica que consiste en
-                        subir una receta que use el ingrediente de la semana (que se selecciona y cambia aleatoriamente
-                        cada semana). Cada interacción con la publicación (likes, comentarios, favoritos, compartidos)
-                        suman puntos en el ranking semanal. Los usuarios que acumulen más puntos tendrán visibilidad en
-                        el ranking.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/desafio-2.png" alt="Captura de pantalla de la sección de desfío"
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Desafío parte 2:</strong> Vista del desafío. El desafío es una dinámica que consiste en
-                        subir una receta que use el ingrediente de la semana (que se selecciona y cambia aleatoriamente
-                        cada semana). Cada interacción con la publicación (likes, comentarios, favoritos, compartidos)
-                        suman puntos en el ranking semanal. Los usuarios que acumulen más puntos tendrán visibilidad en
-                        el ranking.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/desafio-3.png" alt="Captura de pantalla de la sección de desfío"
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Desafío parte 3:</strong> Vista del desafío. El desafío es una dinámica que consiste en
-                        subir una receta que use el ingrediente de la semana (que se selecciona y cambia aleatoriamente
-                        cada semana). Cada interacción con la publicación (likes, comentarios, favoritos, compartidos)
-                        suman puntos en el ranking semanal. Los usuarios que acumulen más puntos tendrán visibilidad en
-                        el ranking.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/perfil.png" alt="Captura de pantalla de la sección del perfil"
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Perfil:</strong> Vista del Perfil. Se muestra las publicaciones pudiendose filtrar por
-                        videos, y favoritas. Se muestra cantidad de publiciones, seguidores, seguidos. Y la opción de
-                        compartir y editar la información personal del perfil.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/busqueda.png" alt="Captura de pantalla de la sección de búsqueda"
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Búsqueda:</strong> Vista de la barra de búsqueda. Se pueden buscar usuarios y recetas.
-                        Para las recetas el algoritmo realiza un búsqueda por titulo de receta, descripción, ingrediente
-                        y etiquetas.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/busqueda-2.png" alt="Captura de pantalla de la sección de búsqueda"
-                        class="captura-pequena">
-                    <figcaption>
-                        <strong>Búsqueda:</strong> Vista de la barra de búsqueda. Se pueden buscar usuarios y recetas.
-                        Para las recetas el algoritmo realiza un búsqueda por titulo de receta, descripción, ingrediente
-                        y etiquetas.
-                    </figcaption>
-                </figure>
-                <figure class="captura-item">
-                    <img src="../img/proyectos/fob/notificaciones.png"
-                        alt="Captura de pantalla de la sección de notificaciones" class="captura-pequena">
-                    <figcaption>
-                        <strong>Notificaciones:</strong> Vista de la sección de notificaciones. Se notifican al usuario
-                        las acciones como likes, comentarios, favoritos y respuestas de comentarios
-                    </figcaption>
-                </figure>
-            </div>
-
-        </section>
-
-        <section id="tecnologias-usadas">
-            <h2>Stack Tecnológico</h2>
-            <div class="tecnologias-grid">
-                <div class="tech-item">
-                    <h3>Frontend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-react"></i> React 18+</li>
-                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-                        <li><i class="fab fa-html5"></i> HTML5</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Backend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-microsoft"></i> .NET Framework</li>
-                        <li><i class="fas fa-code"></i> C#</li>
-                        <li><i class="fas fa-network-wired"></i> API REST</li>
-                        <li><i class="fas fa-database"></i> Entity Framework</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Base de Datos</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-database"></i> MySQL</li>
-                        <li><i class="fas fa-tachometer-alt"></i> Índices optimizados</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Herramientas</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-pencil-ruler"></i> Enterprise Architect</li>
-                        <li><i class="fas fa-palette"></i> Canva (Diseño)</li>
-                        <li><i class="fas fa-file-code"></i> Visual Studio Code</li>
-                        <li><i class="fab fa-github"></i> Git & GitHub</li>
-
-                    </ul>
-                </div>
-            </div>
-        </section>
-
     </div>
 
 

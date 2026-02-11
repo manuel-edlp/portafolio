@@ -30,209 +30,270 @@
         </div>
     </nav>
 
-    <div id="banner"></div>
+    <div class="project-container">
+        <nav id="side-nav">
+            <a href="fondo-blanco.html" class="side-link">Fondo Blanco</a>
+            <a href="hogares-del-sol.html" class="side-link">Hogares del Sol</a>
+            <a href="ticket.html" class="side-link">Ticket</a>
+            <a href="leyendas-del-sur.html" class="side-link">Leyendas del Sur</a>
+            <a href="jornadas.html" class="side-link">Jornadas</a>
+            <a href="cneisi.html" class="side-link">CNEISI</a>
+            <a href="vetcloud.html" class="side-link">VetCloud</a>
+            <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
+            <a href="chatbot.html" class="side-link active">Chatbot SAU</a>
+        </nav>
 
-    <div id="contenido-principal">
+        <div id="contenido-principal">
+            <div id="nav-proyectos-top"></div>
 
-        <div id="cabecera-proyecto">
-            <a href="../#proyectos" class="btn-volver-inicio">
-                <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
-            </a>
-            <h1>Chatbot SAU - Asistente Virtual UTN FRLP</h1>
-            <p class="subtitulo">Asistente virtual inteligente para atender consultas de la Secretaría de Asuntos
-                Universitarios de la UTN FRLP</p>
+            <div id="cabecera-proyecto">
+                <a href="../#proyectos" class="btn-volver-inicio">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
+                </a>
+                <h1>Chatbot SAU - Asistente Virtual UTN FRLP</h1>
+                <p class="subtitulo">Asistente virtual inteligente para atender consultas de la Secretaría de Asuntos
+                    Universitarios de la UTN FRLP</p>
+            </div>
+
+            <section id="detalles-clave">
+                <h2>Información Rápida</h2>
+                <div class="tarjetas-info">
+                    <p><strong>Nombre del proyecto: </strong>Chatbot SAU - Asistente Virtual UTN FRLP</p>
+                    <p><strong>Descripción: </strong>Asistente virtual basado en IA para responder consultas frecuentes
+                        de
+                        estudiantes sobre servicios, procesos administrativos y eventos de la Secretaría de Asuntos
+                        Universitarios.</p>
+                    <p><strong>Tipo: </strong>Proyecto Institucional (Secretaría de Asuntos Universitarios UTN FRLP)</p>
+                    <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
+                    <p><strong>Fecha: </strong>Octubre - Diciembre 2024</p>
+                    <p><strong>Tecnologías Usadas: </strong>Python, Rasa, Docker, K3s, Redis, HTML, CSS, JavaScript,
+                        Telegram Bot API, WhatsApp Business API</p>
+                    <p><strong>Impacto: </strong>Reducción de consultas presenciales, atención 24/7, mejora en
+                        experiencia
+                        del usuario</p>
+                    <a href="https://wa.me/5492213539133" target="_blank" class="boton-proyecto">Probar bot</a>
+                    <a href="https://github.com/UTN-FRLP-Sau/asistente-sau" target="_blank" class="boton-proyecto">Ver
+                        código</a>
+
+                </div>
+            </section>
+
+            <section id="narrativa-proyecto">
+                <h2>Desafío</h2>
+                <p>La Secretaría de Asuntos Universitarios (SAU) de la UTN FRLP enfrentaba un problema significativo:
+                    <strong>miles de estudiantes</strong> realizaban consultas repetitivas sobre procesos
+                    administrativos,
+                    calendarios, servicios disponibles y trámites. Esta demanda generaba <strong>sobrecarga en el
+                        personal</strong>, largas filas de espera y respuestas inconsistentes.
+                </p>
+                <p>El desafío fue crear una solución que permitiera <strong>atender automáticamente al 70-80% de las
+                        consultas frecuentes</strong>, liberando al personal para tareas más estratégicas y mejorando la
+                    experiencia del estudiante con respuestas inmediatas y disponibles 24/7.</p>
+
+                <h2>Enfoque y Proceso</h2>
+                <p>Implementé un <strong>chatbot inteligente basado en IA</strong> que combinaba:</p>
+                <ul>
+                    <li><strong>Natural Language Processing (NLP)</strong>: Para entender consultas en lenguaje natural
+                        en
+                        español.</li>
+                    <li><strong>Base de Conocimiento Estructurada</strong>: 60 preguntas frecuentes organizadas en 6
+                        áreas
+                        (becas, boleto estudiantil, deportes, comedor, bolsa de trabajo, pasantías).</li>
+                    <li><strong>Interfaz de Usuario Intuitiva</strong>: Diseño conversacional amigable y accesible desde
+                        cualquier dispositivo.</li>
+                    <li><strong>Sistema de Escalado</strong>: Capacidad de derivar consultas complejas al personal
+                        humano
+                        cuando sea necesario.</li>
+                    <li><strong>Despliegue Contenerizado</strong>: Docker y K3s para orquestar y escalar el sistema.
+                    </li>
+                </ul>
+
+                <h2>Solución Implementada</h2>
+                <p>Desarrollé una plataforma de chatbot multifuncional que:</p>
+                <ul>
+                    <li><strong>Responde Consultas Frecuentes</strong>: Sobre becas, boleto estudiantil, deportes,
+                        comedor,
+                        bolsa de trabajo y pasantías.</li>
+                    <li><strong>Proporciona Información Administrativa</strong>: Horarios, procesos de inscripción,
+                        requisitos de trámites y fechas clave.</li>
+                    <li><strong>Gestiona Conversaciones Complejas</strong>: Mantiene contexto entre mensajes para
+                        conversaciones naturales y coherentes.</li>
+                    <li><strong>Ofrece Múltiples Canales</strong>: Disponible en web (SocketIO), Telegram y WhatsApp
+                        (conector custom).</li>
+                    <li><strong>Menús Interactivos</strong>: Navegación estructurada por categorías con paginación.</li>
+                </ul>
+                <p>El resultado fue una <strong>reducción del 65-75% en consultas presenciales</strong> durante su
+                    primer
+                    mes de operación, permitiendo al personal enfocarse en casos especiales y mejorando
+                    significativamente
+                    la satisfacción de estudiantes.</p>
+            </section>
+
+            <section id="caracteristicas-tecnicas">
+                <h2>Características Técnicas Destacadas</h2>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <h3>NLP Avanzado</h3>
+                        <p>Procesamiento de lenguaje natural en español con capacidad de entender variaciones y
+                            sinónimos en
+                            las consultas de usuarios.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Base de Conocimiento</h3>
+                        <p>Sistema estructurado con 60 preguntas frecuentes organizadas en 6 áreas temáticas de la SAU.
+                        </p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Conversaciones Contextales</h3>
+                        <p>El chatbot mantiene el contexto de la conversación, permitiendo preguntas de seguimiento e
+                            interacciones naturales.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Interfaz Web con SocketIO</h3>
+                        <p>Cliente web con rasa-webchat 1.0.1 conectado vía WebSocket al servidor Rasa (puerto 30001).
+                        </p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Integración con Telegram</h3>
+                        <p>Bot disponible también en Telegram para acceso multiplataforma.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Integración con WhatsApp</h3>
+                        <p>Conector custom para WhatsApp Business API con soporte para botones y listas interactivas.
+                        </p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <h3>Despliegue en K3s</h3>
+                        <p>Orquestación ligera con Kubernetes (K3s) y Docker para alta disponibilidad.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="demo-proyecto">
+                <h2>Demo</h2>
+                <div class="demo-contenedor">
+                    <div class="demo-placeholder">
+                        <i class="fas fa-robot"></i>
+                        <p>Video demostrativo del chatbot en acción</p>
+                        <small>Disponible bajo solicitud</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="archivos-extras">
+                <h2>Documentación y Recursos</h2>
+                <div class="extras-grid">
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Informe de Requerimientos</h3>
+                            <p>Documento formal de especificación de requisitos (SRS).</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-draw-polygon"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Diagramas UML</h3>
+                            <p>Diagramas de Clases, Secuencia y Casos de Uso.</p>
+                        </div>
+                    </a>
+                    <a href="#" class="extra-card disabled">
+                        <div class="extra-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="extra-info">
+                            <h3>Maquetados UI/UX</h3>
+                            <p>Wireframes y prototipos de alta fidelidad.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section id="impacto-metricas">
+                <h2>Impacto y Resultados</h2>
+                <div class="metricas-grid">
+                    <div class="metrica-item">
+                        <h3>65-75%</h3>
+                        <p>Reducción de consultas presenciales</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>&lt;2 seg</h3>
+                        <p>Tiempo promedio de respuesta</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>24/7</h3>
+                        <p>Disponibilidad del servicio</p>
+                    </div>
+                    <div class="metrica-item">
+                        <h3>4.7/5★</h3>
+                        <p>Calificación promedio de usuarios</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="galeria-capturas">
+                <h2>Vistazo al Proyecto</h2>
+
+                <div class="capturas-contenedor">
+
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/chatbot/chatbot-logo.png" alt="Interfaz principal del chatbot SAU"
+                            class="captura-grande">
+                        <figcaption>
+                            <strong>Logo del Chatbot:</strong> Identidad visual del asistente virtual de la SAU
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <section id="tecnologias-usadas">
+                <h2>Stack Tecnológico</h2>
+                <div class="tecnologias-grid">
+                    <div class="tech-item">
+                        <h3>Backend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-python"></i> Python 3.10+</li>
+                            <li><i class="fas fa-brain"></i> Rasa</li>
+                            <li><i class="fab fa-docker"></i> Docker</li>
+                            <li><i class="fas fa-cube"></i> K3s (Kubernetes)</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Frontend</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-html5"></i> HTML5</li>
+                            <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                            <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+                            <li><i class="fas fa-comments"></i> Rasa Webchat 1.0.1</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Infraestructura</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-database"></i> Redis (lock store)</li>
+                            <li><i class="fas fa-tachometer-alt"></i> Locust (pruebas de carga)</li>
+                            <li><i class="fas fa-globe"></i> Ngrok (desarrollo)</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Integraciones</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-telegram"></i> Telegram Bot API</li>
+                            <li><i class="fab fa-whatsapp"></i> WhatsApp Business API</li>
+                            <li><i class="fas fa-plug"></i> SocketIO (WebSocket)</li>
+                            <li><i class="fab fa-github"></i> Git & GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
         </div>
-
-        <section id="detalles-clave">
-            <h2>Información Rápida</h2>
-            <div class="tarjetas-info">
-                <p><strong>Nombre del proyecto: </strong>Chatbot SAU - Asistente Virtual UTN FRLP</p>
-                <p><strong>Descripción: </strong>Asistente virtual basado en IA para responder consultas frecuentes de
-                    estudiantes sobre servicios, procesos administrativos y eventos de la Secretaría de Asuntos
-                    Universitarios.</p>
-                <p><strong>Tipo: </strong>Proyecto Institucional (Secretaría de Asuntos Universitarios UTN FRLP)</p>
-                <p><strong>Rol: </strong>Desarrollador Full-Stack</p>
-                <p><strong>Fecha: </strong>Octubre - Diciembre 2024</p>
-                <p><strong>Tecnologías Usadas: </strong>Python, Rasa, Docker, K3s, Redis, HTML, CSS, JavaScript,
-                    Telegram Bot API, WhatsApp Business API</p>
-                <p><strong>Impacto: </strong>Reducción de consultas presenciales, atención 24/7, mejora en experiencia
-                    del usuario</p>
-                <a href="" target="_blank" class="boton-proyecto">Probar bot</a>
-                <a href="https://github.com/UTN-FRLP-Sau/asistente-sau" target="_blank" class="boton-proyecto">Ver
-                    código</a>
-
-            </div>
-        </section>
-
-        <section id="narrativa-proyecto">
-            <h2>Desafío</h2>
-            <p>La Secretaría de Asuntos Universitarios (SAU) de la UTN FRLP enfrentaba un problema significativo:
-                <strong>miles de estudiantes</strong> realizaban consultas repetitivas sobre procesos administrativos,
-                calendarios, servicios disponibles y trámites. Esta demanda generaba <strong>sobrecarga en el
-                    personal</strong>, largas filas de espera y respuestas inconsistentes.</p>
-            <p>El desafío fue crear una solución que permitiera <strong>atender automáticamente al 70-80% de las
-                    consultas frecuentes</strong>, liberando al personal para tareas más estratégicas y mejorando la
-                experiencia del estudiante con respuestas inmediatas y disponibles 24/7.</p>
-
-            <h2>Enfoque y Proceso</h2>
-            <p>Implementé un <strong>chatbot inteligente basado en IA</strong> que combinaba:</p>
-            <ul>
-                <li><strong>Natural Language Processing (NLP)</strong>: Para entender consultas en lenguaje natural en
-                    español.</li>
-                <li><strong>Base de Conocimiento Estructurada</strong>: 60 preguntas frecuentes organizadas en 6 áreas
-                    (becas, boleto estudiantil, deportes, comedor, bolsa de trabajo, pasantías).</li>
-                <li><strong>Interfaz de Usuario Intuitiva</strong>: Diseño conversacional amigable y accesible desde
-                    cualquier dispositivo.</li>
-                <li><strong>Sistema de Escalado</strong>: Capacidad de derivar consultas complejas al personal humano
-                    cuando sea necesario.</li>
-                <li><strong>Despliegue Contenerizado</strong>: Docker y K3s para orquestar y escalar el sistema.</li>
-            </ul>
-
-            <h2>Solución Implementada</h2>
-            <p>Desarrollé una plataforma de chatbot multifuncional que:</p>
-            <ul>
-                <li><strong>Responde Consultas Frecuentes</strong>: Sobre becas, boleto estudiantil, deportes, comedor,
-                    bolsa de trabajo y pasantías.</li>
-                <li><strong>Proporciona Información Administrativa</strong>: Horarios, procesos de inscripción,
-                    requisitos de trámites y fechas clave.</li>
-                <li><strong>Gestiona Conversaciones Complejas</strong>: Mantiene contexto entre mensajes para
-                    conversaciones naturales y coherentes.</li>
-                <li><strong>Ofrece Múltiples Canales</strong>: Disponible en web (SocketIO), Telegram y WhatsApp
-                    (conector custom).</li>
-                <li><strong>Menús Interactivos</strong>: Navegación estructurada por categorías con paginación.</li>
-            </ul>
-            <p>El resultado fue una <strong>reducción del 65-75% en consultas presenciales</strong> durante su primer
-                mes de operación, permitiendo al personal enfocarse en casos especiales y mejorando significativamente
-                la satisfacción de estudiantes.</p>
-        </section>
-
-        <section id="caracteristicas-tecnicas">
-            <h2>Características Técnicas Destacadas</h2>
-            <div class="caracteristicas-grid">
-                <div class="caracteristica-card">
-                    <h3>NLP Avanzado</h3>
-                    <p>Procesamiento de lenguaje natural en español con capacidad de entender variaciones y sinónimos en
-                        las consultas de usuarios.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Base de Conocimiento</h3>
-                    <p>Sistema estructurado con 60 preguntas frecuentes organizadas en 6 áreas temáticas de la SAU.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Conversaciones Contextales</h3>
-                    <p>El chatbot mantiene el contexto de la conversación, permitiendo preguntas de seguimiento e
-                        interacciones naturales.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Interfaz Web con SocketIO</h3>
-                    <p>Cliente web con rasa-webchat 1.0.1 conectado vía WebSocket al servidor Rasa (puerto 30001).</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Integración con Telegram</h3>
-                    <p>Bot disponible también en Telegram para acceso multiplataforma.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Integración con WhatsApp</h3>
-                    <p>Conector custom para WhatsApp Business API con soporte para botones y listas interactivas.</p>
-                </div>
-                <div class="caracteristica-card">
-                    <h3>Despliegue en K3s</h3>
-                    <p>Orquestación ligera con Kubernetes (K3s) y Docker para alta disponibilidad.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo-proyecto">
-            <h2>Demo</h2>
-            <div class="demo-contenedor">
-                <div class="demo-placeholder">
-                    <i class="fas fa-robot"></i>
-                    <p>Video demostrativo del chatbot en acción</p>
-                    <small>Disponible bajo solicitud</small>
-                </div>
-            </div>
-        </section>
-
-        <section id="impacto-metricas">
-            <h2>Impacto y Resultados</h2>
-            <div class="metricas-grid">
-                <div class="metrica-item">
-                    <h3>65-75%</h3>
-                    <p>Reducción de consultas presenciales</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>&lt;2 seg</h3>
-                    <p>Tiempo promedio de respuesta</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>24/7</h3>
-                    <p>Disponibilidad del servicio</p>
-                </div>
-                <div class="metrica-item">
-                    <h3>4.7/5★</h3>
-                    <p>Calificación promedio de usuarios</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria-capturas">
-            <h2>Vistazo al Proyecto</h2>
-
-            <div class="capturas-contenedor">
-
-                <figure class="captura-item">
-                    <img src="../img/proyectos/chatbot/chatbot-logo.png" alt="Interfaz principal del chatbot SAU"
-                        class="captura-grande">
-                    <figcaption>
-                        <strong>Logo del Chatbot:</strong> Identidad visual del asistente virtual de la SAU
-                    </figcaption>
-                </figure>
-
-            </div>
-
-        </section>
-
-        <section id="tecnologias-usadas">
-            <h2>Stack Tecnológico</h2>
-            <div class="tecnologias-grid">
-                <div class="tech-item">
-                    <h3>Backend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-python"></i> Python 3.10+</li>
-                        <li><i class="fas fa-brain"></i> Rasa</li>
-                        <li><i class="fab fa-docker"></i> Docker</li>
-                        <li><i class="fas fa-cube"></i> K3s (Kubernetes)</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Frontend</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-html5"></i> HTML5</li>
-                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
-                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-                        <li><i class="fas fa-comments"></i> Rasa Webchat 1.0.1</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Infraestructura</h3>
-                    <ul class="tech-list">
-                        <li><i class="fas fa-database"></i> Redis (lock store)</li>
-                        <li><i class="fas fa-tachometer-alt"></i> Locust (pruebas de carga)</li>
-                        <li><i class="fas fa-globe"></i> Ngrok (desarrollo)</li>
-                    </ul>
-                </div>
-                <div class="tech-item">
-                    <h3>Integraciones</h3>
-                    <ul class="tech-list">
-                        <li><i class="fab fa-telegram"></i> Telegram Bot API</li>
-                        <li><i class="fab fa-whatsapp"></i> WhatsApp Business API</li>
-                        <li><i class="fas fa-plug"></i> SocketIO (WebSocket)</li>
-                        <li><i class="fab fa-github"></i> Git & GitHub</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
     </div>
 
 
