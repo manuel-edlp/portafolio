@@ -457,14 +457,14 @@
 }
 
 .link-colaborador {
-    color: var(--theme-primary);
+    color: black;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .link-colaborador:hover {
-    color: var(--theme-secondary);
+    color: black;
     text-decoration: underline;
 }
 
