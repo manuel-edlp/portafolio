@@ -40,3 +40,7 @@
 #btn-back-to-top {
     color: #222;
 }
+
+.extra-icon {
+    color: var(--theme-primary);
+}
