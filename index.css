@@ -212,25 +212,114 @@ footer {
     transform: scale(1.05);
 }
 
-#cta {
-    margin: 1rem 0 0 0;
+.inicio-acciones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+    width: 100%;
 }
 
-#cta-btn {
-    padding: 15px 30px;
-    font-size: 1.15rem;
+.acciones-principales {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-primary-main,
+.btn-secondary-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-size: 1.1rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
     text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary-main {
     background-color: #0077B6;
     color: white;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 2px solid #0077B6;
 }
 
-#cta-btn:hover {
+.btn-primary-main:hover {
     background-color: #005582;
+    border-color: #005582;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
+}
+
+.btn-secondary-main {
+    background-color: transparent;
+    color: #0077B6;
+    border: 2px solid #0077B6;
+}
+
+.btn-secondary-main:hover {
+    background-color: rgba(0, 119, 182, 0.05);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
+}
+
+/* Grupo CV */
+.acciones-cv-unified {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 50px;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.acciones-cv-unified:hover {
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.btn-cv-view {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    color: #444;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 50px;
+    transition: background-color 0.2s;
+}
+
+.btn-cv-view:hover {
+    background-color: #f5f5f5;
+    color: #0077B6;
+}
+
+.btn-cv-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    color: #666;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid #eee;
+}
+
+.btn-cv-download:hover {
+    background-color: #0077B6;
+    color: white;
+    border-color: #0077B6;
 }
 
 /* --- Sección Sobre mi --- */
@@ -794,34 +883,7 @@ footer {
 }
 
 
-.cv-actions {
-    display: flex;
-    gap: 15px;
-    margin: 25px 0 35px 0;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.cv-btn {
-    padding: 12px 25px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s, border-color 0.3s;
-    text-align: center;
-    min-width: 180px;
-}
-
-.cv-btn.primary-btn {
-    background-color: #007bff;
-    color: #ffffff;
-    border: 2px solid #007bff;
-}
-
-.cv-btn.primary-btn:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
+/* Viejos estilos de CV removidos */
 
 /* --- Side Navigation (Global) --- */
 #side-nav {
@@ -922,57 +984,30 @@ footer {
     text-decoration: none;
 }
 
-.cv-btn.secondary-btn {
-    background-color: transparent;
-    color: #007bff;
-    border: 2px solid #007bff;
-}
-
-.cv-btn.secondary-btn:hover {
-    background-color: #e9ecef;
-    color: #0056b3;
-    border-color: #0056b3;
-}
-
-#cta-secundario {
-    margin-top: 30px;
-    text-align: center;
-}
-
-#cta-contacto-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #6c757d;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #6c757d;
-    font-size: 1.1em;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-#cta-contacto-btn:hover {
-    background-color: #f8f9fa;
-    color: #495057;
-    border-color: #495057;
-}
-
 @media (max-width: 600px) {
-    .cv-actions {
+    .acciones-principales {
         flex-direction: column;
-        gap: 10px;
-        margin: 20px 0;
+        width: 100%;
     }
 
-    .cv-btn {
+    .btn-primary-main,
+    .btn-secondary-main {
         width: 100%;
-        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    .acciones-cv-unified {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-cv-view {
+        flex: 1;
     }
 }
 
-/* Responsive para ocultar o mover en pantallas pequeñas si es necesario */
 @media (max-width: 992px) {
 
-    /* Ocultamos los iconos flotantes para no interferir con el contenido en móviles */
     #social-flotante {
         display: none;
     }
@@ -1066,15 +1101,12 @@ footer {
     gap: 8px;
     margin: 10px 0 15px 0;
     padding: 0 1.5rem;
-    /* Match card padding */
     justify-content: center;
 }
 
 .tag {
     background: #dfe6ed;
-    /* Darker background for contrast */
     color: #212529;
-    /* Darker text */
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 0.75rem;
@@ -1082,14 +1114,12 @@ footer {
     letter-spacing: 0.5px;
     text-transform: uppercase;
     border: 1px solid #ced4da;
-    /* Subtle border for definition */
 }
 
 /* --- Archivos Extras (Documentación) --- */
 #archivos-extras {
     padding: 40px 0;
     background-color: #f8f9fa;
-    /* Light gray background to separate section */
     margin: 40px 0;
     border-radius: 12px;
 }
