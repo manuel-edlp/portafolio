@@ -14,3 +14,7 @@
 .metrica-item {
     background: linear-gradient(135deg, #004e92 0%, #0076d6 100%);
 }
+
+.extra-icon {
+    color: var(--theme-primary);
+}
