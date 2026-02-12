@@ -14,3 +14,7 @@
 .extra-icon {
     color: var(--theme-primary);
 }
+
+.nav-logo img {
+    border-radius: 50px;
+}

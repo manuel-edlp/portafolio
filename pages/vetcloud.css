@@ -10,3 +10,17 @@
     --theme-accent-50: rgba(0, 118, 214, 0.5);
     --theme-accent-90: rgba(0, 118, 214, 0.9);
 }
+
+.extra-icon {
+    color: var(--theme-primary);
+}
+
+.nav-logo img {
+    border-radius: 5px;
+}
+
+.metrica-item h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
