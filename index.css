@@ -487,6 +487,92 @@ footer {
     }
 }
 
+/* --- Sección Formación --- */
+#formacion {
+    padding: 60px 0 20px;
+    margin: 40px auto;
+}
+
+#formacion h2 {
+    text-align: left;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #212529;
+    padding-left: 50px;
+}
+
+.formacion-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 1.5rem;
+    margin-left: 65px;
+    margin-right: 3rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    gap: 30px;
+    transition: all 0.3s ease;
+}
+
+.formacion-item:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    border-color: #0077B6;
+}
+
+.formacion-logo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.formacion-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.formacion-info {
+    flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+    #formacion {
+        padding: 40px 0 10px;
+        margin: 20px 10px;
+    }
+
+    #formacion h2 {
+        font-size: 1.8rem;
+        padding-left: 40px;
+        margin-bottom: 30px;
+    }
+
+    .formacion-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 40px !important;
+        margin-right: 0 !important;
+        gap: 15px;
+        padding: 1.5rem;
+    }
+
+    .formacion-logo {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+}
+
 /* --- Sección Experiencia Laboral (Timeline Style) --- */
 #experiencia {
     position: relative;
