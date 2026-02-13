@@ -539,7 +539,7 @@
     color: var(--theme-secondary);
 }
 
-/* Modal Styles */
+/* Modal - Versión de Ingeniería Profesional */
 .modal {
     display: none;
     position: fixed;
@@ -548,42 +548,207 @@
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+    /* El scroll lo maneja el hijo */
 }
 
+/* Contenedor de scroll principal */
 .modal-content {
-    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Permite scroll natural */
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 0;
-    width: 90%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* Wrapper para centrado y zoom */
+.modal-zoom-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     max-width: 900px;
-    background-color: transparent;
+    /* Ancho máximo en modo normal */
+    transition: all 0.3s ease;
+    margin: 0 auto;
 }
 
 .modal-imagen {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    cursor: zoom-in;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #000;
     display: block;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
+.modal-descripcion {
+    padding: 15px 30px;
+    background: white;
+    color: #333;
+    border-radius: 0 0 8px 8px;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+/* ESTADO ZOOM ACTIVADO */
+.modal.is-zoomed .modal-content {
+    display: block;
+    overflow-x: auto;
+    overflow-y: auto;
+    cursor: zoom-out;
+}
+
+.modal.is-zoomed .modal-zoom-container {
+    display: block;
+    width: 180vw;
+    min-width: 180vw;
+    max-width: none;
+    margin: 0;
+}
+
+.modal.is-zoomed .modal-imagen {
+    max-height: none;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+.modal.is-zoomed .modal-descripcion {
+    width: 100%;
+    max-width: none;
+    border-radius: 0 0 8px 8px;
+    margin: 0;
+}
+
+/* Botones UI Fijos */
 .cerrar {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 30px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background: rgba(40, 40, 40, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    z-index: 1002;
+    z-index: 2010;
     transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
 }
 
-.cerrar i {
-    color: #fff;
+.cerrar:hover {
+    background: #ff4757;
+    transform: rotate(90deg);
+}
+
+.prev,
+.next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(40, 40, 40, 0.5);
+    color: white;
+    padding: 20px 15px;
+    cursor: pointer;
+    z-index: 2005;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    border-radius: 4px;
+    text-decoration: none !important;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 40px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-zoom-container {
+        max-width: 98%;
+        margin: 0;
+    }
+
+    .modal.is-zoomed .modal-content {
+        display: block;
+    }
+
+    .modal.is-zoomed .modal-zoom-container {
+        width: 300vw;
+    }
+
+    /* Restaurar flechas en móvil */
+    .prev,
+    .next {
+        display: flex !important;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 15px 10px;
+        font-size: 20px;
+        z-index: 2015;
+        width: 40px;
+        height: 60px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+    .cerrar {
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+        background: rgba(0, 0, 0, 0.6);
+    }
 }
 
 .modal-descripcion {
