@@ -442,9 +442,44 @@ footer {
         font-size: 1rem;
     }
 
+    #experiencia {
+        padding: 20px 0;
+        margin: 20px 10px;
+    }
+
+    #experiencia h2 {
+        font-size: 1.8rem;
+        padding-left: 40px;
+        margin-bottom: 30px;
+    }
+
+    #experiencia::before {
+        left: 15px;
+        top: 80px;
+    }
+
     .experiencia-item {
-        /* Establece el margen derecho a 0 para que ocupe todo el ancho */
+        margin-left: 40px !important;
         margin-right: 0 !important;
+        padding: 1rem;
+    }
+
+    .experiencia-item::before {
+        left: -33px;
+        top: 20px;
+        width: 12px;
+        height: 12px;
+        border-width: 3px;
+    }
+
+    #org {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .org-fecha {
+        align-self: flex-start;
     }
 
     #coleccion-proyectos {
@@ -452,34 +487,113 @@ footer {
     }
 }
 
-/* --- Sección Experiencia Laboral --- */
+/* --- Sección Experiencia Laboral (Timeline Style) --- */
+#experiencia {
+    position: relative;
+    padding: 60px 0;
+    margin: 40px auto;
+}
+
+#experiencia h2 {
+    text-align: left;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    color: #212529;
+    padding-left: 50px;
+}
+
+/* La línea vertical del timeline ajustable al ancho global */
+#experiencia::before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 165px;
+    bottom: 50px;
+    width: 3px;
+    background: linear-gradient(to bottom, #0077B6, #90E0EF);
+    border-radius: 3px;
+}
+
+.experiencia-item {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2.5rem;
+    margin-left: 65px;
+    /* Espacio para la línea */
+    margin-right: 3rem;
+    /* Restaurado el margen derecho original */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* El punto (indicador) del timeline */
+.experiencia-item::before {
+    content: '';
+    position: absolute;
+    left: -42px;
+    /* Centrado con la línea (25px total offset) */
+    top: 20px;
+    width: 16px;
+    height: 16px;
+    background: #0077B6;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+    transition: all 0.3s ease;
+}
+
+.experiencia-item:hover {
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #0077B6;
+}
+
+.experiencia-item:hover::before {
+    background: #0096C7;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(0, 119, 182, 0.2);
+}
+
 #org {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
-    color: #212529;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.org-nombre {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0077B6;
+    margin: 0;
+}
+
+.org-fecha {
+    font-size: 0.9rem;
+    background: #e1f5fe;
+    color: #0077B6;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-weight: 600;
 }
 
 .rol {
-    font-weight: bold;
+    font-weight: 600;
+    color: #495057;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
 }
 
 .rol-descripcion {
     text-align: justify;
-}
-
-.experiencia-item {
-    background-color: #E9ECEF;
-    border: 1px solid #dee2e6;
-    border-radius: 7px;
-    padding: 0 1rem 1rem;
-    margin-bottom: 1rem;
-    margin-right: 3rem;
-    transition: background-color 0.3s;
-}
-
-.experiencia-item:hover {
-    background-color: #d8e0e7;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* --- Sección Proyectos --- */
@@ -1210,6 +1324,10 @@ footer {
         width: 28px;
         height: 28px;
     }
+
+    #experiencia::before {
+        left: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1344,5 +1462,9 @@ footer {
         width: 100%;
         font-size: 0.95rem;
         padding: 0.8rem 1.5rem;
+    }
+
+    #experiencia::before {
+        left: 10px;
     }
 }
