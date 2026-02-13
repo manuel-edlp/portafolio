@@ -146,30 +146,86 @@
     gap: 1.5rem;
 }
 
+/* --- Estilos base compartidos para Tarjetas de Características --- */
 .caracteristica-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 2px solid #e2e8f0;
-    transition: all 0.3s ease;
+    position: relative;
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(145deg, #ffffff, #f9fafb);
 }
 
 .caracteristica-card:hover {
-    border-color: var(--theme-primary);
-    box-shadow: 0 8px 16px var(--theme-shadow);
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--theme-accent-20);
+}
+
+.card-icon-container {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme-accent-10);
+    border-radius: 12px;
+    color: var(--theme-primary);
+    transition: all 0.3s ease;
+}
+
+.caracteristica-card:hover .card-icon-container {
+    background: var(--theme-gradient);
+    color: white !important;
+    transform: rotate(-3deg) scale(1.1);
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    background-clip: initial;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+.caracteristica-card:hover .card-icon {
+    color: white !important;
 }
 
 .caracteristica-card h3 {
-    color: var(--theme-primary);
+    font-size: 1.25rem !important;
+    margin: 0 !important;
+    color: #1a202c !important;
     font-weight: 700;
-    margin-bottom: 0.8rem;
+    line-height: 1.2;
 }
 
 .caracteristica-card p {
-    color: #555;
+    color: #4a5568 !important;
     font-size: 0.95rem;
     line-height: 1.6;
+    margin: 0;
+}
+
+.caracteristica-card::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--theme-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.caracteristica-card:hover::after {
+    opacity: 0.4;
 }
 
 #demo-proyecto {

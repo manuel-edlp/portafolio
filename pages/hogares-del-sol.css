@@ -10,3 +10,7 @@
     --theme-accent-50: rgba(255, 106, 20, 0.5);
     --theme-accent-90: rgba(255, 106, 20, 0.9);
 }
+
+.caracteristica-card {
+    background: linear-gradient(145deg, #ffffff, #fffaf0);
+}
