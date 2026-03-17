@@ -1,5 +1,6 @@
 // Lista de proyectos ordenados como aparecen en la página principal
 const projects = [
+    { name: "Chatbot SAU", path: "chatbot.html" },
     { name: "Fondo Blanco", path: "fondo-blanco.html" },
     { name: "Hogares del Sol", path: "hogares-del-sol.html" },
     { name: "Ticket", path: "ticket.html" },
@@ -7,8 +8,7 @@ const projects = [
     { name: "Jornadas", path: "jornadas.html" },
     { name: "CNEISI", path: "cneisi.html" },
     { name: "VetCloud", path: "vetcloud.html" },
-    { name: "Agremiación Odontológica", path: "agremiacion.html" },
-    { name: "Chatbot SAU", path: "chatbot.html" }
+    { name: "Agremiación Odontológica", path: "agremiacion.html" }
 ];
 
 // Función para obtener el índice del proyecto actual basado en la URL
