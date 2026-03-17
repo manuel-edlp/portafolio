@@ -553,17 +553,17 @@ footer {
 
     #formacion h2 {
         font-size: 1.8rem;
-        padding-left: 40px;
+        padding-left: 15px;
         margin-bottom: 30px;
     }
 
     .formacion-item {
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 40px !important;
+        margin-left: 0 !important;
         margin-right: 0 !important;
         gap: 15px;
-        padding: 1.5rem;
+        padding: 1.25rem;
     }
 
     .formacion-logo {
@@ -579,14 +579,8 @@ footer {
 
     #certificaciones h2 {
         font-size: 1.8rem;
-        padding-left: 40px;
+        padding-left: 15px;
         margin-bottom: 30px;
-    }
-
-    .certificado-item {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 1.5rem;
     }
 
     .certificado-info-container {
@@ -1309,9 +1303,18 @@ footer {
 
     .certificado-item {
         grid-template-columns: 1fr;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 2rem;
         gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .certificado-item {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 1.25rem;
     }
 }
 
