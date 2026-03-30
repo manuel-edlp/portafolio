@@ -51,7 +51,15 @@ document.addEventListener('DOMContentLoaded', function () {
             const fig = captura.querySelector('figcaption');
 
             if (img) modalImagen.src = img.src;
-            if (fig) modalDescripcion.innerHTML = fig.innerHTML;
+            if (fig) {
+                modalDescripcion.innerHTML = fig.innerHTML;
+                
+                // Agregar el ':' visualmente solo en el modal ampliado
+                const tituloFuerte = modalDescripcion.querySelector('strong');
+                if (tituloFuerte && !tituloFuerte.textContent.trim().endsWith(':')) {
+                    tituloFuerte.innerHTML += ':';
+                }
+            }
 
             modal.style.display = "block";
             document.body.style.overflow = 'hidden';
@@ -177,6 +185,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 5. Configurar Event Listeners
     capturas.forEach((captura, index) => {
+        const figcaption = captura.querySelector('figcaption');
+        
+        // Agregar botón de expandir si el texto supera el contenedor
+        if (figcaption) {
+            // Esperar a que toda la página (fuentes, imágenes, CSS final) cargue para medir la altura exacta
+            window.addEventListener('load', () => {
+                // Si la altura del contenido real es mayor que la altura visible del contenedor por un pequeño margen
+                if (figcaption.scrollHeight > figcaption.clientHeight + 5) {
+                    captura.classList.add('has-overflow');
+                    const expandBtn = document.createElement('button');
+                    expandBtn.className = 'expand-text-btn';
+                    expandBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+                    
+                    expandBtn.addEventListener('click', (e) => {
+                        e.stopPropagation(); // Prevenir que se abra el modal
+                        captura.classList.toggle('expanded-text');
+                        
+                        if (captura.classList.contains('expanded-text')) {
+                            expandBtn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+                        } else {
+                            expandBtn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+                        }
+                    });
+                    captura.appendChild(expandBtn);
+                }
+            });
+        }
+
         captura.addEventListener('click', () => abrirModal(index));
     });
 

@@ -317,35 +317,129 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    align-items: start;
 }
 
 .captura-item {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
+    cursor: pointer;
+    position: relative; 
+}
+
+.captura-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .captura-item img {
     width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    box-shadow: none;
+    border-radius: 0;
+    transition: transform 0.4s ease;
 }
 
-.captura-item img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.captura-item:hover img {
+    transform: scale(1.05);
+}
+
+.captura-item.captura-diagrama img {
+    height: auto;
+    max-height: 700px;
+    object-fit: contain;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 .captura-item figcaption {
-    margin-top: 1rem;
+    padding: 1.2rem;
+    margin: 0;
+    background: #fff;
     font-size: 0.95rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.5;
+    position: relative;
+    max-height: 140px; /* Permite exactamente 3 lineas + titulo con padding normal */
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Solo si JS detecta overflow (4+ líneas), añadimos el padding para alojar el botón */
+.captura-item.has-overflow figcaption {
+    padding-bottom: 3.5rem; 
+    max-height: 175px; /* 140px + el padding extra añadido */
+}
+
+/* Ocultador sólido blanco: tapa la 4ta línea (si existe) para que quede debajo del botón y no superpuesta. SIN DEGRADADOS */
+.captura-item.has-overflow:not(.expanded-text) figcaption::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    background: #fff;
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Eliminar ::after con el degradado antiguo */
+.captura-item.has-overflow figcaption::after {
+    display: none;
+}
+
+/* Botón expandir incrustado dinámicamente con JS */
+.expand-text-btn {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8f9fa;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color, #555);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 10;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.expand-text-btn:hover {
+    background: #e2e8f0;
+    color: #111;
+}
+
+/* Estado expandido */
+.captura-item.expanded-text figcaption {
+    max-height: 1000px;
+    padding-bottom: 3.5rem; /* El botón queda al final */
+}
+
+.captura-item.expanded-text figcaption::before {
+    display: none; /* Quitamos el bloque blanco cuando se expande el texto completo */
 }
 
 .captura-item figcaption strong {
-    color: var(--theme-primary);
+    display: block;
+    font-size: 1.05rem;
+    color: var(--theme-secondary);
+    margin-bottom: 0.4rem;
 }
 
 #tecnologias-usadas {
