@@ -1430,10 +1430,10 @@ footer {
 }
 
 .extras-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
     padding: 0 20px;
 }
 
