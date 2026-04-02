@@ -8,7 +8,8 @@ const projects = [
     { name: "Jornadas", path: "jornadas.html" },
     { name: "CNEISI", path: "cneisi.html" },
     { name: "VetCloud", path: "vetcloud.html" },
-    { name: "Agremiación Odontológica", path: "agremiacion.html" }
+    { name: "Agremiación Odontológica", path: "agremiacion.html" },
+    { name: "Clasificador de Lenguajes", path: "lenguajes.html" }
 ];
 
 // Función para obtener el índice del proyecto actual basado en la URL

@@ -1,0 +1,20 @@
+@import url('project-layout.css');
+
+:root {
+    --theme-primary: #183b58;
+    --theme-secondary: #0d162c;
+    --theme-gradient: linear-gradient(to right, var(--theme-secondary), var(--theme-primary));
+    --theme-shadow: rgba(15, 23, 42, 0.2);
+    --theme-accent-10: rgba(82, 172, 248, 0.1);
+    --theme-accent-20: rgba(82, 172, 248, 0.2);
+    --theme-accent-50: rgba(82, 172, 248, 0.5);
+    --theme-accent-90: rgba(15, 23, 42, 0.9);
+}
+
+.extra-icon {
+    color: var(--theme-primary);
+}
+
+.nav-logo img {
+    border-radius: 50px;
+}

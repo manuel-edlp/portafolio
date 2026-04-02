@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portafolio | Clasificador de Lenguajes </title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="lenguajes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <nav id="nav">
+        <div class="nav-logo">
+            <img src="../img/proyectos/lenguajes/favicon.png" alt="Clasificador de Lenguajes">
+        </div>
+        <div class="nav-right">
+            <button class="menu-toggle" aria-controls="menu-link    s" aria-expanded="false">
+                &#9776;</button>
+
+            <div id="menu-links">
+                <a href="../#inicio">Inicio</a>
+                <a href="../#sobremi">Sobre mí</a>
+                <a href="../#experiencia">Experiencia</a>
+                <a href="../#proyectos">Proyectos</a>
+                <a href="../#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="project-container">
+        <nav id="side-nav">
+            <a href="chatbot.html" class="side-link">Chatbot SAU</a>
+            <a href="fondo-blanco.html" class="side-link">Fondo Blanco</a>
+            <a href="hogares-del-sol.html" class="side-link">Hogares del Sol</a>
+            <a href="ticket.html" class="side-link">Ticket</a>
+            <a href="leyendas-del-sur.html" class="side-link">Leyendas del Sur</a>
+            <a href="jornadas.html" class="side-link">Jornadas</a>
+            <a href="cneisi.html" class="side-link">CNEISI</a>
+            <a href="vetcloud.html" class="side-link">VetCloud</a>
+            <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
+            <a href="lenguajes.html" class="side-link active">Clasificador de Lenguajes</a>
+        </nav>
+
+        <div id="contenido-principal">
+            <div id="nav-proyectos-top"></div>
+
+            <div id="cabecera-proyecto">
+                <a href="../#proyectos" class="btn-volver-inicio">
+                    <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
+                </a>
+                <h1>Clasificador de Lenguajes de Programación</h1>
+                <p class="subtitulo">Modelo de IA basado en Redes Neuronales Recurrentes para la identificación de código</p>
+            </div>
+
+            <section id="detalles-clave">
+                <h2>Información Rápida</h2>
+                <div class="tarjetas-info">
+                    <p><strong>Nombre del proyecto: </strong>Clasificador de Lenguajes de Programación</p>
+                    <p><strong>Descripción: </strong>Sistema de Deep Learning diseñado para identificar automáticamente el lenguaje de programación de un fragmento de código entre 5 clases (C, C#, Java, JavaScript y Python).</p>
+                    <p><strong>Tipo: </strong>Proyecto de Investigación en IA / NLP</p>
+                    <p><strong>Rol: </strong>Desarrollador de IA / Data Scientist</p>
+                    <p><strong>Fecha: </strong>Mayo - Junio 2024</p>
+                    <p><strong>Tecnologías Usadas: </strong>Python, Flask, TensorFlow/Keras, RNN (Bi-LSTM), Word Embedding, Adam Optimizer</p>
+                    <p><strong>Colaboradores: </strong>
+                        <a href="https://www.linkedin.com/in/doloresdominguez/" target="_blank" class="link-colaborador">Dominguez Dolores</a>, 
+                        <a href="https://www.linkedin.com/in/juan-ignacio-frangolini/" target="_blank" class="link-colaborador">Frangolini Juan Ignacio</a>, 
+                        <a href="https://www.linkedin.com/in/sebastiangonzales02/" target="_blank" class="link-colaborador">Gonzales Tello Leo Sebastián</a>, 
+                        <a href="https://www.linkedin.com/in/franco-kral-323aa2272/" target="_blank" class="link-colaborador">Kral Franco Ramiro</a>, 
+                        <a href="https://www.linkedin.com/in/nuria-robledo-208819219/" target="_blank" class="link-colaborador">Robledo Nuria</a>, 
+                        <a href="https://www.linkedin.com/in/milagros-soberon/" target="_blank" class="link-colaborador">Soberón Milagros</a>
+                    </p>
+                    <a href="https://huggingface.co/spaces/mmorullo/CodeAI-Detector" target="_blank" class="boton-proyecto">Probar Herramienta</a>
+                    <a href="https://github.com/manuel-edlp" target="_blank" class="boton-proyecto">Ver Código en GitHub</a>
+                </div>
+            </section>
+
+            <section id="narrativa-proyecto">
+                <h2>Desafío</h2>
+                <p>La identificación automática de lenguajes de programación es un desafío clásico de <strong>Natural Language Processing (NLP)</strong>. Cada lenguaje tiene su propia gramática y "huella digital" sintáctica, lo que hace que distinguir entre estructuras similares sea una tarea compleja para algoritmos tradicionales.</p>
+                <p>El reto principal fue diseñar una arquitectura capaz de capturar el contexto semántico y sintáctico del código, reconociendo patrones como la indentación en Python o los delimitadores en Java, para clasificar correctamente fragmentos de lógica pura.</p>
+
+                <h2>Enfoque y Proceso</h2>
+                <p>Para abordar este problema, implementamos una <strong>Red Neuronal Recurrente (RNN)</strong> con celdas <strong>Bi-LSTM</strong>. Este enfoque permite:</p>
+                <ul>
+                    <li><strong>Tokenización Dinámica:</strong> Convertir el código fuente en secuencias numéricas procesables de longitud fija.</li>
+                    <li><strong>Análisis Bidireccional:</strong> Leer el código en ambos sentidos para capturar el contexto completo de cada token, fundamental para entender estructuras anidadas.</li>
+                    <li><strong>Espacio Vectorial Denso:</strong> Utilizar Word Embedding de 32 dimensiones para agrupar palabras con roles lógicos similares en el espacio latente.</li>
+                </ul>
+
+                <h2>Solución Implementada</h2>
+                <p>Desarrollamos un modelo optimizado con el algoritmo <strong>Adam</strong> que logra distinguir con precisión entre lenguajes muy similares (como C y C#) mediante el entrenamiento con miles de ejemplos sintéticos y reales.</p>
+                <p>El sistema normaliza las entradas a un tamaño fijo de <strong>500 tokens (Padding)</strong> y utiliza una capa <strong>Softmax</strong> final para entregar un ranking de probabilidades, permitiendo que el usuario vea no solo la predicción más probable, sino el nivel de certeza del modelo.</p>
+            </section>
+
+            <section id="caracteristicas-tecnicas">
+                <h2>Características Técnicas Destacadas</h2>
+                <div class="caracteristicas-grid">
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-memory card-icon"></i>
+                        </div>
+                        <h3>Arquitectura Bi-LSTM</h3>
+                        <p>Funciona como una capa de memoria que lee el fragmento en ambos sentidos para identificar patrones estructurales complejos.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-project-diagram card-icon"></i>
+                        </div>
+                        <h3>Word Embedding</h3>
+                        <p>Convierte texto en vectores de 32 dimensiones donde la cercanía representa similitud lógica entre tokens de distintos lenguajes.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-bolt card-icon"></i>
+                        </div>
+                        <h3>Optimización Adam</h3>
+                        <p>Algoritmo adaptativo que ajusta el aprendizaje basándose en los gradientes, logrando una convergencia rápida y precisa del modelo.</p>
+                    </div>
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-list-ol card-icon"></i>
+                        </div>
+                        <h3>Padding y Softmax</h3>
+                        <p>Garantiza que todas las secuencias tengan la misma longitud y traduce las salidas en porcentajes de probabilidad de 0 a 100%.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="arquitectura">
+                <h2>Arquitectura de la Red Neuronal</h2>
+                <div class="capturas-contenedor">
+                    <figure class="captura-item captura-diagrama">
+                        <!-- Imagen que el usuario añadirá luego -->
+                        <img src="../img/proyectos/lenguajes/arquitectura.png" alt="Diagrama de Arquitectura RNA" class="captura-grande">
+                    </figure>
+                </div>
+            </section>
+
+            <section id="demo-proyecto">
+                <h2>Demo en Acción</h2>
+                <div class="demo-contenedor">
+                    <div class="demo-placeholder">
+                        <i class="fas fa-brain"></i>
+                        <p>Video demostrativo de la clasificación de lenguajes</p>
+                    </div>
+                    <video class="demo-video" controls preload="metadata" muted playsinline>
+                        <!-- Video que el usuario añadirá luego -->
+                        <source src="../img/proyectos/lenguajes/lenguajes-demo.webm" type="video/webm">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+            </section>
+
+            <section id="galeria-capturas">
+                <h2>Galería de Resultados</h2>
+                <div class="capturas-contenedor">
+                    <figure class="captura-item">
+                        <!-- Imagen que el usuario añadirá luego -->
+                        <img src="../img/proyectos/lenguajes/herramienta.png" alt="Captura 1" class="captura-grande">
+                        <figcaption><strong>Predicción de Python</strong> El modelo detecta la indentación y palabras clave como 'def'.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/lenguajes/herramienta-2.png" alt="Captura 2" class="captura-grande">
+                        <figcaption><strong>Confianza del Modelo</strong> Ranking de probabilidades generado por la capa Softmax.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/lenguajes/funcionamiento.png" alt="Captura 3" class="captura-grande">
+                        <figcaption><strong>Flujo de Análisis</strong> El sistema procesa el texto plano y lo convierte en tensores numéricos para la red neuronal.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/lenguajes/representacion.png" alt="Captura 4" class="captura-grande">
+                        <figcaption><strong>Estructura RNA</strong> Representación visual de las capas Bi-LSTM y la distribución de neuronas del modelo.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/lenguajes/representacion-2.png" alt="Captura 5" class="captura-grande">
+                        <figcaption><strong>Parámetros de Entrenamiento</strong> Detalle de la arquitectura interna y capas densas para la clasificación final.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="tecnologias-usadas">
+                <h2>Stack Tecnológico</h2>
+                <div class="tecnologias-grid">
+                    <div class="tech-item">
+                        <h3>Deep Learning</h3>
+                        <ul class="tech-list">
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-brain"></i> TensorFlow / Keras</li>
+                            <li><i class="fas fa-microchip"></i> Bi-LSTM RNN</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>NLP / Procesamiento</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-project-diagram"></i> Embedding Layer</li>
+                            <li><i class="fas fa-align-left"></i> Tokenization & Padding</li>
+                        </ul>
+                    </div>
+                    <div class="tech-item">
+                        <h3>Despliegue & API</h3>
+                        <ul class="tech-list">
+                            <li><i class="fas fa-server"></i> Flask</li>
+                            <li><i class="fas fa-network-wired"></i> REST API</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div id="contacto">
+        <h2>¡Contactame!</h2>
+        <div id="contacto-icons">
+            <a href="mailto:manuelmorullo.mm@gmail.com" aria-label="Email" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                    <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                </svg>
+                <span class="icon-tooltip">Email</span>
+            </a>
+            <a href="https://github.com/manuel-edlp" target="_blank" aria-label="GitHub" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                <span class="icon-tooltip">GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/manuel-morullo-161677289" target="_blank" aria-label="LinkedIn" class="contacto-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z" />
+                </svg>
+                <span class="icon-tooltip">LinkedIn</span>
+            </a>
+        </div>
+    </div>
+
+    <button id="btn-back-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M12 19.5l-7.5-7.5 1.5-1.5L12 16.5V4h2v12.5l5.5-5.5 1.5 1.5-7.5 7.5z" clip-rule="evenodd" />
+        </svg>
+    </button>
+
+    <footer>
+        <p><span id="current-year"></span> - Manuel Morullo.</p>
+    </footer>
+
+    <script src="project-gallery.js"></script>
+    <script src="projects-nav.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>
