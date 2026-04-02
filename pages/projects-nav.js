@@ -9,7 +9,8 @@ const projects = [
     { name: "CNEISI", path: "cneisi.html" },
     { name: "VetCloud", path: "vetcloud.html" },
     { name: "Agremiación Odontológica", path: "agremiacion.html" },
-    { name: "Clasificador de Lenguajes", path: "lenguajes.html" }
+    { name: "Clasificador de Lenguajes", path: "lenguajes.html" },
+    { name: "Recomendador de Películas", path: "peliculas.html" }
 ];
 
 // Función para obtener el índice del proyecto actual basado en la URL

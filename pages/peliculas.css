@@ -1,0 +1,86 @@
+@import url('project-layout.css');
+
+:root {
+    --theme-primary: #6366f1;
+    --theme-secondary: #1e1b4b;
+    --theme-gradient: linear-gradient(to right, var(--theme-secondary), var(--theme-primary));
+    --theme-shadow: rgba(99, 102, 241, 0.2);
+    --theme-accent-10: rgba(165, 180, 252, 0.1);
+}
+
+/* Estilo específico para los logos de esta página */
+.nav-logo img {
+    border-radius: 8px;
+}
+
+#detalles-clave .tarjetas-info {
+    border-left: 4px solid var(--theme-primary);
+}
+
+.boton-proyecto {
+    background-color: var(--theme-primary);
+    color: white;
+}
+
+.boton-proyecto:hover {
+    background-color: #4f46e5;
+}
+
+.side-link.active {
+    color: var(--theme-primary);
+    border-left-color: var(--theme-primary);
+}
+
+.tech-item h3 {
+    color: var(--theme-primary);
+}
+
+.tech-list i {
+    color: var(--theme-primary);
+}
+
+.caracteristica-card:hover {
+    border-color: var(--theme-primary);
+}
+
+.card-icon {
+    color: var(--theme-primary);
+}
+
+/* Diagrama de Arquitectura */
+.diagrama-contenedor {
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+.arquitectura-pasos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.paso-fila {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.paso-numero {
+    background: var(--theme-primary);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
