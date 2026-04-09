@@ -11,6 +11,18 @@
     --theme-accent-90: rgba(15, 23, 42, 0.9);
 }
 
+/* Dark Mode Colors - Paleta moderna en tonos azules para programación */
+[data-theme="dark"] {
+    --theme-primary: #0EA5E9;
+    --theme-secondary: #0EA5E9;
+    --theme-gradient: linear-gradient(to right, #1b4086, #003c9d);
+    --theme-shadow: rgba(2, 132, 199, 0.3);
+    --theme-accent-10: rgba(2, 132, 199, 0.1);
+    --theme-accent-20: rgba(2, 132, 199, 0.2);
+    --theme-accent-50: rgba(2, 132, 199, 0.5);
+    --theme-accent-90: rgba(2, 132, 199, 0.9);
+}
+
 .extra-icon {
     color: var(--theme-primary);
 }

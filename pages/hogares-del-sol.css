@@ -12,5 +12,14 @@
 }
 
 .caracteristica-card {
-    background: linear-gradient(145deg, #ffffff, #fffaf0);
+    background: var(--card-bg);
+}
+
+/* Dark Mode - Características Técnicas */
+[data-theme="dark"] .caracteristica-card h3 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .caracteristica-card p {
+    color: #ffffff !important;
 }

@@ -56,6 +56,11 @@
     border: 1px solid #e2e8f0;
 }
 
+[data-theme="dark"] .diagrama-contenedor {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
 .arquitectura-pasos {
     display: flex;
     flex-direction: column;
@@ -72,6 +77,13 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
+[data-theme="dark"] .paso-fila {
+    background: rgba(139, 92, 246, 0.08);
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
 .paso-numero {
     background: var(--theme-primary);
     color: white;
@@ -83,4 +95,8 @@
     justify-content: center;
     font-weight: bold;
     flex-shrink: 0;
+}
+
+[data-theme="dark"] .paso-numero {
+    background: var(--theme-primary);
 }

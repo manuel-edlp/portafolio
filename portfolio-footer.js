@@ -52,7 +52,7 @@ class PortfolioFooter extends HTMLElement {
                 left: 0;
                 width: 100%;
                 height: 4px;
-                background: #0077B6;
+                background: var(--accent-color, #0077B6);
                 z-index: 2;
             }
 
@@ -96,7 +96,7 @@ class PortfolioFooter extends HTMLElement {
                 transform: translateX(-50%);
                 width: 80px;
                 height: 3px;
-                background: #0077B6;
+                background: var(--accent-color, #0077B6);
                 border-radius: 3px;
             }
 
