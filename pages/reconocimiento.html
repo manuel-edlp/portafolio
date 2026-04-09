@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portafolio | Recomendador de Películas </title>
+    <title> Portafolio | Reconocimiento Facial y Clustering </title>
     <link rel="stylesheet" href="../index.css">
-    <link rel="stylesheet" href="peliculas.css">
+    <link rel="stylesheet" href="reconocimiento.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -41,77 +41,74 @@
             <a href="vetcloud.html" class="side-link">VetCloud</a>
             <a href="agremiacion.html" class="side-link">Agremiación Odontológica</a>
             <a href="lenguajes.html" class="side-link">Clasificador de Lenguajes</a>
-            <a href="peliculas.html" class="side-link active">Recomendador de Películas</a>
+            <a href="peliculas.html" class="side-link">Recomendador de Películas</a>
+            <a href="reconocimiento.html" class="side-link active">Reconocimiento Facial y Clustering</a>
         </nav>
 
         <div id="contenido-principal">
             <div id="nav-proyectos-top"></div>
 
             <div id="cabecera-proyecto">
-                <a href="../#peliculas" class="btn-volver-inicio">
+                <a href="../#reconocimiento" class="btn-volver-inicio">
                     <i class="fa-solid fa-arrow-left"></i> Volver a Proyectos
                 </a>
-                <h1>Recomendador de Películas AI</h1>
-                <p class="subtitulo">Sistema de recomendación inteligente basado en búsqueda semántica y arquitectura RAG</p>
+                <h1>Reconocimiento Facial y Clustering</h1>
+                <p class="subtitulo">Sistema de reconocimiento facial y clustering de imágenes con CNN, Viola-Jones y HOG</p>
             </div>
 
             <section id="detalles-clave">
                 <h2>Información Rápida</h2>
                 <div class="tarjetas-info">
-                    <p><strong>Nombre del proyecto: </strong>Recomendador de Películas</p>
-                    <p><strong>Descripción: </strong>Sistema de recomendación que utiliza búsqueda semántica vectorial para encontrar películas similares y genera explicaciones personalizadas mediante LLMs.</p>
-                    <p><strong>Tipo: </strong>Proyecto de Ciencia de Datos / IA (RAG Pipeline)</p>
-                    <p><strong>Rol: </strong>Data Engineer / ML Developer</p>
-                    <p><strong>Fecha: </strong>Junio - Julio 2025</p>
-                    <p><strong>Tecnologías Usadas: </strong>Python, FAISS, SentenceTransformer, Google Gemini API, Streamlit</p>
-                    <p><strong>Colaboradores: </strong>
-                        <a href="https://www.linkedin.com/in/gabriel-scarafia/" target="_blank" class="link-colaborador">Gabriel Scarafia</a>, 
-                        <a href="https://www.linkedin.com/in/matias-russo22/" target="_blank" class="link-colaborador">Matias Russo</a>,
-                        <a href="https://www.linkedin.com/in/joaquin-munoz-dev/" target="_blank" class="link-colaborador">Joaquin Muñoz</a>, 
-                        <a href="#" target="_blank" class="link-colaborador">Tomas Sbert</a>
-                    </p>
-                    <a href="https://recomendador-de-peliculas.streamlit.app/" target="_blank" class="boton-proyecto">Probar Herramienta</a>
-                    <a href="https://github.com/manuel-edlp/TpCienciaDeDatos" target="_blank" class="boton-proyecto">Ver Código</a>
+                    <p><strong>Nombre del proyecto: </strong>AI Cluster & Recognition</p>
+                    <p><strong>Descripción: </strong>Sistema de reconocimiento facial y clustering de imágenes con CNN, Viola-Jones y HOG.</p>
+                    <p><strong>Tipo: </strong>Proyecto personal</p>
+                    <p><strong>Rol: </strong>Desarrollador de IA</p>
+                    <p><strong>Fecha: </strong>Abril 2024 - Abril 2026</p>
+                    <p><strong>Tecnologías Usadas: </strong>Python, Flask, TensorFlow, Keras, OpenCV, Hugging Face</p>
+                    <a href="https://huggingface.co/spaces/mmorullo/AI-Clustering-Recognition" target="_blank" class="boton-proyecto">Probar Herramienta</a>
+                    <a href="https://github.com/manuel-edlp/ProyectoDeteccionFacial" target="_blank" class="boton-proyecto">Ver Código</a>
                 </div>
             </section>
 
             <section id="narrativa-proyecto">
                 <h2>Desafío</h2>
-                <p>Las plataformas tradicionales de recomendación suelen basarse en filtros de género o palabras clave exactas, lo que limita la capacidad de descubrir contenido basándose en conceptos abstractos o tramas complejas. El desafío fue construir un motor de búsqueda que "entendiera" el contexto de la sinopsis.</p>
-                <p>El objetivo fue implementar un pipeline de <strong>Generación Aumentada por Recuperación (RAG)</strong> que no solo encontrara las películas adecuadas, sino que fuera capaz de razonar y explicar al usuario por qué esas opciones encajan con sus gustos particulares.</p>
+                <p>El análisis manual de grandes colecciones de imágenes para identificar y agrupar personas es una tarea ineficiente y propensa a errores. El desafío principal fue construir un sistema capaz de detectar rostros con precisión y, más importante aún, "entender" las similitudes biométricas para organizar automáticamente a los individuos sin etiquetas previas.</p>
+                <p>El objetivo fue implementar un pipeline de <strong>Visión Artificial y Aprendizaje No Supervisado</strong> que no solo localizara caras en una escena, sino que fuera capaz de extraer representaciones matemáticas únicas (embeddings) para realizar un clustering eficiente.</p>
 
                 <h2>Enfoque y Proceso</h2>
-                <p>El proceso comenzó con un <strong>dataset masivo en CSV</strong> que contenía títulos, años, géneros y sinopsis. Aplicamos una etapa de normalización de texto y creamos una <strong>"Sopa de Metadatos"</strong> combinando género, sinopsis y director para enriquecer el contexto semántico.</p>
-                <p>Para la búsqueda semántica, transformamos las descripciones en <strong>vectores de 384 dimensiones</strong> utilizando el modelo <i>SentenceTransformer</i>. Estos vectores fueron indexados en <strong>FAISS (Facebook AI Similarity Search)</strong>, permitiendo comparaciones de similitud coseno en milisegundos sobre miles de registros.</p>
+                <p>El flujo de trabajo comienza con la ingesta de archivos multimedia y un preprocesamiento de imagen para optimizar la iluminación y el enfoque. Implementamos una etapa de <strong>Alineación Facial</strong> para normalizar la posición de los ojos y la nariz, garantizando que el modelo de extracción se centre exclusivamente en los rasgos distintivos.</p>
+                <p>Para la generación de descriptores, utilizamos redes neuronales profundas que transforman cada rostro en <strong>vectores de alta dimensionalidad</strong>. Estos embeddings capturan la esencia biométrica, permitiendo que rostros de la misma persona queden representados en puntos cercanos dentro de un espacio vectorial multidimensional.</p>
 
-                <h2>Solución Implementada:</h2>
-                <p>La arquitectura final (RAG) une la recuperación eficiente de datos con la IA Generativa:</p>
+                <h2>Solución Implementada: Pipeline de Detección y Clustering</h2>
+                <p>La arquitectura final integra la detección robusta con algoritmos de agrupamiento inteligente:</p>
                 <ul>
-                    <li><strong>Recuperación (Retriever):</strong> FAISS localiza las 5 películas más cercanas vectorialmente a la consulta del usuario.</li>
-                    <li><strong>Contextualización (Augmenter):</strong> Se construye un prompt dinámico que inyecta la consulta original y los datos de las películas encontradas.</li>
-                    <li><strong>Generación (Generator):</strong> Se utiliza la API de <strong>Gemini</strong> para analizar el contexto y redactar una recomendación personalizada que explica la conexión lógica entre la búsqueda y los resultados.</li>
+                    <li><strong>Detección Multimodelo:</strong> Evaluación y comparación de arquitecturas <strong>Viola-Jones</strong>, <strong>HOG + Linear SVM</strong> y <strong>CNN (Mmod)</strong> para la localización precisa de rostros en diversas condiciones de captura.</li>
+                    
+                    <li><strong>Extracción y Representación:</strong> Transformación de las regiones faciales en descriptores vectoriales de alta fidelidad, permitiendo el cálculo de similitud mediante métricas de distancia Euclídea y Coseno.</li>
+                    
+                    <li><strong>Agrupamiento Automático (Clustering):</strong> Implementación de un motor de segmentación no supervisada utilizando <strong>DBSCAN</strong> (para manejo de ruido y outliers) y <strong>K-Means</strong>, optimizando la organización de imágenes por identidad y expresión emocional.</li>
                 </ul>
             </section>
 
             <section id="arquitectura">
-                <h2>Arquitectura del Sistema (Pipeline RAG)</h2>
+                <h2>Arquitectura del Sistema (Pipeline Biométrico)</h2>
                 <div class="diagrama-contenedor">
                     <div class="arquitectura-pasos">
                         <div class="paso-fila">
                             <div class="paso-numero">1</div>
-                            <div class="paso-texto"><strong>Entrada & Preproceso:</strong> Limpieza de datos y normalización de la sinopsis/metadatos.</div>
+                            <div class="paso-texto"><strong>Detección & Alineación:</strong> Localización de rostros (ROI) y normalización geométrica de rasgos faciales.</div>
                         </div>
                         <div class="paso-fila">
                             <div class="paso-numero">2</div>
-                            <div class="paso-texto"><strong>Vectorización (Embeddings):</strong> Conversión de texto a vectores numéricos de 384 dimensiones.</div>
+                            <div class="paso-texto"><strong>Extracción de Embeddings:</strong> Transformación de la imagen del rostro en vectores numéricos de alta dimensionalidad.</div>
                         </div>
                         <div class="paso-fila">
                             <div class="paso-numero">3</div>
-                            <div class="paso-texto"><strong>Indexación FAISS:</strong> Organización de vectores para búsqueda de similitud ultrarrápida.</div>
+                            <div class="paso-texto"><strong>Cálculo de Distancias:</strong> Medición de similitud (Euclidiana/Coseno) entre los vectores extraídos.</div>
                         </div>
                         <div class="paso-fila">
                             <div class="paso-numero">4</div>
-                            <div class="paso-texto"><strong>Inferencia AI (Gemini):</strong> Generación de recomendaciones basadas en las coincidencias recuperadas.</div>
+                            <div class="paso-texto"><strong>Clustering Inteligente:</strong> Agrupamiento automático de rostros por identidad mediante algoritmos no supervisados.</div>
                         </div>
                     </div>
                 </div>
@@ -122,46 +119,35 @@
                 <div class="caracteristicas-grid">
                     <div class="caracteristica-card">
                         <div class="card-icon-container">
-                            <i class="fa-solid fa-magnifying-glass-chart card-icon"></i>
+                            <i class="fa-solid fa-face-smile-beam card-icon"></i>
                         </div>
-                        <h3>Búsqueda Semántica</h3>
-                        <p>Supera la limitación de palabras clave exactas, permitiendo buscar por conceptos como "ciencia ficción distópica con giros de trama".</p>
+                        <h3>Reconocimiento de Emociones</h3>
+                        <p>Implementación de redes neuronales convolucionales para clasificar expresiones faciales en tiempo real (felicidad, tristeza, enojo, etc.), aportando una capa de datos psicológicos al análisis.</p>
                     </div>
-                    <div class="caracteristica-card">
-                        <div class="card-icon-container">
-                            <i class="fa-solid fa-bolt card-icon"></i>
-                        </div>
-                        <h3>Indexación con FAISS</h3>
-                        <p>Utiliza librerías optimizadas para realizar búsquedas en espacios vectoriales de alta dimensión en tiempo real.</p>
-                    </div>
-                    <div class="caracteristica-card">
-                        <div class="card-icon-container">
-                            <i class="fa-solid fa-robot card-icon"></i>
-                        </div>
-                        <h3>IA Explicativa</h3>
-                        <p>No solo entrega una lista; gracias a Gemini, el sistema redacta una justificación de por qué cada película es relevante para el usuario.</p>
-                    </div>
-                    <div class="caracteristica-card">
-                        <div class="card-icon-container">
-                            <i class="fa-solid fa-database card-icon"></i>
-                        </div>
-                        <h3>Feature Engineering</h3>
-                        <p>Creación de 'Sopa de Metadatos' para optimizar la tokenización y dar mayor peso semántico a directores y géneros.</p>
-                    </div>
-                </div>
-            </section>
 
-            <section id="demo-proyecto">
-                <h2>Demo</h2>
-                <div class="demo-contenedor">
-                    <div class="demo-placeholder">
-                        <i class="fas fa-robot"></i>
-                        <p>Video demostrativo del recomendador en acción</p>
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-network-wired card-icon"></i>
+                        </div>
+                        <h3>Clustering Versátil</h3>
+                        <p>Evaluación comparativa entre distintos algoritmos como <strong>DBSCAN</strong> (detección de ruido), <strong>K-Means</strong> y <strong>Agglomerative Clustering</strong> para encontrar la mejor agrupación por identidad.</p>
                     </div>
-                    <video class="demo-video" controls preload="metadata" muted playsinline>
-                        <source src="../img/proyectos/peliculas/demo-peliculas.webm" type="video/webm">
-                        Tu navegador no soporta video HTML5.
-                    </video>
+
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-flask-vial card-icon"></i>
+                        </div>
+                        <h3>Laboratorio de Optimización</h3>
+                        <p>Entorno de pruebas diseñado para ajustar hiperparámetros críticos como el <i>threshold</i> de distancia y el número mínimo de muestras, garantizando la máxima precisión biométrica.</p>
+                    </div>
+
+                    <div class="caracteristica-card">
+                        <div class="card-icon-container">
+                            <i class="fa-solid fa-microchip card-icon"></i>
+                        </div>
+                        <h3>Feature Extraction</h3>
+                        <p>Uso de modelos pre-entrenados de vanguardia para transformar imágenes en vectores numéricos robustos, resistentes a cambios de iluminación y variaciones de pose.</p>
+                    </div>
                 </div>
             </section>
 
@@ -179,26 +165,29 @@
                 </div>
             </section>
 
-            <section id="tecnologias-usadas">
-                <h2>Stack Tecnológico</h2>
-                <div class="tecnologias-grid">
-                    <div class="tech-item">
-                        <h3>AI & Machine Learning</h3>
-                        <ul class="tech-list">
-                            <li><i class="fas fa-brain"></i> Google Gemini API</li>
-                            <li><i class="fas fa-project-diagram"></i> SentenceTransformer</li>
-                            <li><i class="fas fa-search-plus"></i> FAISS</li>
-                        </ul>
-                    </div>
-                    <div class="tech-item">
-                        <h3>Data & Platform</h3>
-                        <ul class="tech-list">
-                            <li><i class="fab fa-python"></i> Python (Pandas/NumPy)</li>
-                            <li><i class="fas fa-rocket"></i> Streamlit</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+<section id="tecnologias-usadas">
+    <h2>Stack Tecnológico</h2>
+    <div class="tecnologias-grid">
+        <div class="tech-item">
+            <h3>AI & Computer Vision</h3>
+            <ul class="tech-list">
+                <li><i class="fas fa-eye"></i> OpenCV (Procesamiento de imagen)</li>
+                <li><i class="fas fa-layer-group"></i> TensorFlow & Keras (Deep Learning)</li>
+                <li><i class="fas fa-smile"></i> Dlib (Reconocimiento facial)</li>
+                </ul>
+        </div>
+        
+        <div class="tech-item">
+            <h3>Data & Backend</h3>
+            <ul class="tech-list">
+                <li><i class="fab fa-python"></i> Python</li>
+                <li><i class="fas fa-server"></i> Flask</li>
+                <li><i class="fas fa-cloud-upload-alt"></i> Hugging Face (Deploy)</li>
+                <li><i class="fab fa-github"></i> Git</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
         </div>
     </div>
