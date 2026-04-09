@@ -76,6 +76,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 4. Botón "Leer más" en Acerca de mí (mobile)
+    const btnLeerMas = document.getElementById('btn-leer-mas-sobremi');
+    const sobremiSection = document.getElementById('sobremi');
+
+    if (btnLeerMas && sobremiSection && window.innerWidth <= 768) {
+        // Inicializar sección como colapsada en móvil
+        sobremiSection.classList.add('collapsed');
+
+        btnLeerMas.addEventListener('click', () => {
+            const isExpanded = sobremiSection.classList.contains('expanded');
+            
+            if (isExpanded) {
+                sobremiSection.classList.remove('expanded');
+                sobremiSection.classList.add('collapsed');
+                btnLeerMas.textContent = 'Leer más';
+                btnLeerMas.setAttribute('aria-expanded', 'false');
+            } else {
+                sobremiSection.classList.remove('collapsed');
+                sobremiSection.classList.add('expanded');
+                btnLeerMas.textContent = 'Leer menos';
+                btnLeerMas.setAttribute('aria-expanded', 'true');
+            }
+        });
+    }
+
     // 4. Filtros y Búsqueda de Proyectos
     const searchInput = document.getElementById('busqueda');
     const filterBtns = document.querySelectorAll('.filtro-btn');

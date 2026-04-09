@@ -424,8 +424,43 @@ portfolio-footer {
 
 /* Negritas */
 #sobremi strong {
-    color: #0096C7;
+    color: var(--accent-color);
     font-weight: 600;
+}
+
+/* Enlaces en Acerca de mí */
+#sobremi a {
+    color: #0DA5D8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+#sobremi a:hover {
+    color: #0F8FB6;
+    text-decoration: underline;
+}
+
+/* Botón Leer Más (mobile only) */
+.btn-leer-mas {
+    display: none;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    background-color: #0DA5D8;
+    color: var(--nav-text);
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.btn-leer-mas:hover {
+    background-color: #0F8FB6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 165, 216, 0.3);
 }
 
 /* Responsive */
@@ -501,6 +536,21 @@ portfolio-footer {
 
     #sobremi p {
         font-size: 1rem;
+    }
+
+    /* Ocultar últimos dos párrafos en móvil por defecto */
+    #sobremi.collapsed p:nth-child(n+4) {
+        display: none;
+    }
+
+    /* Mostrar botón Leer Más solo en móvil */
+    .btn-leer-mas {
+        display: block;
+    }
+
+    /* Cuando se expande, mostrar todos los párrafos */
+    #sobremi.expanded p {
+        display: block;
     }
 
     #experiencia {
