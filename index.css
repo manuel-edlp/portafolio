@@ -1015,6 +1015,9 @@ portfolio-footer {
     background-color: var(--accent-hover);
 }
 
+[data-theme="dark"] .btn-ver-mas:hover {
+    background-color: #0284c7; /* A visually pleasing deeper blue for dark mode hover */
+}
 
 /* --- Stack Tecnologico --- */
 #stack {
@@ -1364,6 +1367,13 @@ portfolio-footer {
     background: #f8f9fa;
     border-color: #ccc;
     transform: translateY(-1px);
+}
+
+[data-theme="dark"] .filtro-btn:hover,
+[data-theme="dark"] .filtro-lang-btn:hover {
+    background: #334155;
+    border-color: #475569;
+    color: #ffffff;
 }
 
 .filtro-btn.active,

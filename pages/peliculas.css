@@ -100,3 +100,8 @@
 [data-theme="dark"] .paso-numero {
     background: var(--theme-primary);
 }
+
+/* Color del titulo de las miniaturas de la galeria a principal */
+.captura-item figcaption strong {
+    color: var(--theme-primary);
+}
