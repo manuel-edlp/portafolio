@@ -473,16 +473,15 @@ portfolio-footer {
     color: #ffffff;
     border: none;
     border-radius: 25px;
-}
-
-[data-theme="dark"] .btn-leer-mas {
-    color: var(--accent-text);
-}
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.3s ease;
     width: fit-content;
+}
+
+[data-theme="dark"] .btn-leer-mas {
+    color: var(--accent-text);
 }
 
 .btn-leer-mas:hover {
@@ -1061,11 +1060,6 @@ portfolio-footer {
 
 [data-theme="dark"] .btn-ver-mas {
     color: var(--accent-text);
-}
-    border-radius: 50px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-ver-mas:hover {
