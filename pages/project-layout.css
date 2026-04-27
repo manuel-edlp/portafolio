@@ -5,16 +5,16 @@
 /* project-layout.css - Estilos base compartidos para páginas de proyectos */
 
 :root {
-    --theme-primary: #1814ff;
-    --theme-secondary: #00008B;
+    --theme-primary: #0077B6;
+    --theme-secondary: #005582;
     --theme-gradient: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
-    --theme-shadow: rgba(24, 20, 255, 0.2);
-    --theme-accent-10: rgba(24, 20, 255, 0.1);
-    --theme-accent-20: rgba(24, 20, 255, 0.2);
-    --theme-accent-50: rgba(24, 20, 255, 0.5);
-    --theme-accent-90: rgba(24, 20, 255, 0.9);
+    --theme-shadow: rgba(0, 119, 182, 0.2);
+    --theme-accent-10: rgba(0, 119, 182, 0.1);
+    --theme-accent-20: rgba(0, 119, 182, 0.2);
+    --theme-accent-50: rgba(0, 119, 182, 0.5);
+    --theme-accent-90: rgba(0, 119, 182, 0.9);
 
-    /* Theme Base Colors */
+    /* Theme Base Colors matched with index.css */
     --bg-color: #F4F7F9;
     --text-color: #212529;
     --text-muted: #555555;
@@ -22,6 +22,8 @@
     --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     --border-color: #E9ECEF;
     --nav-text: #ffffff;
+    --accent-color: #0077B6;
+    --accent-hover: #005582;
 }
 
 [data-theme="dark"] {
@@ -32,6 +34,8 @@
     --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     --border-color: #334155;
     --theme-shadow: rgba(0, 0, 0, 0.5);
+    --accent-color: #38bdf8;
+    --accent-hover: #7dd3fc;
 }
 
 #banner {
@@ -58,6 +62,12 @@
 
 #nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+#nav a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .menu-toggle {
@@ -115,6 +125,10 @@
 
 .tarjetas-info strong {
     color: var(--theme-primary);
+}
+
+.tarjetas-info p {
+    color: var(--text-color);
 }
 
 #narrativa-proyecto {
@@ -446,6 +460,11 @@
     color: var(--text-color);
 }
 
+.expand-text-btn:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
 /* Estado expandido */
 .captura-item.expanded-text figcaption {
     max-height: 1000px;
@@ -459,7 +478,7 @@
 .captura-item figcaption strong {
     display: block;
     font-size: 1.05rem;
-    color: var(--theme-secondary);
+    color: var(--theme-primary);
     margin-bottom: 0.4rem;
 }
 
@@ -637,6 +656,11 @@
     box-shadow: 0 8px 16px var(--theme-shadow);
 }
 
+.boton-proyecto:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
 .link-colaborador {
     color: black;
     text-decoration: none;
@@ -645,8 +669,14 @@
 }
 
 .link-colaborador:hover {
-    color: black;
+    color: var(--accent-hover);
     text-decoration: underline;
+}
+
+.link-colaborador:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .btn-volver-inicio {
@@ -661,7 +691,14 @@
 }
 
 .btn-volver-inicio:hover {
-    color: var(--theme-secondary);
+    color: var(--accent-hover);
+    transform: translateX(-5px);
+}
+
+.btn-volver-inicio:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* Modal - Versión de Ingeniería Profesional */
@@ -790,6 +827,11 @@
 .cerrar:hover {
     background: #ff4757;
     transform: rotate(90deg);
+}
+
+.cerrar:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 2px;
 }
 
 .prev,
@@ -921,6 +963,12 @@
     color: #ffffff;
 }
 
+.prev:focus-visible,
+.next:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
 /* Contact Section */
 portfolio-footer {
     display: block;
@@ -961,6 +1009,11 @@ portfolio-footer {
     background: var(--theme-gradient);
 }
 
+#btn-back-to-top:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
 /* Layout - Columnas y Sidebar Sticky */
 @media (min-width: 1200px) {
     .project-container {
@@ -988,6 +1041,7 @@ portfolio-footer {
     #side-nav {
         width: 250px;
         min-width: 250px;
+        margin-bottom: 1rem;
         position: sticky;
         top: 90px;
         height: calc(100vh - 90px);
@@ -1050,16 +1104,21 @@ portfolio-footer {
 
 #side-nav .side-link:hover {
     background: var(--bg-color);
-    color: var(--theme-primary);
+    color: var(--accent-color);
     transform: translateX(5px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+#side-nav .side-link:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 0;
+}
+
 #side-nav .side-link.active {
     background: var(--card-bg);
-    color: var(--theme-primary);
+    color: var(--accent-color);
     font-weight: 700;
-    border-left: 4px solid var(--theme-primary);
+    border-left: 4px solid var(--accent-color);
 }
 
 /* Transitions for hover colors in tech items */
@@ -1125,6 +1184,11 @@ portfolio-footer {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px var(--theme-shadow);
     color: white;
+}
+
+.btn-nav-proyecto:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 .btn-nav-proyecto.btn-anterior {

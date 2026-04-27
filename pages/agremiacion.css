@@ -1,7 +1,7 @@
 @import url('project-layout.css');
 
 :root {
-    --theme-primary: #8dccc4;
+    --theme-primary: #3c8e84; /* Ajustado para contraste AA en blanco */
     --theme-secondary: #76c2b9;
     --theme-gradient: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
     --theme-shadow: rgba(44, 138, 126, 0.2);
@@ -9,6 +9,10 @@
     --theme-accent-20: rgba(141, 204, 196, 0.2);
     --theme-accent-50: rgba(141, 204, 196, 0.5);
     --theme-accent-90: rgba(44, 138, 126, 0.9);
+}
+
+[data-theme="dark"] :root {
+    --theme-primary: #8dccc4; /* Original tiene buen contraste en oscuro */
 }
 
 #nav,

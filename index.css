@@ -183,7 +183,7 @@ portfolio-footer {
 
 #inicio h2 {
     font-size: 2rem;
-    color: #0077B6;
+    color: var(--accent-color);
     font-weight: 300;
     margin-bottom: 1.5rem;
 }
@@ -300,22 +300,28 @@ portfolio-footer {
 }
 
 .btn-primary-main {
-    background-color: #0077B6;
+    background-color: var(--accent-color);
     color: white;
-    border: 2px solid #0077B6;
+    border: 2px solid var(--accent-color);
 }
 
 .btn-primary-main:hover {
-    background-color: #005582;
-    border-color: #005582;
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 119, 182, 0.3);
 }
 
+.btn-primary-main:focus-visible,
+.btn-secondary-main:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
+}
+
 .btn-secondary-main {
     background-color: transparent;
-    color: #0077B6;
-    border: 2px solid #0077B6;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
 }
 
 .btn-secondary-main:hover {
@@ -328,8 +334,8 @@ portfolio-footer {
 .acciones-cv-unified {
     display: flex;
     align-items: center;
-    background: #ffffff;
-    border: 1px solid #e0e0e0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 50px;
     padding: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -346,7 +352,7 @@ portfolio-footer {
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
-    color: #444;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
@@ -355,8 +361,14 @@ portfolio-footer {
 }
 
 .btn-cv-view:hover {
-    background-color: #f5f5f5;
-    color: #0077B6;
+    background-color: var(--border-color);
+    color: var(--accent-color);
+}
+
+.btn-cv-view:focus-visible,
+.btn-cv-download:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 .btn-cv-download {
@@ -365,12 +377,12 @@ portfolio-footer {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #f8f9fa;
-    color: #666;
+    background-color: var(--border-color);
+    color: var(--text-muted);
     border-radius: 50%;
     text-decoration: none;
     transition: all 0.2s;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
 }
 
 .btn-cv-download:hover {
@@ -430,15 +442,21 @@ portfolio-footer {
 
 /* Enlaces en Acerca de mí */
 #sobremi a {
-    color: #0DA5D8;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 #sobremi a:hover {
-    color: #0F8FB6;
+    color: var(--accent-hover);
     text-decoration: underline;
+}
+
+#sobremi a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* Botón Leer Más (mobile only) */
@@ -446,8 +464,8 @@ portfolio-footer {
     display: none;
     margin: 20px auto 0;
     padding: 12px 24px;
-    background-color: #0DA5D8;
-    color: var(--nav-text);
+    background-color: var(--accent-color);
+    color: #ffffff;
     border: none;
     border-radius: 25px;
     font-weight: 600;
@@ -458,9 +476,14 @@ portfolio-footer {
 }
 
 .btn-leer-mas:hover {
-    background-color: #0F8FB6;
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(13, 165, 216, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
+.btn-leer-mas:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 /* Responsive */
@@ -583,7 +606,7 @@ portfolio-footer {
         border-width: 3px;
     }
 
-    #org {
+    .org-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
@@ -635,7 +658,7 @@ portfolio-footer {
 .formacion-item:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-3px);
-    border-color: #0077B6;
+    border-color: var(--accent-color);
 }
 
 .formacion-logo {
@@ -645,10 +668,10 @@ portfolio-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f8f9fa;
+    background: var(--border-color);
     border-radius: 10px;
     padding: 10px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-color);
 }
 
 .formacion-logo img {
@@ -737,7 +760,7 @@ portfolio-footer {
 .certificado-item:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateY(-3px);
-    border-color: #0077B6;
+    border-color: var(--accent-color);
 }
 
 .certificado-info-container {
@@ -843,27 +866,42 @@ portfolio-footer {
     box-shadow: 0 0 0 6px rgba(0, 119, 182, 0.2);
 }
 
-#org {
+.org-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .org-nombre {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #0077B6;
+    color: var(--accent-color);
     margin: 0;
 }
 
 .org-fecha {
-    font-size: 0.9rem;
-    background: #e1f5fe;
-    color: #0077B6;
-    padding: 4px 12px;
-    border-radius: 50px;
-    font-weight: 600;
+    font-size: 0.85rem;
+    /* Estilo más sutil: borde y texto con contraste suficiente (AA) */
+    background: rgba(0, 119, 182, 0.08);
+    color: #005d90;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: 1px solid rgba(0, 119, 182, 0.2);
+    white-space: nowrap;
+}
+
+[data-theme="dark"] .org-fecha {
+    background: rgba(56, 189, 248, 0.15);
+    color: #7dd3fc;
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.duracion-dinamica {
+    opacity: 0.8;
+    font-weight: 500;
+    font-size: 0.8rem;
 }
 
 .rol {
@@ -1008,16 +1046,25 @@ portfolio-footer {
     border-radius: 50px;
     font-weight: bold;
     letter-spacing: 0.5px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-ver-mas:hover {
     background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
+.btn-ver-mas:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 [data-theme="dark"] .btn-ver-mas:hover {
     background-color: #0284c7; /* A visually pleasing deeper blue for dark mode hover */
 }
+
+/* Duplicados eliminados para reducir deuda técnica */
 
 /* --- Stack Tecnologico --- */
 #stack {
@@ -1062,11 +1109,11 @@ portfolio-footer {
 }
 
 #stack li:hover {
-    background-color: #0077B6;
+    background-color: var(--accent-color);
     color: white;
     transform: scale(1.05) translateY(-2px);
     box-shadow: 0 8px 15px rgba(0, 119, 182, 0.3);
-    cursor: pointer;
+    cursor: default;
 }
 
 /* --- Botón Volver Arriba --- */
@@ -1076,7 +1123,7 @@ portfolio-footer {
     right: 20px;
     width: 50px;
     height: 50px;
-    background-color: #0077B6;
+    background-color: var(--accent-color);
     color: white;
     border: none;
     border-radius: 50%;
@@ -1094,8 +1141,13 @@ portfolio-footer {
 }
 
 #btn-back-to-top:hover {
-    background-color: #005582;
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
+}
+
+#btn-back-to-top:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 #btn-back-to-top svg {
@@ -1142,6 +1194,11 @@ portfolio-footer {
 
 .social-icon-flotante:hover svg {
     fill: white;
+}
+
+.social-icon-flotante:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 
@@ -1234,17 +1291,23 @@ portfolio-footer {
     }
 }
 
-/* Colaborator Link High Contrast */
+/* Colaborator Link - usa accent principal para consistencia */
 .link-colaborador {
-    color: #d63384;
+    color: var(--accent-color);
     font-weight: 700;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 .link-colaborador:hover {
-    color: #a61e4d;
+    color: var(--accent-hover);
     text-decoration: none;
+}
+
+.link-colaborador:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 @media (max-width: 600px) {
@@ -1331,15 +1394,13 @@ portfolio-footer {
 .filtros-label {
     margin: 0;
     font-weight: 700;
-    color: #444;
+    color: var(--text-color);
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-[data-theme="dark"] .filtros-label {
-    color: #ffffff;
-}
+/* [data-theme="dark"] .filtros-label ya heredada via var(--text-color) */
 
 .filtros-categorias,
 .filtros-lenguajes {
@@ -1364,9 +1425,16 @@ portfolio-footer {
 
 .filtro-btn:hover,
 .filtro-lang-btn:hover {
-    background: #f8f9fa;
-    border-color: #ccc;
+    background: var(--border-color);
+    border-color: var(--accent-color);
+    color: var(--text-color);
     transform: translateY(-1px);
+}
+
+.filtro-btn:focus-visible,
+.filtro-lang-btn:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 [data-theme="dark"] .filtro-btn:hover,
@@ -1395,15 +1463,16 @@ portfolio-footer {
 }
 
 .tag {
-    background: var(--card-bg);
-    color: var(--text-muted);
+    /* Fix WCAG AA: texto oscuro con fondo suficientemente contrastante */
+    background: var(--border-color);
+    color: var(--text-color);
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
 }
 
 /* --- Archivos Extras (Documentación) --- */
@@ -1484,46 +1553,7 @@ portfolio-footer {
     }
 }
 
-/* --- Sección Stack Tecnológico --- */
-#stack {
-    padding: 60px 0;
-    text-align: center;
-}
 
-#stack h2 {
-    font-size: 2.22rem;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-}
-
-#stack ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-#stack li {
-    background: var(--card-bg);
-    color: var(--text-color);
-    padding: 8px 18px;
-    border-radius: 50px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--card-shadow);
-    transition: all 0.3s ease;
-}
-
-#stack li:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent-color);
-    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.2);
-}
 
 
 
@@ -1542,18 +1572,7 @@ portfolio-footer {
 
 
 
-/* --- Estilos para enlaces de colaboradores --- */
-.link-colaborador {
-    color: #0077B6;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
 
-.link-colaborador:hover {
-    color: #005582;
-    text-decoration: underline;
-}
 
 /* --- Botón Volver a Proyectos --- */
 .btn-volver-inicio {
@@ -1561,15 +1580,21 @@ portfolio-footer {
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    color: #0077B6;
+    color: var(--accent-color);
     font-weight: 600;
     margin-bottom: 1rem;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-volver-inicio:hover {
-    color: #005582;
+    color: var(--accent-hover);
     transform: translateX(-5px);
+}
+
+.btn-volver-inicio:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 /* --- Navegación entre Proyectos --- */
@@ -1591,7 +1616,7 @@ portfolio-footer {
     align-items: center;
     gap: 0.75rem;
     padding: 0.9rem 1.8rem;
-    background-color: #0077B6;
+    background-color: var(--accent-color);
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -1603,9 +1628,14 @@ portfolio-footer {
 }
 
 .btn-nav-proyecto:hover {
-    background-color: #005582;
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+}
+
+.btn-nav-proyecto:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 3px;
 }
 
 .btn-nav-proyecto.btn-anterior {

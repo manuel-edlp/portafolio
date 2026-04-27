@@ -1,7 +1,7 @@
 @import url('project-layout.css');
 
 :root {
-    --theme-primary: #ff6a14;
+    --theme-primary: #c14d00; /* Ajustado para contraste AA en blanco */
     --theme-secondary: #be3f00;
     --theme-gradient: linear-gradient(to right, var(--theme-primary), var(--theme-secondary));
     --theme-shadow: rgba(255, 106, 20, 0.2);
@@ -9,6 +9,10 @@
     --theme-accent-20: rgba(255, 106, 20, 0.2);
     --theme-accent-50: rgba(255, 106, 20, 0.5);
     --theme-accent-90: rgba(255, 106, 20, 0.9);
+}
+
+[data-theme="dark"] :root {
+    --theme-primary: #ff8c4a; /* Ajustado para contraste AA en modo oscuro */
 }
 
 .caracteristica-card {

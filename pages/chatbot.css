@@ -11,6 +11,10 @@
     --theme-accent-90: rgba(30, 64, 175, 0.9);
 }
 
+[data-theme="dark"] :root {
+    --theme-primary: #60a5fa; /* Ajustado para contraste AA en oscuro */
+}
+
 .extra-icon {
     color: var(--theme-primary);
 }

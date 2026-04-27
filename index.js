@@ -166,4 +166,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 5. Cálculo dinámico de duración (años/meses)
+    const orgFechas = document.querySelectorAll('.org-fecha[data-inicio]');
+    orgFechas.forEach(el => {
+        const inicioStr = el.dataset.inicio;
+        const finStr = el.dataset.fin;
+        
+        if (!inicioStr) return;
+        
+        const fechaInicio = new Date(inicioStr);
+        const fechaFin = (finStr === 'Actualidad' || !finStr) ? new Date() : new Date(finStr);
+        
+        // Diferencia en meses
+        let totalMeses = (fechaFin.getFullYear() - fechaInicio.getFullYear()) * 12;
+        totalMeses -= fechaInicio.getMonth();
+        totalMeses += fechaFin.getMonth();
+        
+        // Sumar el mes actual para que sea inclusivo (ej: Sep a Dic = 4 meses)
+        totalMeses += 1;
+
+        if (totalMeses <= 0) return;
+
+        const years = Math.floor(totalMeses / 12);
+        const months = totalMeses % 12;
+
+        let durationStr = '';
+        if (years > 0) {
+            durationStr += `${years} ${years === 1 ? 'año' : 'años'}`;
+        }
+        if (months > 0) {
+            if (durationStr) durationStr += ' y ';
+            durationStr += `${months} ${months === 1 ? 'mes' : 'meses'}`;
+        }
+
+        if (durationStr) {
+            const span = document.createElement('span');
+            span.className = 'duracion-dinamica';
+            span.textContent = ` • ${durationStr}`;
+            el.appendChild(span);
+        }
+    });
 });
