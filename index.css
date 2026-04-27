@@ -19,6 +19,7 @@
     --text-muted: #e2e8f0;
     --accent-color: #38bdf8;
     --accent-hover: #7dd3fc;
+    --accent-text: #001d32; /* Texto oscuro para máxima legibilidad sobre celeste */
     --card-bg: #1e293b;
     --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     --card-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.6);
@@ -305,6 +306,10 @@ portfolio-footer {
     border: 2px solid var(--accent-color);
 }
 
+[data-theme="dark"] .btn-primary-main {
+    color: var(--accent-text);
+}
+
 .btn-primary-main:hover {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
@@ -468,6 +473,11 @@ portfolio-footer {
     color: #ffffff;
     border: none;
     border-radius: 25px;
+}
+
+[data-theme="dark"] .btn-leer-mas {
+    color: var(--accent-text);
+}
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
@@ -1049,6 +1059,15 @@ portfolio-footer {
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+[data-theme="dark"] .btn-ver-mas {
+    color: var(--accent-text);
+}
+    border-radius: 50px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 .btn-ver-mas:hover {
     background-color: var(--accent-hover);
     transform: translateY(-2px);
@@ -1133,6 +1152,10 @@ portfolio-footer {
     transition: opacity 0.3s, visibility 0.3s, transform 0.3s, bottom 0.3s;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] #btn-back-to-top {
+    color: var(--accent-text);
 }
 
 #btn-back-to-top.show {
@@ -1450,6 +1473,11 @@ portfolio-footer {
     color: white;
     border-color: var(--accent-color);
     box-shadow: 0 4px 8px rgba(0, 119, 182, 0.2);
+}
+
+[data-theme="dark"] .filtro-btn.active,
+[data-theme="dark"] .filtro-lang-btn.active {
+    color: var(--accent-text);
 }
 
 /* --- Tags en Tarjetas --- */
