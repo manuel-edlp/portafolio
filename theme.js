@@ -3,8 +3,8 @@
     const savedTheme = localStorage.getItem('theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Si hay un tema guardado, lo usamos. Si no, usamos la preferencia del sistema.
-    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    // Priorizamos el tema guardado, si no existe, el valor por defecto es 'dark'.
+    const initialTheme = savedTheme || 'dark';
     document.documentElement.setAttribute('data-theme', initialTheme);
 
     // 2. Configuración una vez cargado el DOM
