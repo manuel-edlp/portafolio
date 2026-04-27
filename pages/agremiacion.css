@@ -48,3 +48,10 @@
 .extra-icon {
     color: var(--theme-primary);
 }
+
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}

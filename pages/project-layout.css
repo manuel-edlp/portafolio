@@ -300,41 +300,156 @@
     background: black;
 }
 
+/* --- Sección Impacto (Rediseño Radical Compact Dashboard) --- */
 #impacto-metricas {
-    margin: 3rem 0;
+    margin-top: 4rem;
+    padding: 0;
 }
 
-#impacto-metricas h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-}
-
-.metricas-grid {
+.dashboard-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    gap: 16px;
+    margin-top: 2rem;
+    position: relative;
 }
 
-.metrica-item {
-    background: var(--theme-gradient);
-    color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 12px var(--theme-shadow);
+[data-theme="dark"] .dashboard-container {
+    background: rgba(15, 23, 42, 0.6);
 }
 
-.metrica-item h3 {
-    font-size: 2.2rem;
+.dashboard-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    background-color: #1e293b;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #f8fafc;
+}
+
+.dashboard-item .dashboard-value {
+    color: #f8fafc;
+}
+
+.dashboard-item .dashboard-desc {
+    color: #cbd5e1;
+}
+
+.dashboard-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.status-indicator {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme-accent-10);
+    border-radius: 12px;
+    color: var(--theme-primary);
+    flex-shrink: 0;
+}
+
+.dashboard-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0; /* Crucial para permitir que el contenido flex se encoja */
+    flex: 1;
+}
+
+.dashboard-label {
+    font-size: 0.7rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--theme-primary);
+    opacity: 0.8;
 }
 
-.metrica-item p {
-    font-size: 1rem;
-    opacity: 0.9;
+.dashboard-value {
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Tamaño responsivo */
+    font-weight: 900;
+    color: var(--text-color);
+    line-height: 1.1;
+    overflow-wrap: break-word; /* Evita que palabras largas rompan el layout */
+    word-break: break-word;
+}
+
+.dashboard-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-top: 4px;
+    padding-right: 5px; /* Pequeño margen interno para evitar que toque el borde */
+}
+
+/* Micro-interacción */
+.dashboard-item::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--theme-primary);
+    transition: width 0.3s ease;
+}
+
+.dashboard-item:hover::after {
+    width: 100%;
+}
+
+/* --- Variante Branding Color (Inversión de Colores) --- */
+.dashboard-item.branding-color {
+    background-color: var(--theme-primary) !important;
+    border: none;
+    box-shadow: 0 4px 15px var(--theme-shadow, rgba(0, 0, 0, 0.2));
+    color: #ffffff !important;
+}
+
+.dashboard-item.branding-color .status-indicator {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+.dashboard-item.branding-color .dashboard-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600;
+    opacity: 1;
+}
+
+.dashboard-item.branding-color .dashboard-value {
+    color: #ffffff !important;
+}
+
+.dashboard-item.branding-color .dashboard-desc {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.dashboard-item.branding-color:hover {
+    transform: translateY(-5px);
+    background-color: var(--theme-secondary) !important;
+    box-shadow: 0 8px 25px var(--theme-shadow, rgba(0, 0, 0, 0.3));
+}
+
+/* Restaurar barra animada con color blanco para contraste */
+.dashboard-item.branding-color::after {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
 }
 
 #galeria-capturas {
