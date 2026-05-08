@@ -167,28 +167,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const parseDate = (str) => {
+        if (str === 'Actualidad' || !str) {
+            const now = new Date();
+            return { y: now.getFullYear(), m: now.getMonth() + 1 };
+        }
+        const parts = str.split('-').map(Number);
+        return { y: parts[0], m: parts[1] };
+    };
+
     // 5. Cálculo dinámico de duración (años/meses)
     const orgFechas = document.querySelectorAll('.org-fecha[data-inicio]');
     orgFechas.forEach(el => {
         const inicioStr = el.dataset.inicio;
         const finStr = el.dataset.fin;
-        
+
         if (!inicioStr) return;
-        
-        const fechaInicio = new Date(inicioStr);
-        const fechaFin = (finStr === 'Actualidad' || !finStr) ? new Date() : new Date(finStr);
-        
-        // Diferencia en meses
-        let totalMeses = (fechaFin.getFullYear() - fechaInicio.getFullYear()) * 12;
-        totalMeses -= fechaInicio.getMonth();
-        totalMeses += fechaFin.getMonth();
-        
-        // Sumar el mes actual para que sea inclusivo (ej: Sep a Dic = 4 meses)
-        totalMeses += 1;
+
+        const inicio = parseDate(inicioStr);
+        const fin = parseDate(finStr);
+
+        let totalMeses = (fin.y - inicio.y) * 12 + (fin.m - inicio.m);
+
+        // En certificaciones y formación académica los extremos cuentan (inclusivo)
+        const esInclusivo = el.closest('#certificaciones') || el.closest('#formacion');
+        if (esInclusivo) {
+            totalMeses += 1;
+        }
 
         if (totalMeses <= 0) return;
 
         const years = Math.floor(totalMeses / 12);
+
         const months = totalMeses % 12;
 
         let durationStr = '';
