@@ -126,6 +126,24 @@ portfolio-footer {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.lab-link {
+    color: #00f2ff !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.lab-link i {
+    margin-right: 8px;
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0% { filter: drop-shadow(0 0 2px #00f2ff); }
+    50% { filter: drop-shadow(0 0 8px #00f2ff); }
+    100% { filter: drop-shadow(0 0 2px #00f2ff); }
+}
+
 .theme-toggle {
     background: none;
     border: none;
@@ -1149,7 +1167,7 @@ portfolio-footer {
 }
 
 [data-theme="dark"] #btn-back-to-top {
-    color: var(--accent-text);
+    color: white;
 }
 
 #btn-back-to-top.show {

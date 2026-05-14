@@ -14,7 +14,7 @@
 <body>
     <nav id="nav">
         <div class="nav-logo">
-            <i class="fas fa-film" style="color: white; font-size: 2rem;"></i>
+            <img src="../img/proyectos/reconocimiento/logo.svg" alt="Reconocimiento Facial" class="logo-redondo">
         </div>
         <div class="nav-right">
             <button class="menu-toggle" aria-controls="menu-links" aria-expanded="false">
@@ -81,7 +81,7 @@
                 <p>El flujo de trabajo comienza con la ingesta de archivos multimedia y un preprocesamiento de imagen para optimizar la iluminación y el enfoque. Implementamos una etapa de <strong>Alineación Facial</strong> para normalizar la posición de los ojos y la nariz, garantizando que el modelo de extracción se centre exclusivamente en los rasgos distintivos.</p>
                 <p>Para la generación de descriptores, utilizamos redes neuronales profundas que transforman cada rostro en <strong>vectores de alta dimensionalidad</strong>. Estos embeddings capturan la esencia biométrica, permitiendo que rostros de la misma persona queden representados en puntos cercanos dentro de un espacio vectorial multidimensional.</p>
 
-                <h2>Solución Implementada: Pipeline de Detección y Clustering</h2>
+                <h2>Solución Implementada</h2>
                 <p>La arquitectura final integra la detección robusta con algoritmos de agrupamiento inteligente:</p>
                 <ul>
                     <li><strong>Detección Multimodelo:</strong> Evaluación y comparación de arquitecturas <strong>Viola-Jones</strong>, <strong>HOG + Linear SVM</strong> y <strong>CNN (Mmod)</strong> para la localización precisa de rostros en diversas condiciones de captura.</li>
@@ -93,7 +93,7 @@
             </section>
 
             <section id="arquitectura">
-                <h2>Arquitectura del Sistema (Pipeline Biométrico)</h2>
+                <h2>Arquitectura del Sistema</h2>
                 <div class="diagrama-contenedor">
                     <div class="arquitectura-pasos">
                         <div class="paso-fila">
@@ -153,16 +153,50 @@
                 </div>
             </section>
 
+            <section id="demo-proyecto">
+                <h2>Demo</h2>
+                <div class="demo-contenedor">
+                    <video class="demo-video" controls preload="metadata" muted playsinline>
+                        <source src="../img/proyectos/reconocimiento/demo.webm" type="video/webm">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </div>
+            </section>
+
             <section id="galeria-capturas">
                 <h2>Vistazo a la Herramienta</h2>
                 <div class="capturas-contenedor">
                     <figure class="captura-item">
-                        <img src="../img/proyectos/peliculas/miniatura.png" alt="Interfaz del Recomendador" class="captura-grande">
-                        <figcaption><strong>Interfaz en Streamlit</strong> Aplicación web interactiva para realizar consultas al motor RAG.</figcaption>
+                        <img src="../img/proyectos/reconocimiento/presentacion.png" alt="Presentación del Sistema" class="captura-grande">
+                        <figcaption><strong>Presentación</strong> Interfaz principal de la plataforma de análisis facial.</figcaption>
                     </figure>
                     <figure class="captura-item">
-                        <img src="../img/proyectos/peliculas/response.png" alt="Respuesta del Recomendador" class="captura-grande">
-                        <figcaption><strong>Respuesta</strong> Recomendación personalizada generada por Gemini.</figcaption>
+                        <img src="../img/proyectos/reconocimiento/consola.png" alt="Consola de Control" class="captura-grande">
+                        <figcaption><strong>Consola de Control</strong> Selección de motores y ajuste de parámetros de detección.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/reconocimiento/resultados.png" alt="Resultados de Clustering" class="captura-grande">
+                        <figcaption><strong>Clustering</strong> Agrupamiento automático de rostros por identidad y emociones.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/reconocimiento/base-conocimiento1.png" alt="Base de Conocimiento 1" class="captura-grande">
+                        <figcaption><strong>Base de Conocimiento</strong> Documentación técnica integrada sobre el ecosistema de IA.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/reconocimiento/base-conocimiento2.png" alt="Base de Conocimiento 2" class="captura-grande">
+                        <figcaption><strong>Detalles Algorítmicos</strong> Explicación profunda del funcionamiento de cada motor.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/reconocimiento/metricas1.png" alt="Métricas de Rendimiento" class="captura-grande">
+                        <figcaption><strong>Métricas</strong> Panel de control para evaluar la precisión y exhaustividad.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/reconocimiento/metricas2.png" alt="Visualización de Datos" class="captura-grande">
+                        <figcaption><strong>Análisis de Datos</strong> Representación gráfica del rendimiento del modelo.</figcaption>
+                    </figure>
+                    <figure class="captura-item">
+                        <img src="../img/proyectos/reconocimiento/glosario.png" alt="Glosario Técnico" class="captura-grande">
+                        <figcaption><strong>Glosario</strong> Terminología técnica clave para comprender la visión artificial.</figcaption>
                     </figure>
                 </div>
             </section>

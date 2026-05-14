@@ -11,9 +11,35 @@
     --theme-accent-90: rgba(15, 23, 42, 0.9);
 }
 
+[data-theme="dark"] {
+    --theme-primary: #38bdf8;
+    --theme-secondary: #0f172a;
+    --theme-gradient: linear-gradient(to right, #1e293b, #0f172a);
+    --theme-shadow: rgba(0, 0, 0, 0.5);
+    --theme-accent-10: rgba(56, 189, 248, 0.1);
+    --theme-accent-20: rgba(56, 189, 248, 0.2);
+    --theme-accent-50: rgba(56, 189, 248, 0.5);
+    --theme-accent-90: rgba(15, 23, 42, 0.9);
+}
+
+/* Resaltar botón de navegación al proyecto anterior (Recomendador de Películas) en modo oscuro */
+[data-theme="dark"] .btn-nav-proyecto.btn-anterior {
+    background: linear-gradient(to right, #38bdf8, #0ea5e9);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
+[data-theme="dark"] .btn-nav-proyecto.btn-anterior:hover {
+    background: linear-gradient(to right, #7dd3fc, #38bdf8);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.5);
+}
+
 /* Estilo específico para los logos de esta página */
-.nav-logo img {
-    border-radius: 8px;
+.nav-logo img.logo-redondo {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+    object-fit: cover;
+    padding: 2px;
 }
 
 #detalles-clave .tarjetas-info {
@@ -26,7 +52,7 @@
 }
 
 .boton-proyecto:hover {
-    background-color: #4f46e5;
+    background-color: var(--accent-hover);
 }
 
 .side-link.active {
@@ -52,11 +78,11 @@
 
 /* Diagrama de Arquitectura */
 .diagrama-contenedor {
-    background: #f8fafc;
+    background: var(--bg-color);
     padding: 2rem;
     border-radius: 12px;
     margin: 2rem 0;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
 }
 
 .arquitectura-pasos {
@@ -69,10 +95,15 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: white;
+    background: var(--card-bg);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .paso-numero {
+    color: #020617; /* Contraste máximo en dark mode */
 }
 
 .paso-numero {
